@@ -5,9 +5,9 @@ import Home from "./pages/home";
 
 const App = () => {
     return (
-        <ThemeProvider theme={theme}>
-            <Home />
-        </ThemeProvider>
+            <ThemeProvider theme={theme}>
+                <Home />
+            </ThemeProvider>
     );
 }
 export default App;
