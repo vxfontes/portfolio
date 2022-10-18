@@ -2,11 +2,11 @@ import { createTheme } from '@material-ui/core/styles';
 
 declare module "@material-ui/core/styles/createPalette" {
     interface PaletteOptions {
-        mybackgroundColor?: Palette['primary'];
+        mybackgroundColor?: Palette['info'];
     }
     
     interface Palette {
-        mybackgroundColor?: Palette['primary'];
+        mybackgroundColor?: Palette['info'];
     }
     
 }
