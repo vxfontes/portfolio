@@ -9,6 +9,7 @@ const styles = makeStyles((theme: Theme) =>
             color: 'black',
             margin: 0,
             padding: 0,
+            backgroundColor: theme.palette.mybackgroundColor?.main,
         }
 
     })
