@@ -1,22 +1,20 @@
-import { Button, Grid, Typography, Box, useMediaQuery } from '@material-ui/core';
+import { Button, Grid, Typography, Box } from '@material-ui/core';
 import { ArrowForward } from '@material-ui/icons';
 
 import NormalAvatar from '../../components/avatars/normalAvatar';
-import theme from '../../theme';
 import styles from './styles';
 
 const Presentation = () => {
     const classes = styles();
-    const alignButton = useMediaQuery(theme.breakpoints.down('sm'));
 
     return (
         <Grid className={classes.paper} container justifyContent="center" alignItems="center">
-            <Grid item xs={12} sm={6}>
+            <Grid item xl={5} lg={5} md={6} sm={6} xs={12}>
                 <NormalAvatar />
             </Grid>
-            <Grid item xs={12} sm={6}>
-                <Box className={classes.content}>
-                    <Grid className={classes.principalText} item xs={12} md={12}>
+            <Grid item xl={6} lg={7} md={6} sm={6} xs={9}>
+                <Grid className={classes.content} container direction='row' justifyContent="center" alignItems="center">
+                    <Grid className={classes.principalText} item lg={8} md={10} sm={10} xs={12}>
                         <Typography variant='h6' color='secondary'>
                             Hello, I'm
                         </Typography>
@@ -24,22 +22,26 @@ const Presentation = () => {
                             Vanessa Fontes
                         </Typography>
                     </Grid>
-                    <Grid className={classes.principalText} item xs={12} md={12}>
-                        <Grid container direction='row' justifyContent="center" alignItems="flex-start" spacing={1}>
-                            <Grid item xl={2} lg={3} md={4} sm={9} xs={9}>
-                                <Button className={classes.typo} variant="outlined" color='secondary' size='large' fullWidth>
-                                    Resume
+                    <Grid item lg={8} md={12} sm={12} xs={12}>
+                        <Grid className={classes.buttons} container direction='row' alignItems="center" spacing={1}>
+                            <Grid item xl={7} lg={6} md={6} sm={10} xs={12}>
+                                <Button className={classes.typo} variant="outlined" color='secondary' fullWidth>
+                                    <Typography variant='h6'>
+                                        Download Resume
+                                    </Typography>
                                     <ArrowForward style={{ marginLeft: '1vw' }} />
                                 </Button>
                             </Grid>
-                            <Grid item xl={2} lg={2} md={3} sm={9} xs={9}>
-                                <Button className={classes.typo} variant="contained" color="primary" size='large' fullWidth>
-                                    Contact
+                            <Grid item xl={4} lg={6} md={4} sm={10} xs={12}>
+                                <Button className={classes.typo} variant="contained" color="primary" fullWidth>
+                                    <Typography variant='h6'>
+                                        Contact Me
+                                    </Typography>
                                 </Button>
                             </Grid>
                         </Grid>
                     </Grid>
-                </Box>
+                </Grid>
             </Grid>
         </Grid>
     );

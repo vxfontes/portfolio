@@ -18,13 +18,24 @@ const styles = makeStyles((theme: Theme) =>
         },
 
         content: {
-            display: 'block',
-            textAlign:  'center',
-            margin: 'auto'
+            // display: 'block',
+            // textAlign:  'center',
+            // margin: 'auto'
         },
         
         principalText: {
-            marginTop: '0.5em'
+            marginTop: '0.5em',
+            marginBottom: '0.2em'
+        },
+
+        buttons: {
+            justifyContent: 'normal',
+            [theme.breakpoints.down('lg')]: {
+                justifyContent: 'left',
+            },
+            [theme.breakpoints.down('md')]: {
+                justifyContent: 'center',
+            },
         }
     })
 );
