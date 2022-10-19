@@ -23,7 +23,7 @@ const Presentation = () => {
                         </Typography>
                     </Grid>
                     <Grid item xl={8} lg={7} md={9} sm={12} xs={12}>
-                        <Grid container direction='row' alignItems="center" spacing={1}>
+                        <Grid container className={classes.justify} direction='row' spacing={1}>
                             <Grid item xl={6} lg={7} md={7} sm={10} xs={11}>
                                 <Button className={classes.typo} variant="outlined" color='secondary' fullWidth>
                                     <Typography variant='h6'>

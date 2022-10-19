@@ -35,11 +35,12 @@ const styles = makeStyles((theme: Theme) =>
                 marginLeft: 80,
             },
             [theme.breakpoints.down('xs')]: {
+                justifyContent: "center",
                 marginTop: -100,
                 marginLeft: 0,
             },
         },
-
+        
         principalText: {
             marginTop: '0.5em',
             marginBottom: '0.2em',
@@ -47,6 +48,13 @@ const styles = makeStyles((theme: Theme) =>
                 textAlign: 'center',
             },
         },
+        
+        justify: {
+            justifyContent: "flex-start",
+            [theme.breakpoints.down('xs')]: {
+                justifyContent: 'center',
+            },
+        }
     })
 );
 
