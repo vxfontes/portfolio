@@ -12,6 +12,15 @@ declare module "@material-ui/core/styles/createPalette" {
 }
 
 const theme = createTheme({
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 600,
+            md: 960,
+            lg: 1380,
+            xl: 1920,
+        },
+    },
     palette: {
         mybackgroundColor: {
             light: "#8d6ebf",
@@ -34,13 +43,13 @@ theme.typography.h2 = {
     fontFamily: 'Roboto',
     fontSize: 120,
     [theme.breakpoints.only('xl')]: {
-        fontSize: 116,
+        fontSize: 120,
     },
     [theme.breakpoints.down('lg')]: {
-        fontSize: 88,
+        fontSize: '5.6em',
     },
     [theme.breakpoints.down('md')]: {
-        fontSize: 65,
+        fontSize: 70,
     },
     [theme.breakpoints.down('sm')]: {
         fontSize: 49,

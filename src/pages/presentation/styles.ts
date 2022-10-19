@@ -27,21 +27,24 @@ const styles = makeStyles((theme: Theme) =>
 
         content: {
             marginLeft: 100,
+            justifyContent: 'center',
+            [theme.breakpoints.up('sm')]: {
+                justifyContent: "flex-start"
+            },
             [theme.breakpoints.down('md')]: {
-                marginLeft: 50,
+                marginLeft: 80,
             },
             [theme.breakpoints.down('xs')]: {
                 marginTop: -100,
                 marginLeft: 0,
             },
         },
-        
+
         principalText: {
             marginTop: '0.5em',
             marginBottom: '0.2em',
             [theme.breakpoints.down('xs')]: {
                 textAlign: 'center',
-
             },
         },
     })
