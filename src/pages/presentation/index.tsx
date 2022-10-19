@@ -25,25 +25,18 @@ const Presentation = () => {
                         </Typography>
                     </Grid>
                     <Grid className={classes.principalText} item xs={12} md={12}>
-                        <Grid container direction='row' justifyContent="flex-end" alignItems="flex-start" spacing={1}>
-                            <Grid item xs={2} md={3}></Grid>
-                            <Grid item xs={8} md={3}>
+                        <Grid container direction='row' justifyContent="center" alignItems="flex-start" spacing={1}>
+                            <Grid item xl={2} lg={3} md={4} sm={9} xs={9}>
                                 <Button className={classes.typo} variant="outlined" color='secondary' size='large' fullWidth>
                                     Resume
                                     <ArrowForward style={{ marginLeft: '1vw' }} />
                                 </Button>
                             </Grid>
-
-                            {alignButton && <>
-                                <Grid item xs={2}></Grid>
-                                <Grid item xs={2}></Grid>
-                            </>}
-                            <Grid item xs={8} md={3}>
+                            <Grid item xl={2} lg={2} md={3} sm={9} xs={9}>
                                 <Button className={classes.typo} variant="contained" color="primary" size='large' fullWidth>
-                                    Contact Me
+                                    Contact
                                 </Button>
                             </Grid>
-                            <Grid item xs={2} md={3}></Grid>
                         </Grid>
                     </Grid>
                 </Box>
