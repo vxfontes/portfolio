@@ -1,5 +1,5 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core';
-import bgTexture from '../../assets/image/bgTexture.svg'
+import bgTexture from '../../assets/image/bgTexture.svg';
 
 const styles = makeStyles((theme: Theme) =>
 
