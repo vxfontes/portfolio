@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, IconButton, Dialog, useMediaQuery, Box, Slide } from '@material-ui/core';
+import { TransitionProps } from '@material-ui/core/transitions/transition';
 import { Menu, Close } from '@material-ui/icons';
+
+// local
 import styles from './styles';
 import theme from "../../theme";
-import ColorButtonBlue from '../buttons/Blue';
-import { TransitionProps } from '@material-ui/core/transitions/transition';
 
 
 const Transition = React.forwardRef(function Transition(
@@ -19,7 +20,7 @@ const MyAppBar = () => {
     const classes = styles();
     const [open, setOpen] = useState(false);
     const showMenu = useMediaQuery(theme.breakpoints.down('sm'));
-    const showOptions = useMediaQuery(theme.breakpoints.up('sm'));
+    const showOptions = useMediaQuery(theme.breakpoints.up('md'));
 
     const handleOpen = () => {
         setOpen(true);
