@@ -19,7 +19,15 @@ const theme = createTheme({
             dark: "#372554",
             contrastText: 'white',
         },
+        secondary: {
+            light: '#000',
+            main: '#fff',
+            dark: '#fff'
+        }
     },
+    typography: {
+        fontFamily: 'Roboto',
+    }
 })
 
 export default theme;
