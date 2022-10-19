@@ -4,9 +4,9 @@ import RoutesApp from "./routes";
 
 const App = () => {
     return (
-            <ThemeProvider theme={theme}>
-                <RoutesApp />
-            </ThemeProvider>
+        <ThemeProvider theme={theme}>
+            <RoutesApp />
+        </ThemeProvider>
     );
 }
 export default App;
