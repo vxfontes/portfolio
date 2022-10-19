@@ -14,31 +14,36 @@ const styles = makeStyles((theme: Theme) =>
             flexDirection: 'row-reverse'
         },
 
+        hello: {
+            [theme.breakpoints.down('xs')]: {
+                marginLeft: 4
+            },
+        },
+
         typo: {
             fontFamily: 'Roboto',
             textTransform: 'inherit'
         },
 
         content: {
+            marginLeft: 100,
+            [theme.breakpoints.down('md')]: {
+                marginLeft: 50,
+            },
             [theme.breakpoints.down('xs')]: {
                 marginTop: -100,
+                marginLeft: 0,
             },
         },
         
         principalText: {
             marginTop: '0.5em',
-            marginBottom: '0.2em'
-        },
+            marginBottom: '0.2em',
+            [theme.breakpoints.down('xs')]: {
+                textAlign: 'center',
 
-        buttons: {
-            justifyContent: 'normal',
-            [theme.breakpoints.down('lg')]: {
-                justifyContent: 'left',
             },
-            [theme.breakpoints.down('md')]: {
-                justifyContent: 'center',
-            },
-        }
+        },
     })
 );
 

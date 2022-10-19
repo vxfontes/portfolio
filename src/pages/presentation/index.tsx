@@ -12,19 +12,19 @@ const Presentation = () => {
             <Grid item xl={5} lg={5} md={6} sm={6} xs={12}>
                 <NormalAvatar />
             </Grid>
-            <Grid item xl={6} lg={7} md={6} sm={6} xs={9}>
-                <Grid className={classes.content} container direction='row' justifyContent="center" alignItems="center">
-                    <Grid className={classes.principalText} item lg={8} md={10} sm={10} xs={12}>
-                        <Typography variant='h6' color='secondary'>
+            <Grid item xl={7} lg={7} md={6} sm={6} xs={9}>
+                <Grid className={classes.content} container direction='row' justifyContent="center" alignItems="center" spacing={1}>
+                    <Grid className={classes.principalText} item xl={8} lg={9} md={10} sm={10} xs={12}>
+                        <Typography className={classes.hello} variant='h6' color='secondary' align='left'>
                             Hello, I'm
                         </Typography>
                         <Typography variant='h2' color='secondary'>
                             Vanessa Fontes
                         </Typography>
                     </Grid>
-                    <Grid item lg={8} md={12} sm={12} xs={12}>
-                        <Grid className={classes.buttons} container direction='row' alignItems="center" spacing={1}>
-                            <Grid item xl={7} lg={6} md={6} sm={10} xs={12}>
+                    <Grid item xl={8} lg={8} md={10} sm={11} xs={12}>
+                        <Grid container direction='row' justifyContent='center' alignItems="center" spacing={1}>
+                            <Grid item xl={5} lg={7} md={7} sm={10} xs={11}>
                                 <Button className={classes.typo} variant="outlined" color='secondary' fullWidth>
                                     <Typography variant='h6'>
                                         Download Resume
@@ -32,7 +32,7 @@ const Presentation = () => {
                                     <ArrowForward style={{ marginLeft: '1vw' }} />
                                 </Button>
                             </Grid>
-                            <Grid item xl={4} lg={6} md={4} sm={10} xs={12}>
+                            <Grid item xl={4} lg={5} md={4} sm={10} xs={11}>
                                 <Button className={classes.typo} variant="contained" color="primary" fullWidth>
                                     <Typography variant='h6'>
                                         Contact Me

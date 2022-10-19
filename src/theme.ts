@@ -32,18 +32,18 @@ const theme = createTheme({
 
 theme.typography.h2 = {
     fontFamily: 'Roboto',
-    fontSize: 90,
+    fontSize: 120,
     [theme.breakpoints.only('xl')]: {
-        fontSize: 120,
+        fontSize: 116,
     },
     [theme.breakpoints.down('lg')]: {
-        fontSize: 86,
+        fontSize: 88,
     },
     [theme.breakpoints.down('md')]: {
         fontSize: 65,
     },
     [theme.breakpoints.down('sm')]: {
-        fontSize: 47,
+        fontSize: 49,
     },
     [theme.breakpoints.down('xs')]: {
         fontSize: 44,
@@ -61,10 +61,10 @@ theme.typography.h6 = {
         fontSize: 21,
     },
     [theme.breakpoints.down('sm')]: {
-        fontSize: 18,
+        fontSize: 19,
     },
     [theme.breakpoints.down('xs')]: {
-        fontSize: 18,
+        fontSize: 19,
     },
 }
 
