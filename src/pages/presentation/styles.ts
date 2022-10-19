@@ -18,9 +18,9 @@ const styles = makeStyles((theme: Theme) =>
         },
 
         content: {
-            // display: 'block',
-            // textAlign:  'center',
-            // margin: 'auto'
+            [theme.breakpoints.down('xs')]: {
+                marginTop: -100,
+            },
         },
         
         principalText: {
