@@ -1,4 +1,5 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core';
+import bgTexture from '../../assets/image/bgTexture.svg'
 
 const styles = makeStyles((theme: Theme) =>
 
@@ -9,6 +10,7 @@ const styles = makeStyles((theme: Theme) =>
             margin: 0,
             padding: 0,
             backgroundColor: theme.palette.mybackgroundColor?.main,
+            backgroundImage: `url(${bgTexture})`,
             flexDirection: 'row-reverse'
         },
 
