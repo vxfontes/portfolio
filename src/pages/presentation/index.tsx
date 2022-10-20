@@ -1,4 +1,4 @@
-import { Button, Grid, Typography, Box } from '@material-ui/core';
+import { Button, Grid, Typography } from '@material-ui/core';
 import { ArrowForward } from '@material-ui/icons';
 
 import NormalAvatar from '../../components/avatars/normalAvatar';
