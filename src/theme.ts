@@ -25,7 +25,7 @@ const theme = createTheme({
         mybackgroundColor: {
             light: "#8d6ebf",
             main: "#372554",
-            dark: "#372554",
+            dark: "#463366",
             contrastText: 'white',
         },
         secondary: {
@@ -38,6 +38,26 @@ const theme = createTheme({
         fontFamily: 'Roboto',
     }
 })
+
+theme.typography.h4 = {
+    fontFamily: 'Roboto',
+    fontSize: 70,
+    [theme.breakpoints.only('xl')]: {
+        fontSize: 70,
+    },
+    [theme.breakpoints.down('lg')]: {
+        fontSize: 56,
+    },
+    [theme.breakpoints.down('md')]: {
+        fontSize: 50,
+    },
+    [theme.breakpoints.down('sm')]: {
+        fontSize: 40,
+    },
+    [theme.breakpoints.down('xs')]: {
+        fontSize: 30,
+    },
+}
 
 theme.typography.h2 = {
     fontFamily: 'Roboto',
