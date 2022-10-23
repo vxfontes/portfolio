@@ -59,6 +59,26 @@ theme.typography.h4 = {
     },
 }
 
+theme.typography.h5 = {
+    fontFamily: 'Roboto',
+    fontSize: 70,
+    [theme.breakpoints.only('xl')]: {
+        fontSize: 40,
+    },
+    [theme.breakpoints.down('lg')]: {
+        fontSize: 30,
+    },
+    [theme.breakpoints.down('md')]: {
+        fontSize: 20,
+    },
+    [theme.breakpoints.down('sm')]: {
+        fontSize: 40,
+    },
+    [theme.breakpoints.down('xs')]: {
+        fontSize: 30,
+    },
+}
+
 theme.typography.h2 = {
     fontFamily: 'Roboto',
     fontSize: 120,
@@ -79,6 +99,26 @@ theme.typography.h2 = {
     },
 }
 
+theme.typography.body2 = {
+    fontFamily: 'Roboto',
+    fontSize: 32,
+    [theme.breakpoints.only('xl')]: {
+        fontSize: 24,
+    },
+    [theme.breakpoints.down('lg')]: {
+        fontSize: 17,
+    },
+    [theme.breakpoints.down('md')]: {
+        fontSize: 13,
+    },
+    [theme.breakpoints.down('sm')]: {
+        fontSize: 14,
+    },
+    [theme.breakpoints.down('xs')]: {
+        fontSize: 13,
+    },
+}
+
 theme.typography.h6 = {
     fontFamily: 'Roboto',
     fontWeight: 'lighter',
@@ -87,7 +127,7 @@ theme.typography.h6 = {
         fontSize: 23,
     },
     [theme.breakpoints.down('md')]: {
-        fontSize: 21,
+        fontSize: 20,
     },
     [theme.breakpoints.down('sm')]: {
         fontSize: 19,

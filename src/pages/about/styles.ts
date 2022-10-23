@@ -14,7 +14,10 @@ const styles = makeStyles((theme: Theme) =>
         
         image: {
             borderBottom: "3px solid #000000",
-            [theme.breakpoints.only('sm')] : {
+            [theme.breakpoints.only('xs')] : {
+                borderBottom: "none",
+            },
+            [theme.breakpoints.down('sm')] : {
                 height: '500px'
             },
             [theme.breakpoints.up('lg')] : {
@@ -38,7 +41,7 @@ const styles = makeStyles((theme: Theme) =>
                 padding: '10px 14px 14px 14px',
             },
             [theme.breakpoints.up('md')]: {
-                fontSize: 26,
+                fontSize: 22,
                 padding: '18px 14px 14px 14px',
             },
             [theme.breakpoints.up('lg')]: {
@@ -73,6 +76,15 @@ const styles = makeStyles((theme: Theme) =>
             },
             borderRadius: '10px',
             padding: '2em',
+        },
+        
+        icon: {
+            // display: 'block',
+            fontSize: 100,
+            justifyContent: 'space-between',
+            [theme.breakpoints.down('lg')] : {
+                fontSize: 40,
+            },
         }
     })
 );

@@ -1,6 +1,8 @@
-import { Button, Grid, Typography, Box, Avatar } from '@material-ui/core';
+import { Box, Grid, Typography, useMediaQuery } from '@material-ui/core';
+import AdjustOutlinedIcon from '@material-ui/icons/AdjustOutlined';
 import styles from './styles';
 import me from '../../assets/image/me.png';
+import theme from '../../theme';
 
 interface Props {
     language: string,
@@ -8,6 +10,7 @@ interface Props {
 
 const About = (get: Props) => {
     const language = get.language;
+    const showData = useMediaQuery(theme.breakpoints.up('md'));
     const classes = styles();
 
     return (
@@ -34,13 +37,40 @@ const About = (get: Props) => {
                             <span style={{ borderBottom: "3px solid #000000", marginRight: '0.22em' }}>About</span> me
                         </Typography>
                         <Typography className={classes.typoText} variant='h6' color='secondary'>
-                            Doing bachelor's degree in exact sciences and technology with terminality in computer engineering. 
-                            I have a high performance returned to achieve or exceed goals and ease of learning. Offering knowledge in 
+                            Doing bachelor's degree in exact sciences and technology with terminality in computer engineering.
+                            I have a high performance returned to achieve or exceed goals and ease of learning. Offering knowledge in
                             technology, exacts and design, with experience in team strategy development.
                         </Typography>
                     </>
                 )}
             </Grid>
+
+            {showData && (
+                <Grid container direction='row' justifyContent='space-between' alignItems="center" xl={8} lg={8} md={8} >
+                    <Box>
+                        <AdjustOutlinedIcon className={classes.icon} color='secondary' />
+                        <Typography color='secondary' variant='h5'>name</Typography>
+                        <Typography color='secondary' variant='body2'>Vanessa Ramos Fontes</Typography>
+                    </Box>
+                    <Box>
+                        <AdjustOutlinedIcon className={classes.icon} color='secondary' />
+                        <Typography color='secondary' variant='h5'>email</Typography>
+                        <Typography color='secondary' variant='body2'>nessa1vane@icloud.com</Typography>
+                    </Box>
+                    <Box>
+                        <AdjustOutlinedIcon className={classes.icon} color='secondary' />
+                        <Typography color='secondary' variant='h5'>cellphone</Typography>
+                        <Typography color='secondary' variant='body2'>+55 (75) 98838-9894</Typography>
+                    </Box>
+                    <Box>
+                        <AdjustOutlinedIcon className={classes.icon} color='secondary' />
+                        <Typography color='secondary' variant='h5'>github</Typography>
+                        <Typography color='secondary' variant='body2'>
+                            <a href='https://github.com/vxfontes' style={{ textDecoration: 'none', color: 'white' }} >vxfontes</a>
+                        </Typography>
+                    </Box>
+                </Grid>
+            )}
         </Grid>
     );
 }
