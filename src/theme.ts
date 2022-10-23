@@ -25,7 +25,7 @@ const theme = createTheme({
         mybackgroundColor: {
             light: "#8d6ebf",
             main: "#372554",
-            dark: "#372554",
+            dark: "#463366",
             contrastText: 'white',
         },
         secondary: {
