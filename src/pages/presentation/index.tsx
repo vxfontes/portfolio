@@ -2,13 +2,11 @@ import { Button, Grid, Typography } from '@material-ui/core';
 import { ArrowForward } from '@material-ui/icons';
 
 import NormalAvatar from '../../components/avatars/normalAvatar';
+import { LanguageProps } from '../../interfaces/languageProps';
 import styles from './styles';
 
-interface Props {
-    language: string,
-}
 
-const Presentation = (get: Props) => {
+const Presentation = (get: LanguageProps) => {
     const language = get.language;
 
     const classes = styles();

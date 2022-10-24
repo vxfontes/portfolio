@@ -3,12 +3,10 @@ import AdjustOutlinedIcon from '@material-ui/icons/AdjustOutlined';
 import styles from './styles';
 import me from '../../assets/image/me.png';
 import theme from '../../theme';
+import { LanguageProps } from '../../interfaces/languageProps';
 
-interface Props {
-    language: string,
-}
 
-const About = (get: Props) => {
+const About = (get: LanguageProps) => {
     const language = get.language;
     const showData = useMediaQuery(theme.breakpoints.up('md'));
     const classes = styles();
