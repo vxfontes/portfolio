@@ -60,11 +60,11 @@ const styles = makeStyles((theme: Theme) =>
             justifyContent: 'flex-start',
             textAlign: 'start',
             [theme.breakpoints.down('xs')] : {
-                marginTop: -80,
+                marginTop: -150,
                 padding: 50,
             },
             [theme.breakpoints.only('sm')] : {
-                marginTop: -350,
+                marginTop: -100,
                 padding: 50,
             },
             [theme.breakpoints.up('md')] : {
@@ -85,6 +85,10 @@ const styles = makeStyles((theme: Theme) =>
             justifyContent: 'space-between',
             [theme.breakpoints.down('lg')] : {
                 fontSize: 40,
+            },
+            [theme.breakpoints.down('sm')] : {
+                fontSize: 40,
+                marginTop: -200
             },
         }
     })

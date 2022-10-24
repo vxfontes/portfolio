@@ -8,7 +8,7 @@ import { LanguageProps } from '../../interfaces/languageProps';
 
 const About = (get: LanguageProps) => {
     const language = get.language;
-    const showData = useMediaQuery(theme.breakpoints.up('md'));
+    const showData = useMediaQuery(theme.breakpoints.up('sm'));
     const classes = styles();
 
     return (
@@ -44,7 +44,7 @@ const About = (get: LanguageProps) => {
             </Grid>
 
             {showData && (
-                <Grid container direction='row' justifyContent='space-between' alignItems="center" xl={8} lg={8} md={8} >
+                <Grid container direction='row' justifyContent='space-between' alignItems="center" xl={8} lg={8} md={8} sm={8} >
                     <Box>
                         <AdjustOutlinedIcon className={classes.icon} color='secondary' />
                         <Typography color='secondary' variant='h5'>name</Typography>
