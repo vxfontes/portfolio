@@ -34,7 +34,7 @@ const styles = makeStyles((theme: Theme) =>
         },
 
         typoText: {
-            textAlign: 'center', 
+            textAlign: 'initial', 
             padding: '14px 14px 14px 14px',
             fontSize: 20,
             [theme.breakpoints.up('sm')]: {
