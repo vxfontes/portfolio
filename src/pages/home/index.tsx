@@ -41,7 +41,9 @@ const Home = () => {
     const handleClose = (e: string) => {
         setLanguage(e);
         setOpen(false);
-        setLoading(true);
+        setTimeout(() => {
+            setLoading(true);
+        }, 1000);
     };
 
     return (
