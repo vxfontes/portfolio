@@ -51,17 +51,19 @@ const Presentation = (get: LanguageProps) => {
                                 </Link>
                             </Grid>
                             <Grid item xl={4} lg={4} md={4} sm={10} xs={11}>
-                                <Button className={classes.typo} variant="contained" color="primary" fullWidth>
-                                    {language === 'portuguese' ? (
-                                        <Typography variant='h6'>
-                                            Contato
-                                        </Typography>
-                                    ) : (
-                                        <Typography variant='h6'>
-                                            Contact Me
-                                        </Typography>
-                                    )}
-                                </Button>
+                                <Link href='https://api.whatsapp.com/send?phone=5575988389894' style={{ textDecoration: 'none', color: 'white' }}>
+                                    <Button className={classes.typo} variant="contained" color="primary" fullWidth>
+                                        {language === 'portuguese' ? (
+                                            <Typography variant='h6'>
+                                                Contato
+                                            </Typography>
+                                        ) : (
+                                            <Typography variant='h6'>
+                                                Contact Me
+                                            </Typography>
+                                        )}
+                                    </Button>
+                                </Link>
                             </Grid>
                         </Grid>
                     </Grid>
