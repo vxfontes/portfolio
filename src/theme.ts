@@ -63,13 +63,13 @@ theme.typography.h4 = {
     fontFamily: 'Roboto',
     fontSize: 70,
     [theme.breakpoints.only('xl')]: {
-        fontSize: 70,
+        fontSize: 60,
     },
     [theme.breakpoints.down('lg')]: {
-        fontSize: 56,
+        fontSize: 50,
     },
     [theme.breakpoints.down('md')]: {
-        fontSize: 50,
+        fontSize: 46,
     },
     [theme.breakpoints.down('sm')]: {
         fontSize: 40,

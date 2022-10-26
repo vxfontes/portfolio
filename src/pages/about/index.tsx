@@ -13,10 +13,10 @@ const About = (get: LanguageProps) => {
 
     return (
         <Grid className={classes.paper} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
-            <Grid item xl={7} lg={5} md={5} sm={5} xs={10}>
+            <Grid item xl={6} lg={5} md={5} sm={5} xs={10}>
                 <img className={classes.image} height="500" src={me} />
             </Grid>
-            <Grid item className={classes.about} xl={7} lg={5} md={5} sm={8} xs={10}>
+            <Grid item className={classes.about} xl={6} lg={5} md={5} sm={8} xs={10}>
                 {language === 'portuguese' ? (
                     <>
                         <Typography className={classes.typoTitle} variant='h4' color='secondary'>

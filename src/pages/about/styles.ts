@@ -39,11 +39,11 @@ const styles = makeStyles((theme: Theme) =>
             fontSize: 20,
             [theme.breakpoints.up('sm')]: {
                 fontSize: 24,
-                padding: '10px 14px 14px 14px',
+                padding: '0px 14px 14px 14px',
             },
             [theme.breakpoints.up('md')]: {
                 fontSize: 22,
-                padding: '18px 14px 14px 14px',
+                padding: '0px 14px 14px 14px',
             },
             [theme.breakpoints.up('lg')]: {
                 fontSize: 32,
@@ -67,13 +67,17 @@ const styles = makeStyles((theme: Theme) =>
                 marginTop: -100,
                 padding: 50,
             },
-            [theme.breakpoints.up('md')] : {
+            [theme.breakpoints.only('md')] : {
                 backgroundColor: theme.palette.mybackgroundColor?.main,
                 marginLeft: 0,
             },
             [theme.breakpoints.up('lg')] : {
                 backgroundColor: theme.palette.mybackgroundColor?.main,
                 marginLeft: 0,
+            },
+            [theme.breakpoints.up('xl')] : {
+                backgroundColor: theme.palette.mybackgroundColor?.main,
+                marginLeft: -200,
             },
             borderRadius: '10px',
             padding: '2em',
