@@ -55,7 +55,7 @@ const Presentation = (get: LanguageProps) => {
                                     <Button className={classes.typo} variant="contained" color="primary" fullWidth>
                                         {language === 'portuguese' ? (
                                             <Typography variant='h6'>
-                                                Contato
+                                                Me Contate
                                             </Typography>
                                         ) : (
                                             <Typography variant='h6'>
