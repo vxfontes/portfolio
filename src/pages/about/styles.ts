@@ -88,7 +88,7 @@ const styles = makeStyles((theme: Theme) =>
             fontSize: 100,
             justifyContent: 'space-between',
             [theme.breakpoints.down('lg')] : {
-                fontSize: 40,
+                fontSize: 45,
             },
             [theme.breakpoints.down('sm')] : {
                 fontSize: 40,
