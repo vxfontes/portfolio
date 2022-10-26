@@ -40,54 +40,54 @@ const Skills = (get: LanguageProps) => {
                     <>
                         <Grid item className={classes.icons} xl={9} lg={10} md={10} sm={12}>
                             <Box>
-                                <img src={javascript} height='90' />
+                                <img src={javascript} alt='javascript' height='90' />
                                 <Typography variant="h6" color='secondary'>JavaScript</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>80%</Typography>
                             </Box>
                             <Box>
-                                <img src={typescript} height='90' />
+                                <img src={typescript} alt='typescript' height='90' />
                                 <Typography variant="h6" color='secondary'>TypeScript</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>75%</Typography>
                             </Box>
                             <Box>
-                                <img src={css} height='90' />
+                                <img src={css} alt='css' height='90' />
                                 <Typography variant="h6" color='secondary'>CSS</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>95%</Typography>
                             </Box>
                             <Box>
-                                <img src={html} height='90' />
+                                <img src={html} alt='html' height='90' />
                                 <Typography variant="h6" color='secondary'>HTML</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>90%</Typography>
                             </Box>
                             <Box>
-                                <img src={git} height='90' />
+                                <img src={git} alt='git' height='90' />
                                 <Typography variant="h6" color='secondary'>Git</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>80%</Typography>
                             </Box>
                         </Grid>
                         <Grid item className={classes.icons} xl={9} lg={10} md={10} sm={12}>
                             <Box>
-                                <img src={java} height='90' />
+                                <img src={java} alt='java' height='90' />
                                 <Typography variant="h6" color='secondary'>Java</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>60%</Typography>
                             </Box>
                             <Box>
-                                <img src={node} height='90' />
+                                <img src={node} alt='nodejs' height='90' />
                                 <Typography variant="h6" color='secondary'>NodeJS</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>65%</Typography>
                             </Box>
                             <Box>
-                                <img src={python} height='90' />
+                                <img src={python} alt='python' height='90' />
                                 <Typography variant="h6" color='secondary'>Python</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>36%</Typography>
                             </Box>
                             <Box>
-                                <img src={react} height='90' />
+                                <img src={react} alt='ReactJS' height='90' />
                                 <Typography variant="h6" color='secondary'>ReactJs</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>90%</Typography>
                             </Box>
                             <Box>
-                                <img src={react} height='90' />
+                                <img src={react} alt='React native' height='90' />
                                 <Typography variant="h6" color='secondary'>React Native</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>45%</Typography>
                             </Box>
@@ -99,60 +99,60 @@ const Skills = (get: LanguageProps) => {
                     <>
                         <Grid item className={classes.icons} xs={12}>
                             <Box>
-                                <img src={javascript} height='60' />
+                                <img src={javascript} alt='javascript' height='60' />
                                 <Typography variant="h6" color='secondary'>JavaScript</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>80%</Typography>
                             </Box>
                             <Box>
-                                <img src={typescript} height='60' />
+                                <img src={typescript} alt='typescript' height='60' />
                                 <Typography variant="h6" color='secondary'>TypeScript</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>75%</Typography>
                             </Box>
                         </Grid>
                         <Grid item className={classes.icons} xs={12}>
                             <Box>
-                                <img src={css} height='60' />
+                                <img src={css} alt='css' height='60' />
                                 <Typography variant="h6" color='secondary'>CSS</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>95%</Typography>
                             </Box>
                             <Box>
-                                <img src={html} height='60' />
+                                <img src={html} alt='html' height='60' />
                                 <Typography variant="h6" color='secondary'>HTML</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>90%</Typography>
                             </Box>
                         </Grid>
                         <Grid item className={classes.icons} xs={12}>
                             <Box>
-                                <img src={git} height='60' />
+                                <img src={git} alt='git' height='60' />
                                 <Typography variant="h6" color='secondary'>Git</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>80%</Typography>
                             </Box>
                             <Box>
-                                <img src={java} height='60' />
+                                <img src={java} alt='java' height='60' />
                                 <Typography variant="h6" color='secondary'>Java</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>60%</Typography>
                             </Box>
                         </Grid>
                         <Grid item className={classes.icons} xs={12}>
                             <Box>
-                                <img src={node} height='60' />
+                                <img src={node} alt='nodejs' height='60' />
                                 <Typography variant="h6" color='secondary'>NodeJS</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>65%</Typography>
                             </Box>
                             <Box>
-                                <img src={python} height='60' />
+                                <img src={python} alt='pyhton' height='60' />
                                 <Typography variant="h6" color='secondary'>Python</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>36%</Typography>
                             </Box>
                         </Grid>
                         <Grid item className={classes.icons} xs={12}>
                             <Box>
-                                <img src={react} height='60' />
+                                <img src={react} alt='ReactJS' height='60' />
                                 <Typography variant="h6" color='secondary'>ReactJs</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>90%</Typography>
                             </Box>
                             <Box>
-                                <img src={react} height='60' />
+                                <img src={react} alt='React native' height='60' />
                                 <Typography variant="h6" color='secondary'>React<br />Native</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>45%</Typography>
                             </Box>
