@@ -41,12 +41,11 @@ const theme = createTheme({
 
 theme.typography.h2 = {
     fontFamily: 'Roboto',
-    fontSize: 120,
     [theme.breakpoints.only('xl')]: {
-        fontSize: 115,
+        fontSize: 95,
     },
     [theme.breakpoints.down('lg')]: {
-        fontSize: 82,
+        fontSize: 80,
     },
     [theme.breakpoints.down('md')]: {
         fontSize: 64,
@@ -81,9 +80,8 @@ theme.typography.h4 = {
 
 theme.typography.h5 = {
     fontFamily: 'Roboto',
-    fontSize: 70,
     [theme.breakpoints.only('xl')]: {
-        fontSize: 38,
+        fontSize: 34,
     },
     [theme.breakpoints.down('lg')]: {
         fontSize: 24,
@@ -102,7 +100,7 @@ theme.typography.h5 = {
 theme.typography.h6 = {
     fontFamily: 'Roboto',
     fontWeight: 'lighter',
-    fontSize: 32,
+    fontSize: 28,
     [theme.breakpoints.down('lg')]: {
         fontSize: 24,
     },

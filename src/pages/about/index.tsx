@@ -44,7 +44,7 @@ const About = (get: LanguageProps) => {
             </Grid>
 
             {showData && (
-                <Grid container direction='row' justifyContent='space-between' alignItems="center" xl={8} lg={8} md={8} sm={8} >
+                <Grid style={{ marginTop: '2vh' }} container direction='row' justifyContent='space-between' alignItems="center" xl={8} lg={8} md={8} sm={8} >
                     <Box>
                         <AdjustOutlinedIcon className={classes.icon} color='secondary' />
                         <Typography color='secondary' variant='h5'>name</Typography>
@@ -64,7 +64,7 @@ const About = (get: LanguageProps) => {
                         <AdjustOutlinedIcon className={classes.icon} color='secondary' />
                         <Typography color='secondary' variant='h5'>github</Typography>
                         <Typography variant='body2' style={{ color: '#b8b8b89e' }}>
-                            <a href='https://github.com/vxfontes' style={{ textDecoration: 'none', color: 'white' }} >vxfontes</a>
+                            <a href='https://github.com/vxfontes' style={{ textDecoration: 'none', color: '#b8b8b89e' }} >vxfontes</a>
                         </Typography>
                     </Box>
                 </Grid>

@@ -29,7 +29,7 @@ const styles = makeStyles((theme: Theme) =>
         typoTitle: {
             display: 'flex', 
             textAlign: 'left', 
-            padding: '5px 0 0 14px',
+            padding: '5px 0 15px 14px',
             fontFamily: 'Roboto'
         },
 
@@ -50,7 +50,7 @@ const styles = makeStyles((theme: Theme) =>
                 padding: '20px 14px 14px 14px',
             },
             [theme.breakpoints.up('xl')]: {
-                fontSize: 36,
+                fontSize: 32,
                 padding: '20px 14px 14px 14px',
             },
         },
