@@ -48,22 +48,22 @@ const About = (get: LanguageProps) => {
                     <Box>
                         <AdjustOutlinedIcon className={classes.icon} color='secondary' />
                         <Typography color='secondary' variant='h5'>name</Typography>
-                        <Typography color='secondary' variant='body2'>Vanessa Ramos Fontes</Typography>
+                        <Typography variant='body2' style={{ color: '#b8b8b89e' }}>Vanessa Ramos Fontes</Typography>
                     </Box>
                     <Box>
                         <AdjustOutlinedIcon className={classes.icon} color='secondary' />
                         <Typography color='secondary' variant='h5'>email</Typography>
-                        <Typography color='secondary' variant='body2'>nessa1vane@icloud.com</Typography>
+                        <Typography variant='body2' style={{ color: '#b8b8b89e' }}>nessa1vane@icloud.com</Typography>
                     </Box>
                     <Box>
                         <AdjustOutlinedIcon className={classes.icon} color='secondary' />
                         <Typography color='secondary' variant='h5'>cellphone</Typography>
-                        <Typography color='secondary' variant='body2'>+55 (75) 98838-9894</Typography>
+                        <Typography variant='body2' style={{ color: '#b8b8b89e' }}>+55 (75) 98838-9894</Typography>
                     </Box>
                     <Box>
                         <AdjustOutlinedIcon className={classes.icon} color='secondary' />
                         <Typography color='secondary' variant='h5'>github</Typography>
-                        <Typography color='secondary' variant='body2'>
+                        <Typography variant='body2' style={{ color: '#b8b8b89e' }}>
                             <a href='https://github.com/vxfontes' style={{ textDecoration: 'none', color: 'white' }} >vxfontes</a>
                         </Typography>
                     </Box>

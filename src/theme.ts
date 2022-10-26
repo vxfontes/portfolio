@@ -80,21 +80,22 @@ theme.typography.h4 = {
 }
 
 theme.typography.h5 = {
+    fontFamily: 'Roboto',
     fontSize: 70,
     [theme.breakpoints.only('xl')]: {
-        fontSize: 40,
+        fontSize: 38,
     },
     [theme.breakpoints.down('lg')]: {
-        fontSize: 26,
+        fontSize: 24,
     },
     [theme.breakpoints.down('md')]: {
-        fontSize: 20,
+        fontSize: 18,
     },
     [theme.breakpoints.down('sm')]: {
-        fontSize: 20,
+        fontSize: 18,
     },
     [theme.breakpoints.down('xs')]: {
-        fontSize: 15,
+        fontSize: 16,
     },
 }
 
