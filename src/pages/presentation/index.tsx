@@ -1,14 +1,12 @@
-import { Button, Grid, Typography } from '@material-ui/core';
+import { Button, Grid, Link, Typography } from '@material-ui/core';
 import { ArrowForward } from '@material-ui/icons';
 
 import NormalAvatar from '../../components/avatars/normalAvatar';
+import { LanguageProps } from '../../interfaces/languageProps';
 import styles from './styles';
 
-interface Props {
-    language: string,
-}
 
-const Presentation = (get: Props) => {
+const Presentation = (get: LanguageProps) => {
     const language = get.language;
 
     const classes = styles();
@@ -37,31 +35,35 @@ const Presentation = (get: Props) => {
                     <Grid item xl={8} lg={7} md={9} sm={12} xs={12}>
                         <Grid container className={classes.justify} direction='row' spacing={1}>
                             <Grid item xl={6} lg={7} md={7} sm={10} xs={11}>
-                                <Button className={classes.typo} variant="outlined" color='secondary' fullWidth>
-                                    {language === 'portuguese' ? (
-                                        <Typography variant='h6'>
-                                            Baixar currículo
-                                        </Typography>
-                                    ) : (
-                                        <Typography variant='h6'>
-                                            Download Resume
-                                        </Typography>
-                                    )}
-                                    <ArrowForward style={{ marginLeft: '1vw' }} />
-                                </Button>
+                                <Link href='https://bit.ly/curriculovxfontes' style={{ textDecoration: 'none', color: 'white' }}>
+                                    <Button className={classes.typo} variant="outlined" color='secondary' fullWidth>
+                                        {language === 'portuguese' ? (
+                                            <Typography variant='h6'>
+                                                Baixar currículo
+                                            </Typography>
+                                        ) : (
+                                            <Typography variant='h6'>
+                                                Download Resume
+                                            </Typography>
+                                        )}
+                                        <ArrowForward style={{ marginLeft: '1vw' }} />
+                                    </Button>
+                                </Link>
                             </Grid>
                             <Grid item xl={4} lg={4} md={4} sm={10} xs={11}>
-                                <Button className={classes.typo} variant="contained" color="primary" fullWidth>
-                                    {language === 'portuguese' ? (
-                                        <Typography variant='h6'>
-                                            Contato
-                                        </Typography>
-                                    ) : (
-                                        <Typography variant='h6'>
-                                            Contact Me
-                                        </Typography>
-                                    )}
-                                </Button>
+                                <Link href='https://api.whatsapp.com/send?phone=5575988389894' style={{ textDecoration: 'none', color: 'white' }}>
+                                    <Button className={classes.typo} variant="contained" color="primary" fullWidth>
+                                        {language === 'portuguese' ? (
+                                            <Typography variant='h6'>
+                                                Contato
+                                            </Typography>
+                                        ) : (
+                                            <Typography variant='h6'>
+                                                Contact Me
+                                            </Typography>
+                                        )}
+                                    </Button>
+                                </Link>
                             </Grid>
                         </Grid>
                     </Grid>

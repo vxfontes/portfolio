@@ -23,9 +23,27 @@ const styles = makeStyles((theme: Theme) =>
             height: '100vh',
             width: '100vw',
         },
-
+        
         options: {
             display: 'flex',
+            justifyContent: 'center',
+        },
+        
+        box: {
+            display: 'block',
+            textAlign: 'center',
+            position: 'relative',
+            marginTop: '30vh',
+        },
+
+        bar: {
+            marginLeft: 12,
+            [theme.breakpoints.down('sm')]: {
+                marginLeft: 0,
+                marginTop: 10,
+                fontSize: 45,
+                fontWeight: 'bold'
+            }
         }
     })
 );

@@ -39,6 +39,26 @@ const theme = createTheme({
     }
 })
 
+theme.typography.h2 = {
+    fontFamily: 'Roboto',
+    fontSize: 120,
+    [theme.breakpoints.only('xl')]: {
+        fontSize: 120,
+    },
+    [theme.breakpoints.down('lg')]: {
+        fontSize: '5.6em',
+    },
+    [theme.breakpoints.down('md')]: {
+        fontSize: 70,
+    },
+    [theme.breakpoints.down('sm')]: {
+        fontSize: 49,
+    },
+    [theme.breakpoints.down('xs')]: {
+        fontSize: 44,
+    },
+}
+
 theme.typography.h4 = {
     fontFamily: 'Roboto',
     fontSize: 70,
@@ -72,30 +92,28 @@ theme.typography.h5 = {
         fontSize: 20,
     },
     [theme.breakpoints.down('sm')]: {
-        fontSize: 40,
+        fontSize: 20,
     },
     [theme.breakpoints.down('xs')]: {
-        fontSize: 30,
+        fontSize: 15,
     },
 }
 
-theme.typography.h2 = {
+theme.typography.h6 = {
     fontFamily: 'Roboto',
-    fontSize: 120,
-    [theme.breakpoints.only('xl')]: {
-        fontSize: 120,
-    },
+    fontWeight: 'lighter',
+    fontSize: 32,
     [theme.breakpoints.down('lg')]: {
-        fontSize: '5.6em',
+        fontSize: 23,
     },
     [theme.breakpoints.down('md')]: {
-        fontSize: 70,
+        fontSize: 20,
     },
     [theme.breakpoints.down('sm')]: {
-        fontSize: 49,
+        fontSize: 19,
     },
     [theme.breakpoints.down('xs')]: {
-        fontSize: 44,
+        fontSize: 19,
     },
 }
 
@@ -116,24 +134,6 @@ theme.typography.body2 = {
     },
     [theme.breakpoints.down('xs')]: {
         fontSize: 13,
-    },
-}
-
-theme.typography.h6 = {
-    fontFamily: 'Roboto',
-    fontWeight: 'lighter',
-    fontSize: 32,
-    [theme.breakpoints.down('lg')]: {
-        fontSize: 23,
-    },
-    [theme.breakpoints.down('md')]: {
-        fontSize: 20,
-    },
-    [theme.breakpoints.down('sm')]: {
-        fontSize: 19,
-    },
-    [theme.breakpoints.down('xs')]: {
-        fontSize: 19,
     },
 }
 

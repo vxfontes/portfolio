@@ -10,6 +10,7 @@ const styles = makeStyles((theme: Theme) =>
             padding: 0,
             backgroundColor: theme.palette.mybackgroundColor?.main,
             textAlign: 'center',
+            boxShadow: '0px -9px 28px -10px rgba(0,0,0,0.78)'
         },
         
         image: {
@@ -33,7 +34,7 @@ const styles = makeStyles((theme: Theme) =>
         },
 
         typoText: {
-            textAlign: 'justify', 
+            textAlign: 'initial', 
             padding: '14px 14px 14px 14px',
             fontSize: 20,
             [theme.breakpoints.up('sm')]: {
@@ -59,11 +60,11 @@ const styles = makeStyles((theme: Theme) =>
             justifyContent: 'flex-start',
             textAlign: 'start',
             [theme.breakpoints.down('xs')] : {
-                marginTop: -80,
+                marginTop: -150,
                 padding: 50,
             },
             [theme.breakpoints.only('sm')] : {
-                marginTop: -350,
+                marginTop: -100,
                 padding: 50,
             },
             [theme.breakpoints.only('md')] : {
@@ -88,6 +89,10 @@ const styles = makeStyles((theme: Theme) =>
             justifyContent: 'space-between',
             [theme.breakpoints.down('lg')] : {
                 fontSize: 40,
+            },
+            [theme.breakpoints.down('sm')] : {
+                fontSize: 40,
+                marginTop: -200
             },
         }
     })

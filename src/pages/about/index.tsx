@@ -3,14 +3,12 @@ import AdjustOutlinedIcon from '@material-ui/icons/AdjustOutlined';
 import styles from './styles';
 import me from '../../assets/image/me.png';
 import theme from '../../theme';
+import { LanguageProps } from '../../interfaces/languageProps';
 
-interface Props {
-    language: string,
-}
 
-const About = (get: Props) => {
+const About = (get: LanguageProps) => {
     const language = get.language;
-    const showData = useMediaQuery(theme.breakpoints.up('md'));
+    const showData = useMediaQuery(theme.breakpoints.up('sm'));
     const classes = styles();
 
     return (
@@ -46,7 +44,7 @@ const About = (get: Props) => {
             </Grid>
 
             {showData && (
-                <Grid container direction='row' justifyContent='space-between' alignItems="center" xl={8} lg={10} md={9} >
+                <Grid container direction='row' justifyContent='space-between' alignItems="center" xl={8} lg={8} md={8} sm={8} >
                     <Box>
                         <AdjustOutlinedIcon className={classes.icon} color='secondary' />
                         <Typography color='secondary' variant='h5'>name</Typography>

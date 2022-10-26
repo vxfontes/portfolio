@@ -69,7 +69,7 @@ const Home = () => {
 
             {loading ? (
                 <>
-                    <MyAppBar />
+                    <MyAppBar language={language} />
                     <Presentation language={language} />
                     <About language={language} />
                 </>
