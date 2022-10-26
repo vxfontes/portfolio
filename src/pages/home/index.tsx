@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import MyAppBar from "../../components/appBar"
 import About from "../about";
 import Presentation from "../presentation";
+import Skills from "../skills";
 
 const Transition = React.forwardRef(function Transition(
     props: TransitionProps & { children?: React.ReactElement<any, any> },
@@ -72,6 +73,7 @@ const Home = () => {
                     <MyAppBar language={language} />
                     <Presentation language={language} />
                     <About language={language} />
+                    <Skills language={language} />
                 </>
             ) : (
                 <Box className={classes.carregar}>
