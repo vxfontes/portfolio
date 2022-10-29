@@ -1,4 +1,5 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core';
+import asfalttexture from '../../assets/image/asfalttexture.png';
 
 const styles = makeStyles((theme: Theme) =>
     createStyles({
@@ -8,9 +9,8 @@ const styles = makeStyles((theme: Theme) =>
             margin: 0,
             padding: 0,
             backgroundColor: theme.palette.mybackgroundColor?.main,
-            textAlign: 'center',
+            backgroundImage: `url(${asfalttexture})`,
         },
-
     })
 );
 
