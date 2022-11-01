@@ -7,6 +7,8 @@ import About from "../about";
 import Presentation from "../presentation";
 import Projects from "../projects";
 import Skills from "../skills";
+import { dataBaseApp } from "../../firebase";
+import { addDoc, collection, doc, setDoc } from "firebase/firestore";
 
 const Transition = React.forwardRef(function Transition(
     props: TransitionProps & { children?: React.ReactElement<any, any> },
@@ -40,9 +42,21 @@ const Home = () => {
     const [open, setOpen] = React.useState(true);
     const [loading, setLoading] = React.useState(false);
 
+    async function enviandoValores(value: string) {
+        try {
+            await setDoc(doc(dataBaseApp, "language", "lang"), {
+                language: value,
+            });
+        } catch (e) {
+            console.error("Error adding document: ", e);
+            alert("Erro ao salvar linguagem, reinicie e tente novamente")
+        }
+    }
+
     const handleClose = (e: string) => {
         setLanguage(e);
         setOpen(false);
+        enviandoValores(e);
         setTimeout(() => {
             setLoading(true);
         }, 1000);
