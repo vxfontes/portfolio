@@ -12,7 +12,7 @@
 /build
 
 # key
-/src/utils/firebaseKey
+/src/utils/firebaseKey.ts
 
 # misc
 .DS_Store
