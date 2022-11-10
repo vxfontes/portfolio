@@ -1,0 +1,32 @@
+[
+    {
+        "title": "JM System",
+        "descriptionPT": "Sistema para uma empresa de paletes da Bahia, onde gera-se recibos para comissão de funcionário e vendas além do cadastro de compras e despesas. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
+        "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
+        "finish": true
+    },
+    {
+        "title": "Clone Netflix",
+        "descriptionPT": "Sistema para umaementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
+        "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
+        "finish": false
+    },
+    {
+        "title": "JM System",
+        "descriptionPT": "Sistema para uma empresom as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
+        "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
+        "finish": false
+    },
+    {
+        "title": "JM System",
+        "descriptionPT": "Sistema para uma empre de compras e despesas. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
+        "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
+        "finish": false
+    },
+    {
+        "title": "JM System",
+        "descriptionPT": "Sistema para uma empresa de paletes da Bahia, onde gera-se recibos para comissão de funcionário e vendas além do cadastro de compras e despesas. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
+        "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
+        "finish": true
+    }
+]

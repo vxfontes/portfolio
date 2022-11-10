@@ -8,15 +8,23 @@ const styles = makeStyles((theme: Theme) =>
             minHeight: '100vh',
             height: '100%',
             margin: 0,
-            padding: 0,
+            padding: 30,
             backgroundColor: theme.palette.mybackgroundColor?.main,
             backgroundImage: `url(${asfalttexture})`,
         },
-        
+
+        inside: {
+            width: '90%',
+            minHeight: '100vh',
+            height: '100%',
+        },
+
         page: {
-            width: '100%',
+            width: '90%',
             height: '100%',
             margin: 0,
+            paddingTop: 8,
+            paddingBottom: 10,
             padding: 4,
             borderRadius: '15px',
             backgroundColor: theme.palette.mybackgroundColor?.dark,
@@ -30,15 +38,17 @@ const styles = makeStyles((theme: Theme) =>
             justifyContent: 'space-between',
             color: theme.palette.mybackgroundColor?.main,
         },
-        
+
         progressText: {
             fontWeight: 'bold',
             color: theme.palette.mybackgroundColor?.main,
+            width: '100%'
         },
-        
+
         chip: {
-            marginRight: 5
-        }
+            marginRight: 5,
+            marginBottom: 10,
+        },
 
     })
 );
