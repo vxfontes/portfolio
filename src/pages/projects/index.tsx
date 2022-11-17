@@ -87,11 +87,15 @@ const Projects = (get: LanguageProps) => {
                 <Grid className={classes.inside} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
                     <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
                         {language === 'english' ? (
-                            <Typography style={{ paddingTop: '5vh' }} variant='h2' color='secondary'>Proj
-                            <span style={{ borderBottom: "5px solid #ffffffe0", paddingRight: '0.26em' }}>ects</span>
+                            <Typography style={{ paddingTop: '5vh' }} variant='h2' color='secondary'>
+                                <span className={classes.colorProj}>Proj</span>
+                                <span style={{ borderBottom: "5px solid #ffffffec", paddingRight: '0.26em' }}>ects</span>
                             </Typography>
                         ) : (
-                            <Typography style={{ paddingTop: '5vh' }} variant='h2' color='secondary'>Projetos</Typography>
+                            <Typography style={{ paddingTop: '5vh' }} variant='h2' color='secondary'>
+                                <span className={classes.colorProj}>Proj</span>
+                                <span style={{ borderBottom: "5px solid #ffffffec", paddingRight: '0.26em' }}>etos</span>
+                            </Typography>
                         )}
                     </Grid>
                     {principalData.map((project) =>
@@ -102,18 +106,18 @@ const Projects = (get: LanguageProps) => {
                         </Grid>
                     )}
                     <Grid item xl={4} lg={4} md={4} sm={11} xs={11}>
-                        <Link href="#" underline="none" onClick={preventDefault}>
-                            <Grid className={classes.page} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
-                                <Box className={classes.box}>
+                        <Grid className={classes.pageBox} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
+                            <Grid className={classes.box}>
+                                <Link href="#" underline="none" onClick={preventDefault}>
                                     <span className={classes.span}>+</span>
                                     {language === 'english' ? (
                                         <Typography variant='body1' color='secondary'>More</Typography>
                                     ) : (
                                         <Typography variant='body1' color='secondary'>Ver mais</Typography>
                                     )}
-                                </Box>
+                                </Link>
                             </Grid>
-                        </Link>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>

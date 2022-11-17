@@ -31,6 +31,17 @@ const styles = makeStyles((theme: Theme) =>
             backgroundColor: theme.palette.mybackgroundColor?.dark,
         },
 
+        pageBox: {
+            width: '95%',
+            height: '100%',
+            margin: 0,
+            marginTop: -100,
+            paddingTop: 8,
+            paddingBottom: 10,
+            padding: 4,
+            borderRadius: '15px',
+        },
+
         progressBar: {
             backgroundColor: 'white',
             borderRadius: '10px',
@@ -56,10 +67,14 @@ const styles = makeStyles((theme: Theme) =>
             fontSize: 120,
             color: 'white',
         },
+
+        colorProj: {
+            color: theme.palette.mybackgroundColor?.light,
+        },
         
         box: {
-            paddingTop: '8vh',
-            paddingBottom: '7vh',
+            paddingTop: '3vh',
+            paddingBottom: '3vh',
             alignContent: 'center',
             alignItems: 'center',
             justifyContent: 'center',
