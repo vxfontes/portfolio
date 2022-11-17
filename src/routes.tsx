@@ -6,7 +6,7 @@ const RoutesApp = () => {
     return (
         <Router>
             <Routes>
-                <Route path='/portfolio' element={<Home />}/>
+                <Route path='/' element={<Home />}/>
                 <Route path='/breakpoints' element={<TestBreakpoint />}/>
             </Routes>
         </Router>
