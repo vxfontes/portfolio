@@ -6,8 +6,7 @@ import { Menu, Close } from '@material-ui/icons';
 // local
 import styles from './styles';
 import theme from "../../theme";
-import { LanguageProps } from '../../interfaces/languageProps';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 
 const Transition = React.forwardRef(function Transition(
@@ -17,8 +16,9 @@ const Transition = React.forwardRef(function Transition(
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const MyAppBar = (get: LanguageProps) => {
-    const language = get.language;
+const MyAppBar = () => {
+    const params = useParams();
+    const language = params.language;
 
     const classes = styles();
     const [open, setOpen] = useState(false);
@@ -91,9 +91,11 @@ const MyAppBar = (get: LanguageProps) => {
                                     <>
                                         {data.english.map((type: string) => {
                                             return (
-                                                <Typography className={classes.bar} variant="h6" color='secondary'>
-                                                    {type}
-                                                </Typography>
+                                                <Link to={`/${type.toLowerCase()}/${language}`} style={{ textDecoration: 'none', color: 'white' }}>
+                                                    <Typography className={classes.bar} variant="h6" color='secondary'>
+                                                        {type}
+                                                    </Typography>
+                                                </Link>
                                             )
                                         })}
                                     </>
@@ -101,9 +103,11 @@ const MyAppBar = (get: LanguageProps) => {
                                     <>
                                         {data.portuguese.map((type: string) => {
                                             return (
-                                                <Typography className={classes.bar} variant="h6" color='secondary'>
-                                                    {type}
-                                                </Typography>
+                                                <Link to={`/${type.toLowerCase()}/${language}`} style={{ textDecoration: 'none', color: 'white' }}>
+                                                    <Typography className={classes.bar} variant="h6" color='secondary'>
+                                                        {type}
+                                                    </Typography>
+                                                </Link>
                                             )
                                         })}
                                     </>
