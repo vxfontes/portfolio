@@ -20,9 +20,10 @@ const styles = makeStyles((theme: Theme) =>
         },
 
         page: {
-            width: '90%',
+            width: '95%',
             height: '100%',
             margin: 0,
+            marginTop: -100,
             paddingTop: 8,
             paddingBottom: 10,
             padding: 4,
@@ -33,10 +34,11 @@ const styles = makeStyles((theme: Theme) =>
         progressBar: {
             backgroundColor: 'white',
             borderRadius: '10px',
-            padding: 12,
+            padding: 9,
             display: 'flex',
             justifyContent: 'space-between',
             color: theme.palette.mybackgroundColor?.main,
+            alignItems: 'center',
         },
 
         progressText: {
@@ -49,6 +51,20 @@ const styles = makeStyles((theme: Theme) =>
             marginRight: 5,
             marginBottom: 10,
         },
+
+        span: {
+            fontSize: 120,
+            color: 'white',
+        },
+        
+        box: {
+            paddingTop: '8vh',
+            paddingBottom: '7vh',
+            alignContent: 'center',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+        }
 
     })
 );

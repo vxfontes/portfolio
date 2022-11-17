@@ -1,31 +1,36 @@
 [
     {
         "title": "JM System",
-        "descriptionPT": "Sistema para uma empresa de paletes da Bahia, onde gera-se recibos para comissão de funcionário e vendas além do cadastro de compras e despesas. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
-        "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
+        "id": 1,
+        "descriptionPT": "Sistema que gera recibos e possui dashboard completo.",
+        "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI", "React Router Dom"],
         "finish": true
     },
     {
         "title": "Clone Netflix",
-        "descriptionPT": "Sistema para umaementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
-        "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
-        "finish": false
+        "id": 2,
+        "descriptionPT": "Imitação da interface principal da netflix utilizando ReactJS.",
+        "tecnologies": ["React JS", "Axios", "React Router Dom", "Cors", "Express", "Bootstrap", "Moongose", "Morgan", "Underscore"],
+        "finish": true
+    },
+    {
+        "title": "To Do React",
+        "id": 3,
+        "descriptionPT": "Lista de tarefas utilizando react e sem a utilização de banco de dados",
+        "tecnologies": ["React JS", "React Icons", "React Router Dom", "Axios", "UUID"],
+        "finish": true
     },
     {
         "title": "JM System",
-        "descriptionPT": "Sistema para uma empresom as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
-        "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
-        "finish": false
-    },
-    {
-        "title": "JM System",
+        "id": 4,
         "descriptionPT": "Sistema para uma empre de compras e despesas. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
         "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
         "finish": false
     },
     {
         "title": "JM System",
-        "descriptionPT": "Sistema para uma empresa de paletes da Bahia, onde gera-se recibos para comissão de funcionário e vendas além do cadastro de compras e despesas. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
+        "id": 5,
+        "descriptionPT": "Sistema para uma empresa de po: lucro bruto, lucro líquido, despesas e outros.",
         "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
         "finish": true
     }
