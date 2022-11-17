@@ -1,14 +1,16 @@
 import { Button, Grid, Link, Typography } from '@material-ui/core';
 import { ArrowForward } from '@material-ui/icons';
+import { useParams } from 'react-router-dom';
 
 import NormalAvatar from '../../components/avatars/normalAvatar';
 import { LanguageProps } from '../../interfaces/languageProps';
 import styles from './styles';
 
 
-const Presentation = (get: LanguageProps) => {
-    const language = get.language;
-
+const Presentation = () => {
+    
+    const params = useParams();
+    const language = params.language;
     const classes = styles();
 
     return (

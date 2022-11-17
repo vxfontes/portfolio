@@ -1,13 +1,15 @@
 import { Box, Grid, Typography, useMediaQuery } from '@material-ui/core';
+import { useParams } from 'react-router-dom';
 import AdjustOutlinedIcon from '@material-ui/icons/AdjustOutlined';
 import styles from './styles';
 import me from '../../assets/image/me.png';
 import theme from '../../theme';
-import { LanguageProps } from '../../interfaces/languageProps';
 
 
-const About = (get: LanguageProps) => {
-    const language = get.language;
+const About = () => {
+    
+    const params = useParams();
+    const language = params.language;
     const showData = useMediaQuery(theme.breakpoints.up('sm'));
     const classes = styles();
 
