@@ -1,4 +1,3 @@
-import { LanguageProps } from "../../interfaces/languageProps";
 import { Box, Grid, Typography, useMediaQuery } from '@material-ui/core';
 import styles from './styles';
 import theme from "../../theme";
