@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { Box, Chip, Grid, Link, Typography } from "@material-ui/core";
-import { LanguageProps } from "../../interfaces/languageProps";
 import DeveloperModeIcon from '@material-ui/icons/DeveloperMode';
 import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import styles from "./styles";
 import data from '../../data/projects.json';
+import { useParams } from 'react-router-dom';
 
 interface ProjectProps {
     title: string,
@@ -30,8 +30,9 @@ const principalData = [
     },
 ]
 
-const Projects = (get: LanguageProps) => {
-    const language = get.language;
+const Projects = () => {
+    const params = useParams();
+    const language = params.language;
     const classes = styles();
 
     const preventDefault = (event: React.SyntheticEvent) => { event.preventDefault(); alert("I'm a button.") };
