@@ -30,10 +30,13 @@ const styles = makeStyles((theme: Theme) =>
         },
         
         box: {
-            display: 'block',
-            textAlign: 'center',
-            position: 'relative',
-            marginTop: '30vh',
+            display: 'flex',
+            [theme.breakpoints.down('sm')]: {
+                display: 'block',
+                textAlign: 'center',
+                position: 'relative',
+                marginTop: '30vh',
+            }
         },
 
         bar: {

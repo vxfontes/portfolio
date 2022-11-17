@@ -2,6 +2,7 @@ import { Box, Button, CircularProgress, Dialog, DialogActions, DialogContent, Di
 import { TransitionProps } from "@material-ui/core/transitions/transition";
 import { createStyles, makeStyles } from "@material-ui/styles";
 import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
 import MyAppBar from "../../components/appBar"
 import About from "../about";
 import Presentation from "../presentation";
@@ -22,7 +23,7 @@ const styles = makeStyles((theme: Theme) =>
         dialog: {
             backgroundColor: theme.palette.mybackgroundColor?.main,
             border: 'none'
-        }, 
+        },
 
         carregar: {
             backgroundColor: theme.palette.mybackgroundColor?.main,
@@ -85,11 +86,7 @@ const Home = () => {
 
             {loading ? (
                 <>
-                    <MyAppBar language={language} />
-                    <Presentation language={language} />
-                    <About language={language} />
-                    <Skills language={language} />
-                    <Projects language={language} />
+                    <Navigate to={`/${language}`} />
                 </>
             ) : (
                 <Box className={classes.carregar}>

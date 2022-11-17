@@ -1,4 +1,3 @@
-import { LanguageProps } from "../../interfaces/languageProps";
 import { Box, Grid, Typography, useMediaQuery } from '@material-ui/core';
 import styles from './styles';
 import theme from "../../theme";
@@ -13,10 +12,13 @@ import typescript from '../../assets/icons/typescript.svg';
 import python from '../../assets/icons/python.svg';
 import react from '../../assets/icons/react-native.svg';
 import node from '../../assets/icons/node-js.svg';
+import { useParams } from "react-router-dom";
 
 
-const Skills = (get: LanguageProps) => {
-    const language = get.language;
+const Skills = () => {
+    const params = useParams();
+    const language = params.language;
+
     const classes = styles();
     const gridGrande = useMediaQuery(theme.breakpoints.up('sm'));
     const gridPequeno = useMediaQuery(theme.breakpoints.only('xs'));
