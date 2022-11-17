@@ -6,7 +6,7 @@ import { Menu, Close } from '@material-ui/icons';
 // local
 import styles from './styles';
 import theme from "../../theme";
-import { LanguageProps } from '../../interfaces/languageProps';
+import { Link, useParams } from 'react-router-dom';
 
 
 const Transition = React.forwardRef(function Transition(
@@ -16,8 +16,9 @@ const Transition = React.forwardRef(function Transition(
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const MyAppBar = (get: LanguageProps) => {
-    const language = get.language;
+const MyAppBar = () => {
+    const params = useParams();
+    const language = params.language;
 
     const classes = styles();
     const [open, setOpen] = useState(false);
@@ -32,6 +33,42 @@ const MyAppBar = (get: LanguageProps) => {
         setOpen(false);
     };
 
+    const data = {
+        "english": [
+            "About", "Skills", "Projects", "Contact"
+        ],
+        "portuguese": [
+            "Sobre", "Habilidades", "Projetos", "Contato"
+        ]
+    }
+
+    const MenuChildren = ({ children }: any) => {
+        if (showMenu === true) {
+            return (
+                <>
+                    <Dialog open={open} onClose={handleClose} fullScreen TransitionComponent={Transition} keepMounted>
+                        <Box className={classes.dialog}>
+                            <IconButton edge='end' aria-label="menu" color="secondary" onClick={handleClose}>
+                                <Close />
+                            </IconButton>
+                            {children}
+                        </Box>
+                    </Dialog>
+                </>
+            )
+        } else if (showOptions === true) {
+            return (
+                <>
+                    {children}
+                </>
+            )
+        } else {
+            return (
+                <></>
+            )
+        }
+    }
+
     return (
         <>
             <AppBar color='transparent' position="fixed" elevation={0}>
@@ -40,43 +77,6 @@ const MyAppBar = (get: LanguageProps) => {
                         <span className={classes.span}>folio.</span>
                     </Typography>
 
-                    {/* opções */}
-                    {showOptions &&
-                        <Box className={classes.options}>
-                            {language === 'english' ? (
-                                <>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        About
-                                    </Typography>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        Skills
-                                    </Typography>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        Projects
-                                    </Typography>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        Contact
-                                    </Typography>
-                                </>
-                            ) : (
-                                <>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        Sobre
-                                    </Typography>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        Habilidades
-                                    </Typography>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        Projetos
-                                    </Typography>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        Contato
-                                    </Typography>
-                                </>
-                            )}
-                        </Box>
-                    }
-
                     {/* menu */}
                     {showMenu && <>
                         <IconButton edge='end' aria-label="menu" color="secondary" onClick={handleOpen}>
@@ -84,48 +84,37 @@ const MyAppBar = (get: LanguageProps) => {
                         </IconButton>
                     </>}
 
-
-                    {/* Dialog */}
-                    <Dialog open={open} onClose={handleClose} fullScreen TransitionComponent={Transition} keepMounted>
-                        <Box className={classes.dialog}>
-                            <IconButton edge='end' aria-label="menu" color="secondary" onClick={handleClose}>
-                                <Close />
-                            </IconButton>
-                            <Box className={classes.options}>
+                    <MenuChildren>
+                        <Box className={classes.options}>
+                            <Box className={classes.box}>
                                 {language === 'english' ? (
-                                <Box className={classes.box}>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            About
-                                        </Typography>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            Skills
-                                        </Typography>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            Projects
-                                        </Typography>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            Contact
-                                        </Typography>
-                                    </Box>
+                                    <>
+                                        {data.english.map((type: string) => {
+                                            return (
+                                                <Link to={`/${type.toLowerCase()}/${language}`} style={{ textDecoration: 'none', color: 'white' }}>
+                                                    <Typography className={classes.bar} variant="h6" color='secondary'>
+                                                        {type}
+                                                    </Typography>
+                                                </Link>
+                                            )
+                                        })}
+                                    </>
                                 ) : (
-                                <Box className={classes.box}>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            Sobre
-                                        </Typography>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            Habilidades
-                                        </Typography>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            Projetos
-                                        </Typography>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            Contato
-                                        </Typography>
-                                    </Box>
+                                    <>
+                                        {data.portuguese.map((type: string) => {
+                                            return (
+                                                <Link to={`/${type.toLowerCase()}/${language}`} style={{ textDecoration: 'none', color: 'white' }}>
+                                                    <Typography className={classes.bar} variant="h6" color='secondary'>
+                                                        {type}
+                                                    </Typography>
+                                                </Link>
+                                            )
+                                        })}
+                                    </>
                                 )}
                             </Box>
                         </Box>
-                    </Dialog>
+                    </MenuChildren>
                 </Toolbar>
             </AppBar>
         </>
