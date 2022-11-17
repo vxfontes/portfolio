@@ -10,8 +10,8 @@ const RoutesApp = () => {
     return (
         <Router>
             <Routes>
-                <Route path='/portfolio' element={<Home />}/>
-                <Route path='/portfolio/:language' element={<CallingPages />}/>
+                <Route path='/' element={<Home />}/>
+                <Route path='/:language' element={<CallingPages />}/>
                 <Route path='/breakpoints' element={<TestBreakpoint />}/>
 
                 {/* ingles */}
