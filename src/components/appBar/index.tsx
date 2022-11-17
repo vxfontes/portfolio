@@ -33,6 +33,15 @@ const MyAppBar = (get: LanguageProps) => {
         setOpen(false);
     };
 
+    const data = {
+        "english": [
+            "About", "Skills", "Projects", "Contact"
+        ],
+        "portuguese": [
+            "Sobre", "Habilidades", "Projetos", "Contato"
+        ]
+    }
+
     const MenuChildren = ({ children }: any) => {
         if (showMenu === true) {
             return (
@@ -77,37 +86,29 @@ const MyAppBar = (get: LanguageProps) => {
 
                     <MenuChildren>
                         <Box className={classes.options}>
-                            {language === 'english' ? (
-                                <Box className={classes.box}>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        About
-                                    </Typography>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        Skills
-                                    </Typography>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        Projects
-                                    </Typography>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        Contact
-                                    </Typography>
-                                </Box>
-                            ) : (
-                                <Box className={classes.box}>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        Sobre
-                                    </Typography>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        Habilidades
-                                    </Typography>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        Projetos
-                                    </Typography>
-                                    <Typography className={classes.bar} variant="h6" color='secondary'>
-                                        Contato
-                                    </Typography>
-                                </Box>
-                            )}
+                            <Box className={classes.box}>
+                                {language === 'english' ? (
+                                    <>
+                                        {data.english.map((type: string) => {
+                                            return (
+                                                <Typography className={classes.bar} variant="h6" color='secondary'>
+                                                    {type}
+                                                </Typography>
+                                            )
+                                        })}
+                                    </>
+                                ) : (
+                                    <>
+                                        {data.portuguese.map((type: string) => {
+                                            return (
+                                                <Typography className={classes.bar} variant="h6" color='secondary'>
+                                                    {type}
+                                                </Typography>
+                                            )
+                                        })}
+                                    </>
+                                )}
+                            </Box>
                         </Box>
                     </MenuChildren>
                 </Toolbar>
