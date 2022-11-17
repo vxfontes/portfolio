@@ -7,6 +7,7 @@ import { Menu, Close } from '@material-ui/icons';
 import styles from './styles';
 import theme from "../../theme";
 import { LanguageProps } from '../../interfaces/languageProps';
+import { Link } from 'react-router-dom';
 
 
 const Transition = React.forwardRef(function Transition(
@@ -32,6 +33,33 @@ const MyAppBar = (get: LanguageProps) => {
         setOpen(false);
     };
 
+    const MenuChildren = ({ children }: any) => {
+        if (showMenu === true) {
+            return (
+                <>
+                    <Dialog open={open} onClose={handleClose} fullScreen TransitionComponent={Transition} keepMounted>
+                        <Box className={classes.dialog}>
+                            <IconButton edge='end' aria-label="menu" color="secondary" onClick={handleClose}>
+                                <Close />
+                            </IconButton>
+                            {children}
+                        </Box>
+                    </Dialog>
+                </>
+            )
+        } else if (showOptions === true) {
+            return (
+                <>
+                    {children}
+                </>
+            )
+        } else {
+            return (
+                <></>
+            )
+        }
+    }
+
     return (
         <>
             <AppBar color='transparent' position="fixed" elevation={0}>
@@ -40,11 +68,17 @@ const MyAppBar = (get: LanguageProps) => {
                         <span className={classes.span}>folio.</span>
                     </Typography>
 
-                    {/* opções */}
-                    {showOptions &&
+                    {/* menu */}
+                    {showMenu && <>
+                        <IconButton edge='end' aria-label="menu" color="secondary" onClick={handleOpen}>
+                            <Menu />
+                        </IconButton>
+                    </>}
+
+                    <MenuChildren>
                         <Box className={classes.options}>
                             {language === 'english' ? (
-                                <>
+                                <Box className={classes.box}>
                                     <Typography className={classes.bar} variant="h6" color='secondary'>
                                         About
                                     </Typography>
@@ -57,9 +91,9 @@ const MyAppBar = (get: LanguageProps) => {
                                     <Typography className={classes.bar} variant="h6" color='secondary'>
                                         Contact
                                     </Typography>
-                                </>
+                                </Box>
                             ) : (
-                                <>
+                                <Box className={classes.box}>
                                     <Typography className={classes.bar} variant="h6" color='secondary'>
                                         Sobre
                                     </Typography>
@@ -72,60 +106,10 @@ const MyAppBar = (get: LanguageProps) => {
                                     <Typography className={classes.bar} variant="h6" color='secondary'>
                                         Contato
                                     </Typography>
-                                </>
+                                </Box>
                             )}
                         </Box>
-                    }
-
-                    {/* menu */}
-                    {showMenu && <>
-                        <IconButton edge='end' aria-label="menu" color="secondary" onClick={handleOpen}>
-                            <Menu />
-                        </IconButton>
-                    </>}
-
-
-                    {/* Dialog */}
-                    <Dialog open={open} onClose={handleClose} fullScreen TransitionComponent={Transition} keepMounted>
-                        <Box className={classes.dialog}>
-                            <IconButton edge='end' aria-label="menu" color="secondary" onClick={handleClose}>
-                                <Close />
-                            </IconButton>
-                            <Box className={classes.options}>
-                                {language === 'english' ? (
-                                <Box className={classes.box}>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            About
-                                        </Typography>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            Skills
-                                        </Typography>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            Projects
-                                        </Typography>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            Contact
-                                        </Typography>
-                                    </Box>
-                                ) : (
-                                <Box className={classes.box}>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            Sobre
-                                        </Typography>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            Habilidades
-                                        </Typography>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            Projetos
-                                        </Typography>
-                                        <Typography className={classes.bar} variant="h6" color='secondary'>
-                                            Contato
-                                        </Typography>
-                                    </Box>
-                                )}
-                            </Box>
-                        </Box>
-                    </Dialog>
+                    </MenuChildren>
                 </Toolbar>
             </AppBar>
         </>
