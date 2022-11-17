@@ -85,7 +85,7 @@ const Home = () => {
 
             {loading ? (
                 <>
-                    <Navigate to={`/portfolio/${language}`} />
+                    <Navigate to={`/${language}`} />
                 </>
             ) : (
                 <Box className={classes.carregar}>
