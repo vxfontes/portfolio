@@ -16,7 +16,7 @@ const ProjectsPage = () => {
     return (
         <>
             <Grid className={classes.paperProjects} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
-                <Grid item xl={12} lg={11} md={12} sm={12} xs={12}>
+                <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
                     <Typography style={{ paddingTop: '1vh', marginBottom: '5vh' }} variant='h2' color='secondary'>
                         {language === 'english' ? (
                             <>
@@ -53,8 +53,7 @@ const ProjectsPage = () => {
                                         </>
                                     ) : (
                                         <>
-                                            {project.descriptionPT.substr(0, 40)}-<br />
-                                            {project.descriptionPT.substr(40, 35)}...
+                                            {project.descriptionPT.substr(0, 100)}...
                                         </>
                                     )}
                                 </Typography>
