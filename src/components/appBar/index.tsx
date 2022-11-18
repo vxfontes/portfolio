@@ -91,7 +91,7 @@ const MyAppBar = () => {
                                     <>
                                         {data.english.map((type: string) => {
                                             return (
-                                                <Link to={`/${type.toLowerCase()}/${language}`} style={{ textDecoration: 'none', color: 'white' }}>
+                                                <Link className={classes.decoration} to={`/${type.toLowerCase()}/${language}`} >
                                                     <Typography className={classes.bar} variant="h6" color='secondary'>
                                                         {type}
                                                     </Typography>
@@ -103,7 +103,7 @@ const MyAppBar = () => {
                                     <>
                                         {data.portuguese.map((type: string) => {
                                             return (
-                                                <Link to={`/${type.toLowerCase()}/${language}`} style={{ textDecoration: 'none', color: 'white' }}>
+                                                <Link className={classes.decoration} to={`/${type.toLowerCase()}/${language}`} >
                                                     <Typography className={classes.bar} variant="h6" color='secondary'>
                                                         {type}
                                                     </Typography>
