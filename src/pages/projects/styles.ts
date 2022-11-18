@@ -13,6 +13,16 @@ const styles = makeStyles((theme: Theme) =>
             backgroundImage: `url(${asfalttexture})`,
         },
 
+        paperProjects: {
+            width: '100%',
+            minHeight: '100vh',
+            height: '100%',
+            margin: 0,
+            padding: 60,
+            backgroundColor: theme.palette.mybackgroundColor?.main,
+            backgroundImage: `url(${asfalttexture})`,
+        },
+
         inside: {
             width: '90%',
             minHeight: '100vh',
@@ -79,7 +89,42 @@ const styles = makeStyles((theme: Theme) =>
             alignItems: 'center',
             justifyContent: 'center',
             textAlign: 'center',
-        }
+        },
+        
+        decoration: {
+            textDecoration: 'none', 
+            color: 'white'
+        },
+        
+        aligning: {
+            alignContent: 'center',
+            alignItems: 'center',
+            justifyContent: 'center',
+            textAlign: 'center',
+            backgroundColor: theme.palette.mybackgroundColor?.dark,
+        },
+
+        project: {
+            width: '90%',
+            borderRadius: 15,
+            border: '1px dashed #fff',
+            marginBottom: '5vh',
+            [theme.breakpoints.down('sm')]: {
+                width: '100%',
+            }
+        },
+
+        description: {
+            padding: 15,
+            marginTop: -90,
+            backgroundColor: theme.palette.mybackgroundColor?.dark,
+            zIndex: 6,
+        },
+        
+        media: {
+            height: 300,
+            zIndex: -1,
+        },
 
     })
 );
