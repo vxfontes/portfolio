@@ -1,6 +1,7 @@
 import MyAppBar from '../../components/appBar';
 import About from '../about';
 import Presentation from '../presentation';
+import Projects from '../projects';
 import Skills from '../skills';
 
 const CallingPages = () => {
@@ -10,6 +11,7 @@ const CallingPages = () => {
             <Presentation />
             <About />
             <Skills />
+            <Projects />
         </>
     );
 }
