@@ -90,8 +90,13 @@ const MyAppBar = () => {
                                 {language === 'english' ? (
                                     <>
                                         {data.english.map((type: string) => {
+                                            let proj;
+                                            if(type.toLowerCase() === 'projects') {
+                                                proj = 'projectsPage'
+                                            }
+
                                             return (
-                                                <Link className={classes.decoration} to={`/${type.toLowerCase()}/${language}`} >
+                                                <Link className={classes.decoration} to={`/${proj}/${language}`} >
                                                     <Typography className={classes.bar} variant="h6" color='secondary'>
                                                         {type}
                                                     </Typography>
@@ -102,6 +107,11 @@ const MyAppBar = () => {
                                 ) : (
                                     <>
                                         {data.portuguese.map((type: string) => {
+                                            let proj;
+                                            if(type.toLowerCase() === 'projetos') {
+                                                proj = 'projectsPage'
+                                            }
+
                                             return (
                                                 <Link className={classes.decoration} to={`/${type.toLowerCase()}/${language}`} >
                                                     <Typography className={classes.bar} variant="h6" color='secondary'>
