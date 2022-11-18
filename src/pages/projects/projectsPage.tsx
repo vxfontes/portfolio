@@ -34,7 +34,7 @@ const ProjectsPage = () => {
                 {data.map((project: ProjectProps) => (
                     <Grid item xl={4} lg={4} md={5} sm={12} xs={12}>
                         <Card className={classes.project}>
-                            <CardMedia className={classes.media} image={me} title='Project Image' />
+                            <CardMedia className={classes.media} image={project.imgPrincipal} title='Project Image' />
 
                             <CardContent className={classes.description}>
                                 <Typography className={classes.chip} variant="h6" style={{ fontWeight: 'bold' }} color='secondary'>{project.title}</Typography>

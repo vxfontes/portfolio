@@ -4,34 +4,39 @@
         "descriptionPT": "Sistema para uma empre de compras e despesas. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
         "descriptionEN": "System for a purchasing and expense business. Implemented a dashboard with company information such as: gross profit, net income, expenses and others.",
         "tecnologies": ["React JS", "Typescript", "Firebase", "Formik", "Yup", "Formik", "Material UI", "React Router Dom"],
-        "finish": true
+        "finish": true,
+        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png"
     },
     {
         "title": "Clone Netflix",
         "descriptionPT": "Imitação da interface principal da netflix utilizando ReactJS.",
         "descriptionEN": "Imitation of netflix's main interface using ReactJS.",
         "tecnologies": ["React JS", "Axios",  "Cors", "React Router Dom","Express", "Bootstrap", "Moongose", "Morgan", "Underscore"],
-        "finish": true
+        "finish": true,
+        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png"
     },
     {
         "title": "To Do React",
         "descriptionPT": "Lista de tarefas utilizando react.js e sem a utilização de banco de dados.",
         "descriptionEN": "Task list using react.js and without database usage.",
         "tecnologies": ["React JS", "React Icons", "Axios", "React Router Dom", "UUID"],
-        "finish": true
+        "finish": true,
+        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png"
     },
     {
         "title": "JM System",
         "descriptionPT": "Sistema para uma empre de compras e despesas. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
         "descriptionEN": "System for a purchasing and expense business. Implemented a dashboard with company information such as: gross profit, net income, expenses and others.",
         "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
-        "finish": false
+        "finish": false,
+        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png"
     },
     {
         "title": "JM System",
         "descriptionPT": "Sistema para uma empre de compras e despesas. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
         "descriptionEN": "System for a purchasing and expense business. Implemented a dashboard with company information such as: gross profit, net income, expenses and others.",
         "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
-        "finish": true
+        "finish": true,
+        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png"
     }
 ]
