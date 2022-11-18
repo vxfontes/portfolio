@@ -113,7 +113,7 @@ const MyAppBar = () => {
                                             }
 
                                             return (
-                                                <Link className={classes.decoration} to={`/${type.toLowerCase()}/${language}`} >
+                                                <Link className={classes.decoration} to={`/${proj}/${language}`} >
                                                     <Typography className={classes.bar} variant="h6" color='secondary'>
                                                         {type}
                                                     </Typography>
