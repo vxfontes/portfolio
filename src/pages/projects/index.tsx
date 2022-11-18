@@ -5,29 +5,8 @@ import DoubleArrowIcon from '@material-ui/icons/DoubleArrow';
 import styles from "./styles";
 import { useParams, Link } from 'react-router-dom';
 import theme from '../../theme';
+import data from '../../data/projects.json';
 import { ProjectProps } from "../../interface/ProjectProps";
-
-
-const principalData = [
-    {
-        "title": "JM System",
-        "descriptionPT": "Sistema que gera recibos e possui dashboard completo.",
-        "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI", "React Router Dom"],
-        "finish": true
-    },
-    {
-        "title": "Clone Netflix",
-        "descriptionPT": "Imitação da interface principal da netflix utilizando ReactJS.",
-        "tecnologies": ["React JS", "Axios", "React Router Dom", "Cors", "Bootstrap", "..."],
-        "finish": true
-    },
-    {
-        "title": "Clone Netflix",
-        "descriptionPT": "Imitação da interface principal da netflix utilizando ReactJS.",
-        "tecnologies": ["React JS", "Axios", "React Router Dom", "Cors", "Bootstrap", "..."],
-        "finish": true
-    },
-]
 
 const Projects = () => {
     const params = useParams();
@@ -65,7 +44,7 @@ const Projects = () => {
                 </Grid>
                 <Grid item xl={11} lg={11} md={11} sm={11} xs={11}>
                     <Typography variant="h4" color='secondary'>{projeto.title}</Typography>
-                    <Typography variant="body1" color='secondary'>{projeto.descriptionPT}</Typography>
+                    <Typography variant="body1" color='secondary'>{projeto.descriptionPT.substr(0, 50)}...</Typography>
                 </Grid>
 
                 {showMore && (
@@ -98,9 +77,9 @@ const Projects = () => {
                             )}
                         </Typography>
                     </Grid>
-                    {principalData.map((project) =>
+                    {data.slice(0, 3).map((project) =>
                         <Grid item xl={4} lg={4} md={4} sm={11} xs={11} style={{ marginTop: '4vh' }}>
-                            <Link className={classes.decoration} to="#">
+                            <Link className={classes.decoration} to={`/project/${language}/${project.id}`}>
                                 <Thumbnail project={project} />
                             </Link>
                         </Grid>
