@@ -6,6 +6,7 @@ export interface ProjectProps {
     details: string[],
     tecnologies: string[],
     finish: boolean,
+    link: string,
     imgPrincipal: string,
     imgMobile: string[],
     imgDesktop: string[],
