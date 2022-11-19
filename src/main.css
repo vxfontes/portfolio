@@ -11,5 +11,5 @@ body{
 
 .fade-ender .fade-enter-active {
     opacity: 1;
-    transition: opacity 250ms ease-in;
+    transition: all 0.9s 0s ease;
 }
