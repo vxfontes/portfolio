@@ -73,9 +73,11 @@ const MyAppBar = () => {
         <>
             <AppBar color='transparent' position="fixed" elevation={0}>
                 <Toolbar className={classes.toolbar}>
-                    <Typography variant="h5" className={classes.name}>Port
-                        <span className={classes.span}>folio.</span>
-                    </Typography>
+                    <Link className={classes.decoration} to={`/${language}`}>
+                        <Typography variant="h5" className={classes.name}>Port
+                            <span className={classes.span}>folio.</span>
+                        </Typography>
+                    </Link>
 
                     {/* menu */}
                     {showMenu && <>
@@ -91,7 +93,7 @@ const MyAppBar = () => {
                                     <>
                                         {data.english.map((type: string) => {
                                             let proj = type.toLowerCase();
-                                            if(type.toLowerCase() === 'projects') {
+                                            if (type.toLowerCase() === 'projects') {
                                                 proj = 'projectsPage'
                                             }
 
@@ -108,7 +110,7 @@ const MyAppBar = () => {
                                     <>
                                         {data.portuguese.map((type: string) => {
                                             let proj = type.toLowerCase();
-                                            if(type.toLowerCase() === 'projetos') {
+                                            if (type.toLowerCase() === 'projetos') {
                                                 proj = 'projectsPage'
                                             }
 
