@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import data from '../../data/projects.json';
 import styles from "./styles";
 import { ProjectProps } from "../../interface/ProjectProps";
+import MyAppBar from "../../components/appBar";
 
 
 const ProjectsPage = () => {
@@ -14,6 +15,7 @@ const ProjectsPage = () => {
 
     return (
         <>
+            <MyAppBar />
             <Grid className={classes.paperProjects} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
                 <Grid item xl={12} lg={12} md={11} sm={12} xs={12}>
                     <Typography style={{ paddingTop: '1vh', marginBottom: '5vh' }} variant='h2' color='secondary'>

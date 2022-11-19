@@ -90,7 +90,7 @@ const MyAppBar = () => {
                                 {language === 'english' ? (
                                     <>
                                         {data.english.map((type: string) => {
-                                            let proj;
+                                            let proj = type.toLowerCase();
                                             if(type.toLowerCase() === 'projects') {
                                                 proj = 'projectsPage'
                                             }
@@ -107,7 +107,7 @@ const MyAppBar = () => {
                                 ) : (
                                     <>
                                         {data.portuguese.map((type: string) => {
-                                            let proj;
+                                            let proj = type.toLowerCase();
                                             if(type.toLowerCase() === 'projetos') {
                                                 proj = 'projectsPage'
                                             }
