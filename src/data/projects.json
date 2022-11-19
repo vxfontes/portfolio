@@ -106,5 +106,23 @@
         "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/login-cadastro-e-perfil/main/img/cadastro.png", "https://raw.githubusercontent.com/vxfontes/login-cadastro-e-perfil/main/img/login.png", "https://raw.githubusercontent.com/vxfontes/login-cadastro-e-perfil/main/img/perfil.png"],
         "videos": ["https://user-images.githubusercontent.com/63061509/202739328-fe946710-a7fa-4fdf-8f92-d2b9dd7447a3.mp4"],
         "another": []
+    },
+    {
+        "id": 7,
+        "title": "Agenda telefônica",
+        "descriptionPT": "Modelo de 3 telas que são indispensáveis para basicamente todos os sites hoje em dia: Cadastro, login e tela de perfil.",
+        "descriptionEN": "Model of 3 screens that are indispensable for basically all sites nowadays: Registration, login and profile screen.",
+        "details": [
+            "Telas de login, cadastro e de perfil de estilos diferentes para testar conhecimentos de HTML e CSS puro com estilizações distintas e alternativas focando no design.", 
+            "Login, registration and profile screens of different styles to test knowledge of HTML and pure CSS with distinct and alternative stylizations focusing on design."
+        ],
+        "tecnologies": ["Java", "Java Swing"],
+        "finish": true,
+        "link": "https://github.com/vxfontes/JavaPOO-university/tree/main/aulaPOO/src/main/java/aula6/agenda",
+        "imgPrincipal": "https://raw.githubusercontent.com/vxfontes/JavaPOO-university/main/aulaPOO/src/main/java/aula6/agenda/img/principal.png",
+        "imgMobile": [],
+        "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/JavaPOO-university/main/aulaPOO/src/main/java/aula6/agenda/img/principal.png", "https://raw.githubusercontent.com/vxfontes/JavaPOO-university/main/aulaPOO/src/main/java/aula6/agenda/img/editar.png", "https://raw.githubusercontent.com/vxfontes/JavaPOO-university/main/aulaPOO/src/main/java/aula6/agenda/img/adicionar.png"],
+        "videos": ["https://user-images.githubusercontent.com/63061509/202831176-81de5ba7-ecd0-4850-84cd-3db63855c42e.mp4"],
+        "another": []
     }
 ]
