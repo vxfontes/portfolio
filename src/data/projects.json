@@ -2,20 +2,36 @@
     {
         "id": 1,
         "title": "JM System",
-        "descriptionPT": "Sistema para uma empre de compras e despesas. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
-        "descriptionEN": "System for a purchasing and expense business. Implemented a dashboard with company information such as: gross profit, net income, expenses and others.",
-        "tecnologies": ["React JS", "Typescript", "Firebase", "Formik", "Yup", "Formik", "Material UI", "React Router Dom"],
+        "descriptionPT": "Sistema de compras e despesas com gerador de PDF. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
+        "descriptionEN": "System for purchasing and expense business with PDF generator. Implemented a dashboard with company information such as: gross profit, net income, expenses and others.",
+        "details": [
+            "Sistema de uma empresa que utiliza de recibos para a comprovação de recebimento de comissão para funcionários, recibo de clentes e comprovante de compras. Com isso cadastra-se também despesas e cria-se um dashboard que abrange todos esses valores, retornando então lucro bruto, lucro líquido, quantidade de compra e venda além de dois tipos de gráficos exibindo todas as informações com aba de transições recentes",
+            "System of a company that uses receipts to prove receipt of commission to employees, receipt of lenses and proof of purchases. This also includes expenses and creates a dashboard that covers all these values, then returning gross profit, net profit, purchase and sale quantity plus two types of charts displaying all information with recent transitions tab"
+        ],
+        "tecnologies": ["React JS", "Typescript", "Firebase", "Formik", "Yup", "PDFMake", "ApexCharts", "Material UI", "React Router Dom"],
         "finish": true,
-        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png"
+        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png",
+        "imgMobile": ["https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/main.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/navbar.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/dashboard.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/dashboard2.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/dashboard3.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/recibo.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/reciboRejected.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/reciboModal1.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/reciboModal2.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/reciboOk.PNG"],
+        "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mainPage.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/dashboard.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/recibo.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/reciboRejected.png"],
+        "videos": ["https://user-images.githubusercontent.com/63061509/200879209-9e556423-d3b2-4265-ba62-1b80835274f7.mp4", "https://user-images.githubusercontent.com/63061509/200878749-48c52e41-d6f1-4466-b625-af9009adfe88.mp4", "https://user-images.githubusercontent.com/63061509/200879167-e15d460d-751e-4c56-acf3-6bc38616fb03.mp4"],
+        "another": ["Visualização de todos os tipos de PDFs gerados pelo sistema", "View all types of system-generated PDFs", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/venda.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/comissao.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/comprovante.png"]
     },
     {
         "id": 2,
         "title": "Clone Netflix",
-        "descriptionPT": "Imitação da interface principal da netflix utilizando ReactJS.",
-        "descriptionEN": "Imitation of netflix's main interface using ReactJS.",
-        "tecnologies": ["React JS", "Axios",  "Cors", "React Router Dom","Express", "Bootstrap", "Moongose", "Morgan", "Underscore"],
+        "descriptionPT": "Imitação da interface principal da netflix utilizando ReactJS com login, exibição de filmes e série com temporadas e episódios.",
+        "descriptionEN": "Imitation of netflix's main interface using ReactJS with login, showing movies and series with seasons and episodes.",
+        "details": [
+            "Login com usuários pré-definidos em um banco de dados do MongoDB, estão pré-salvos em um JSON. Após ser logado, o usuario é automaticamente redirecionado para a página principal onde teremos os filme ou série em destaque no momento e outros divididos em categorias distintas. Página home exibe um filme principal, e gera aleatoriamente todas as colunas, colocando o nome da categoria do primeiro filme da linha. Todos os filmes abrem com um pop-up, mas as séries exibem as temporadas e os episódios cadastrados. O usuário também pode realizar o logout.",
+            "Login with predefined users in a MongoDB database are pre-saved in a JSON. After being logged in, the user is automatically redirected to the main page where we will have the film or series featured at the moment and others divided into different categories. Home page displays a main movie, and randomly generates all the columns by placing the category name of the first movie in the row. All films open with a pop-up, but the series show the seasons and episodes registered. The user can also log out."
+        ], 
+        "tecnologies": ["React JS", "Node Js",  "MongoDB", "Axios",  "Cors", "React Router Dom","Express", "Bootstrap", "Moongose", "Morgan", "Underscore"],
         "finish": true,
-        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png"
+        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png",
+        "imgMobile": [""],
+        "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/login.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-inicial.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-inicial2.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-filme.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-serie.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-serie2.png"],
+        "videos": ["https://user-images.githubusercontent.com/63061509/202825264-2763d07c-b473-43d7-bee3-006a3aa61025.mp4"],
+        "another": ["Possui CRUD, sendo possível utilizar rotas de get, post, put e delete para manipular o banco de dados"]
     },
     {
         "id": 3,
@@ -24,7 +40,10 @@
         "descriptionEN": "Task list using react.js and without database usage.",
         "tecnologies": ["React JS", "React Icons", "Axios", "React Router Dom", "UUID"],
         "finish": true,
-        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png"
+        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png",
+        "imgMobile": [""],
+        "imgDesktop": [""],
+        "videos": [""]
     },
     {
         "id": 4,
