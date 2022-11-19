@@ -15,7 +15,8 @@
         "imgMobile": ["https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/main.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/navbar.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/dashboard.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/dashboard2.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/dashboard3.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/recibo.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/reciboRejected.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/reciboModal1.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/reciboModal2.PNG", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/reciboOk.PNG"],
         "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mainPage.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/dashboard.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/recibo.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/reciboRejected.png"],
         "videos": ["https://user-images.githubusercontent.com/63061509/200879209-9e556423-d3b2-4265-ba62-1b80835274f7.mp4", "https://user-images.githubusercontent.com/63061509/200878749-48c52e41-d6f1-4466-b625-af9009adfe88.mp4", "https://user-images.githubusercontent.com/63061509/200879167-e15d460d-751e-4c56-acf3-6bc38616fb03.mp4"],
-        "another": ["Visualização de todos os tipos de PDFs gerados pelo sistema", "View all types of system-generated PDFs", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/venda.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/comissao.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/comprovante.png"]
+        "another": ["https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/venda.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/comissao.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/comprovante.png"],
+        "anotherDescription": ["Visualização de todos os tipos de PDFs gerados pelo sistema", "View all types of system-generated PDFs"]
     },
     {
         "id": 2,
@@ -33,7 +34,8 @@
         "imgMobile": [],
         "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/login.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-inicial.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-inicial2.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-filme.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-serie.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-serie2.png"],
         "videos": ["https://user-images.githubusercontent.com/63061509/202825264-2763d07c-b473-43d7-bee3-006a3aa61025.mp4"],
-        "another": []
+        "another": [],
+        "anotherDescription": []
     },
     {
         "id": 3,
@@ -51,7 +53,8 @@
         "imgMobile": ["https://i.imgur.com/oPD8X2q.png", "https://i.imgur.com/2VgMDQu.png", "https://i.imgur.com/feyuYML.png", "https://i.imgur.com/XFqrivG.png"],
         "imgDesktop": ["https://i.imgur.com/kN9AP5a.png", "https://i.imgur.com/f1V516V.png"],
         "videos": [],
-        "another": []
+        "another": [],
+        "anotherDescription": []
     },
     {
         "id": 4,
@@ -69,7 +72,8 @@
         "imgMobile": ["https://raw.githubusercontent.com/vxfontes/to-do-react/main/src/image/principalMobile.PNG", "https://raw.githubusercontent.com/vxfontes/to-do-react/main/src/image/about.PNG"],
         "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/to-do-react/main/src/image/principal.png"],
         "videos": ["https://user-images.githubusercontent.com/63061509/202737466-df8d0042-789b-4cdb-b614-d07b118676a3.mp4"],
-        "another": []
+        "another": [],
+        "anotherDescription": []
     },
     {
         "id": 5,
@@ -87,7 +91,8 @@
         "imgMobile": [],
         "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/games-bootstrap/main/img/interfaces/principal1.png", "https://raw.githubusercontent.com/vxfontes/games-bootstrap/main/img/interfaces/principal2.png"],
         "videos": ["https://user-images.githubusercontent.com/63061509/202736119-f8cad550-0208-4fec-b119-61cb8c23f2fe.mp4"],
-        "another": []
+        "another": [],
+        "anotherDescription": []
     },
     {
         "id": 6,
@@ -105,7 +110,8 @@
         "imgMobile": [],
         "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/login-cadastro-e-perfil/main/img/cadastro.png", "https://raw.githubusercontent.com/vxfontes/login-cadastro-e-perfil/main/img/login.png", "https://raw.githubusercontent.com/vxfontes/login-cadastro-e-perfil/main/img/perfil.png"],
         "videos": ["https://user-images.githubusercontent.com/63061509/202739328-fe946710-a7fa-4fdf-8f92-d2b9dd7447a3.mp4"],
-        "another": []
+        "another": [],
+        "anotherDescription": []
     },
     {
         "id": 7,
@@ -123,6 +129,7 @@
         "imgMobile": [],
         "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/JavaPOO-university/main/aulaPOO/src/main/java/aula6/agenda/img/principal.png", "https://raw.githubusercontent.com/vxfontes/JavaPOO-university/main/aulaPOO/src/main/java/aula6/agenda/img/editar.png", "https://raw.githubusercontent.com/vxfontes/JavaPOO-university/main/aulaPOO/src/main/java/aula6/agenda/img/adicionar.png"],
         "videos": ["https://user-images.githubusercontent.com/63061509/202831176-81de5ba7-ecd0-4850-84cd-3db63855c42e.mp4"],
-        "another": []
+        "another": [],
+        "anotherDescription": []
     }
 ]

@@ -11,5 +11,6 @@ export interface ProjectProps {
     imgMobile: string[],
     imgDesktop: string[],
     videos: string[],
-    another: string [], // primeira posção é texto e resto imagens ou videos
+    another: string [],
+    anotherDescription: string []
 }
