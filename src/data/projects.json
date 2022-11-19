@@ -37,47 +37,74 @@
     },
     {
         "id": 3,
-        "title": "To Do React",
-        "descriptionPT": "Lista de tarefas utilizando react.js e sem a utilização de banco de dados. Onde adicionamos, marcamos uma tarefa como concluida e a excluirmos.",
-        "descriptionEN": "Task list using react.js and without database usage. We can add a task, mark a task as completed and delete it.",
-        "details": ["", ""],
-        "tecnologies": ["React JS", "React Icons", "Axios", "React Router Dom", "UUID"],
-        "finish": true,
-        "link": "https://github.com/vxfontes/to-do-react",
-        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png",
-        "imgMobile": [""],
-        "imgDesktop": [""],
-        "videos": [""],
-        "another": [""]
+        "title": "Find Your Duo",
+        "descriptionPT": "Site e aplicativo que tem como objetivo unir jogadores para que possam jogar juntos independente do tipo de jogo.",
+        "descriptionEN": "Site and app that aims to unite players so they can play together all the type of game.",
+        "details": [
+            "A versão web tem como objetivo a publicação de anúncios de 'procurando meu duo' em diferentes tipos de jogos, selecionando então o jogo, colocando o 'nickname', discord e outras informações. O aplicativo para celular permite então que o usuário passei entre os anúncios criados e selecione o seu duo para a partida. O backend faz toda essa ligação utilizando um banco de dados com prisma.", 
+            "The web version aims to publish ads of 'looking for my duo' in different types of games, then selecting the game, putting the 'nickname', discord and other information. The mobile app then allows the user to search between the created ads and select their duo for the match. The backend makes all this connection using a prism database."
+        ],
+        "tecnologies": ["React JS", "Node Js", "Typescript", "express", "hoppscotch", "ts-node-dev", "prisma", "SQLite", "cors", "vite", "tailwind css", "photosphor", "expo", "typescript", "ngrok", "React navigation"],
+        "finish": false,
+        "link": "https://github.com/vxfontes/findYourDuo",
+        "imgPrincipal": "https://i.imgur.com/kN9AP5a.png",
+        "imgMobile": ["https://i.imgur.com/oPD8X2q.png", "https://i.imgur.com/2VgMDQu.png", "https://i.imgur.com/feyuYML.png", "https://i.imgur.com/XFqrivG.png"],
+        "imgDesktop": ["https://i.imgur.com/kN9AP5a.png", "https://i.imgur.com/f1V516V.png"],
+        "videos": [],
+        "another": []
     },
     {
         "id": 4,
-        "title": "JM System",
-        "descriptionPT": "Sistema para uma empre de compras e despesas. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
-        "descriptionEN": "System for a purchasing and expense business. Implemented a dashboard with company information such as: gross profit, net income, expenses and others.",
-        "details": ["", ""],
-        "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
-        "finish": false,
-        "link": "",
-        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png",
-        "imgMobile": [""],
-        "imgDesktop": [""],
-        "videos": [""],
-        "another": [""]
+        "title": "To Do React",
+        "descriptionPT": "Lista de tarefas utilizando react.js e sem a utilização de banco de dados. Onde adicionamos, marcamos uma tarefa como concluida e a excluirmos.",
+        "descriptionEN": "Task list using react.js and without database usage. We can add a task, mark a task as completed and delete it.",
+        "details": [
+            "Uma lista de tarefas que se pode adicionar, marcar como feita e deletar uma tarefa. Não tem vinculo com banco de dados, utilização de um JSON armazenado na nuvem para consumir dados. IDs são gerados por biblioteca para maior facilidade de marcação de tarefas.", 
+            "A list of tasks that you can add, mark as done, and delete a task. It has no link to database, It was use a JSON stored in the cloud to consume data. IDs are generated per library for easier task markup."
+        ],
+        "tecnologies": ["React JS", "React Icons", "Axios", "React Router Dom", "UUID"],
+        "finish": true,
+        "link": "https://github.com/vxfontes/to-do-react",
+        "imgPrincipal": "https://raw.githubusercontent.com/vxfontes/to-do-react/main/src/image/principal.png",
+        "imgMobile": ["https://raw.githubusercontent.com/vxfontes/to-do-react/main/src/image/principalMobile.PNG", "https://raw.githubusercontent.com/vxfontes/to-do-react/main/src/image/about.PNG"],
+        "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/to-do-react/main/src/image/principal.png"],
+        "videos": ["https://user-images.githubusercontent.com/63061509/202737466-df8d0042-789b-4cdb-b614-d07b118676a3.mp4"],
+        "another": []
     },
     {
         "id": 5,
-        "title": "JM System",
-        "descriptionPT": "Sistema para uma empre de compras e despesas. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
-        "descriptionEN": "System for a purchasing and expense business. Implemented a dashboard with company information such as: gross profit, net income, expenses and others.",
-        "details": ["", ""],
-        "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
+        "title": "Gamigo",
+        "descriptionPT": "Página que exibe os principais jogos da atualidade para todo tipo de dispositivo, inspirado no site aeriagames.",
+        "descriptionEN": "Page that displays the most famous games currently for all types of devices, inspired by the site aeriagames.",
+        "details": [
+            "Site que mostra todo tipo de jogo famoso na atualidade. Jogos tanto para computador quanto para celular com uma pequena descrição para que o usuário decida se vale ou não jogar determinado jogo, além de mostrar a categoria do jogo, caso o jogador deseje algo específico.", 
+            "Site that shows all kind of famous game nowadays. Games for both computer and mobile with a short description for the user to decide whether or not to play a particular game, in addition to showing the category of the game, if the player wants something specific."
+        ],
+        "tecnologies": ["HTML", "CSS", "Bootstrap"],
         "finish": true,
-        "link": "",
-        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png",
-        "imgMobile": [""],
-        "imgDesktop": [""],
-        "videos": [""],
-        "another": [""]
+        "link": "https://github.com/vxfontes/games-bootstrap",
+        "imgPrincipal": "https://raw.githubusercontent.com/vxfontes/games-bootstrap/main/img/interfaces/principal1.png",
+        "imgMobile": [],
+        "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/games-bootstrap/main/img/interfaces/principal1.png", "https://raw.githubusercontent.com/vxfontes/games-bootstrap/main/img/interfaces/principal2.png"],
+        "videos": ["https://user-images.githubusercontent.com/63061509/202736119-f8cad550-0208-4fec-b119-61cb8c23f2fe.mp4"],
+        "another": []
+    },
+    {
+        "id": 6,
+        "title": "Main Interfaces",
+        "descriptionPT": "Modelo de 3 telas que são indispensáveis para basicamente todos os sites hoje em dia: Cadastro, login e tela de perfil.",
+        "descriptionEN": "Model of 3 screens that are indispensable for basically all sites nowadays: Registration, login and profile screen.",
+        "details": [
+            "Telas de login, cadastro e de perfil de estilos diferentes para testar conhecimentos de HTML e CSS puro com estilizações distintas e alternativas focando no design.", 
+            "Login, registration and profile screens of different styles to test knowledge of HTML and pure CSS with distinct and alternative stylizations focusing on design."
+        ],
+        "tecnologies": ["HTML", "CSS"],
+        "finish": true,
+        "link": "https://github.com/vxfontes/login-cadastro-e-perfil",
+        "imgPrincipal": "https://raw.githubusercontent.com/vxfontes/login-cadastro-e-perfil/main/img/cadastro.png",
+        "imgMobile": [],
+        "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/login-cadastro-e-perfil/main/img/cadastro.png", "https://raw.githubusercontent.com/vxfontes/login-cadastro-e-perfil/main/img/login.png", "https://raw.githubusercontent.com/vxfontes/login-cadastro-e-perfil/main/img/perfil.png"],
+        "videos": ["https://user-images.githubusercontent.com/63061509/202739328-fe946710-a7fa-4fdf-8f92-d2b9dd7447a3.mp4"],
+        "another": []
     }
 ]
