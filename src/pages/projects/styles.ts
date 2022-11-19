@@ -4,6 +4,16 @@ import layers from '../../assets/image/backLayers.svg'
 
 const styles = makeStyles((theme: Theme) =>
     createStyles({
+        paperPrinc: {
+            width: '100%',
+            minHeight: '100vh',
+            height: '100%',
+            margin: 0,
+            padding: 30,
+            backgroundColor: theme.palette.mybackgroundColor?.main,
+            backgroundImage: `url(${asfalttexture})`,
+        },
+
         paper: {
             width: '100%',
             minHeight: '100%',
@@ -20,7 +30,16 @@ const styles = makeStyles((theme: Theme) =>
                 backgroundSize: '100%',
             },
         },
-        
+
+        paperColor: {
+            width: '100%',
+            minHeight: '100vh',
+            height: '100%',
+            margin: 0,
+            padding: 30,
+            backgroundColor: theme.palette.mybackgroundColor?.main,
+        },
+
         paperInfo: {
             width: '100%',
             minHeight: '100vh',
@@ -97,7 +116,7 @@ const styles = makeStyles((theme: Theme) =>
         colorProj: {
             color: theme.palette.mybackgroundColor?.light,
         },
-        
+
         box: {
             paddingTop: '3vh',
             paddingBottom: '3vh',
@@ -106,18 +125,23 @@ const styles = makeStyles((theme: Theme) =>
             justifyContent: 'center',
             textAlign: 'center',
         },
-        
+
         decoration: {
-            textDecoration: 'none', 
+            textDecoration: 'none',
             color: 'white'
         },
-        
+
         aligning: {
             alignContent: 'center',
             alignItems: 'center',
             justifyContent: 'center',
             textAlign: 'center',
             backgroundColor: theme.palette.mybackgroundColor?.dark,
+        },
+
+        alignGrid: {
+            display: 'flex',
+            justifyContent: 'center'
         },
 
         project: {
@@ -136,7 +160,7 @@ const styles = makeStyles((theme: Theme) =>
             backgroundColor: theme.palette.mybackgroundColor?.dark,
             zIndex: 6,
         },
-        
+
         media: {
             height: 300,
             zIndex: -1,
@@ -153,7 +177,7 @@ const styles = makeStyles((theme: Theme) =>
                 marginTop: 40
             },
         },
-        
+
         imgPrincipal: {
             width: 550,
             borderRadius: '20px',
@@ -164,18 +188,13 @@ const styles = makeStyles((theme: Theme) =>
                 width: 550,
             },
             [theme.breakpoints.down('sm')]: {
-                width: 700,
-                marginTop: -280,
-                marginLeft: 30
-            },
-            [theme.breakpoints.down('xs')]: {
-                width: '100%',
+                width: '80%',
                 marginTop: 10,
                 marginBottom: 10,
                 marginLeft: 0
             },
         },
-        
+
         imgPrincipalMobile: {
             height: 550,
             marginTop: -50,
@@ -192,19 +211,19 @@ const styles = makeStyles((theme: Theme) =>
             },
             [theme.breakpoints.down('sm')]: {
                 height: 500,
-                marginLeft: 180,
                 marginTop: -300,
             },
         },
-        
+
         typo: {
             marginLeft: -100,
             marginRight: '50px',
+            marginBottom: 20,
             [theme.breakpoints.down('sm')]: {
                 marginLeft: 30,
             },
         },
-        
+
         typoPrinc: {
             marginLeft: -100,
             marginRight: '50px',
@@ -224,27 +243,43 @@ const styles = makeStyles((theme: Theme) =>
                 paddingTop: 50
             },
         },
-        
+
         chips: {
             marginLeft: -100,
             marginTop: 10,
             [theme.breakpoints.down('sm')]: {
-                marginLeft: 30,
-            },
-            [theme.breakpoints.only('xs')]: {
                 marginTop: 10,
                 marginLeft: 0,
             },
         },
-        
+
         repoButton: {
-            borderRadius: '10px', 
-            marginTop: 10, 
+            borderRadius: '10px',
+            marginTop: 10,
             textTransform: 'capitalize',
-            [theme.breakpoints.only('md')]: {
-                marginTop: 10,
-                marginLeft: -70,
-            },
+            marginLeft: -70,
+        },
+
+        imageList: {
+            // width: '60%',
+            // [theme.breakpoints.down('sm')]: {
+            //     width: '90%'
+            // }
+            flexWrap: 'nowrap',
+            // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+            transform: 'translateZ(0)',
+        },
+
+        gallery: {
+            columnCount: 3,
+            columnWidth: '30%',
+            padding: '0 12px',
+        },
+
+        pics: {
+            transition: 'all 350ms ease',
+            cursor: 'pointer',
+            marginBottom: '12px'
         }
 
     })
