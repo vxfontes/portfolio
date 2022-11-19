@@ -49,9 +49,10 @@ const Projects = () => {
 
                 {showMore && (
                     <Grid item xl={11} lg={11} md={11} sm={11} xs={11}>
-                        {projeto.tecnologies.map((tec: string[]) =>
+                        {projeto.tecnologies.slice(0, 5).map((tec: string[]) =>
                             <Chip className={classes.chip} label={tec} variant='outlined' color='secondary' />
                         )}
+                        <Chip className={classes.chip} label='...' variant='outlined' color='secondary' />
                     </Grid>
                 )}
             </Grid>
@@ -63,7 +64,7 @@ const Projects = () => {
             <Grid className={classes.paper} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
                 <Grid className={classes.inside} container direction='row' justifyContent='center' alignItems="center" spacing={2}>
                     <Grid item xl={12} lg={12} md={12} sm={12} xs={12}>
-                        <Typography style={{ paddingTop: '5vh' }} variant='h2' color='secondary'>
+                        <Typography style={{ paddingTop: '5vh', marginBottom: '5vh' }} variant='h2' color='secondary'>
                             {language === 'english' ? (
                                 <>
                                     <span className={classes.colorProj}>Proj</span>

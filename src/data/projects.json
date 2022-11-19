@@ -22,45 +22,57 @@
         "descriptionPT": "Imitação da interface principal da netflix utilizando ReactJS com login, exibição de filmes e série com temporadas e episódios.",
         "descriptionEN": "Imitation of netflix's main interface using ReactJS with login, showing movies and series with seasons and episodes.",
         "details": [
-            "Login com usuários pré-definidos em um banco de dados do MongoDB, estão pré-salvos em um JSON. Após ser logado, o usuario é automaticamente redirecionado para a página principal onde teremos os filme ou série em destaque no momento e outros divididos em categorias distintas. Página home exibe um filme principal, e gera aleatoriamente todas as colunas, colocando o nome da categoria do primeiro filme da linha. Todos os filmes abrem com um pop-up, mas as séries exibem as temporadas e os episódios cadastrados. O usuário também pode realizar o logout.",
-            "Login with predefined users in a MongoDB database are pre-saved in a JSON. After being logged in, the user is automatically redirected to the main page where we will have the film or series featured at the moment and others divided into different categories. Home page displays a main movie, and randomly generates all the columns by placing the category name of the first movie in the row. All films open with a pop-up, but the series show the seasons and episodes registered. The user can also log out."
+            "Login com usuários pré-definidos em um banco de dados do MongoDB, estão pré-salvos em um JSON. Após ser logado, o usuario é automaticamente redirecionado para a página principal onde teremos os filme ou série em destaque no momento e outros divididos em categorias distintas. Página home exibe um filme principal, e gera aleatoriamente todas as colunas, colocando o nome da categoria do primeiro filme da linha. Todos os filmes abrem com um pop-up, mas as séries exibem as temporadas e os episódios cadastrados. O usuário também pode realizar o logout. Possui CRUD, sendo possível utilizar rotas de get, post, put e delete para manipular o banco de dados.",
+            "Login with predefined users in a MongoDB database are pre-saved in a JSON. After being logged in, the user is automatically redirected to the main page where we will have the film or series featured at the moment and others divided into different categories. Home page displays a main movie, and randomly generates all the columns by placing the category name of the first movie in the row. All films open with a pop-up, but the series show the seasons and episodes registered. The user can also log out. It has CRUD, being possible to use get, post, put and delete routes to manipulate the database."
         ], 
         "tecnologies": ["React JS", "Node Js",  "MongoDB", "Axios",  "Cors", "React Router Dom","Express", "Bootstrap", "Moongose", "Morgan", "Underscore"],
         "finish": true,
-        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png",
-        "imgMobile": [""],
+        "imgPrincipal": "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-inicial.png",
+        "imgMobile": [],
         "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/login.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-inicial.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-inicial2.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-filme.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-serie.png", "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-serie2.png"],
         "videos": ["https://user-images.githubusercontent.com/63061509/202825264-2763d07c-b473-43d7-bee3-006a3aa61025.mp4"],
-        "another": ["Possui CRUD, sendo possível utilizar rotas de get, post, put e delete para manipular o banco de dados"]
+        "another": []
     },
     {
         "id": 3,
         "title": "To Do React",
         "descriptionPT": "Lista de tarefas utilizando react.js e sem a utilização de banco de dados.",
         "descriptionEN": "Task list using react.js and without database usage.",
+        "details": ["", ""],
         "tecnologies": ["React JS", "React Icons", "Axios", "React Router Dom", "UUID"],
         "finish": true,
         "imgPrincipal": "https://i.imgur.com/fC7wHPU.png",
         "imgMobile": [""],
         "imgDesktop": [""],
-        "videos": [""]
+        "videos": [""],
+        "another": [""]
     },
     {
         "id": 4,
         "title": "JM System",
         "descriptionPT": "Sistema para uma empre de compras e despesas. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
         "descriptionEN": "System for a purchasing and expense business. Implemented a dashboard with company information such as: gross profit, net income, expenses and others.",
+        "details": ["", ""],
         "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
         "finish": false,
-        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png"
+        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png",
+        "imgMobile": [""],
+        "imgDesktop": [""],
+        "videos": [""],
+        "another": [""]
     },
     {
         "id": 5,
         "title": "JM System",
         "descriptionPT": "Sistema para uma empre de compras e despesas. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
         "descriptionEN": "System for a purchasing and expense business. Implemented a dashboard with company information such as: gross profit, net income, expenses and others.",
+        "details": ["", ""],
         "tecnologies": ["React JS", "Firebase", "Yup", "Formik", "Material UI"],
         "finish": true,
-        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png"
+        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png",
+        "imgMobile": [""],
+        "imgDesktop": [""],
+        "videos": [""],
+        "another": [""]
     }
 ]
