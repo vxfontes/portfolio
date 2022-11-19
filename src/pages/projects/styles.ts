@@ -1,26 +1,38 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core';
 import asfalttexture from '../../assets/image/asfalttexture.png';
+import layers from '../../assets/image/backLayers.svg'
 
 const styles = makeStyles((theme: Theme) =>
     createStyles({
         paper: {
             width: '100%',
-            minHeight: '100vh',
+            minHeight: '100%',
             height: '100%',
             margin: 0,
             padding: 30,
             backgroundColor: theme.palette.mybackgroundColor?.main,
             backgroundImage: `url(${asfalttexture})`,
+            [theme.breakpoints.down('xs')]: {
+                padding: 40,
+                minHeight: '100%',
+                backgroundImage: `url(${layers})`,
+                backgroundRepeat: 'repeat',
+                backgroundSize: '100%',
+            },
         },
-
-        paperProjects: {
+        
+        paperInfo: {
             width: '100%',
             minHeight: '100vh',
             height: '100%',
             margin: 0,
-            padding: 60,
-            backgroundColor: theme.palette.mybackgroundColor?.main,
-            backgroundImage: `url(${asfalttexture})`,
+            padding: 30,
+            backgroundImage: `url(${layers})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100%',
+            [theme.breakpoints.down('sm')]: {
+                backgroundRepeat: 'repeat',
+            },
         },
 
         inside: {
@@ -71,6 +83,10 @@ const styles = makeStyles((theme: Theme) =>
         chip: {
             marginRight: 5,
             marginBottom: 10,
+            [theme.breakpoints.only('xs')]: {
+                marginRight: 4,
+                marginBottom: 5,
+            }
         },
 
         span: {
@@ -125,6 +141,111 @@ const styles = makeStyles((theme: Theme) =>
             height: 300,
             zIndex: -1,
         },
+
+        principal: {
+            width: '100%',
+            [theme.breakpoints.up('xl')]: {
+                marginLeft: 90,
+                marginTop: 40
+            },
+            [theme.breakpoints.up('lg')]: {
+                marginLeft: 50,
+                marginTop: 40
+            },
+        },
+        
+        imgPrincipal: {
+            width: 550,
+            borderRadius: '20px',
+            [theme.breakpoints.up('xl')]: {
+                width: 700,
+            },
+            [theme.breakpoints.up('lg')]: {
+                width: 550,
+            },
+            [theme.breakpoints.down('sm')]: {
+                width: 700,
+                marginTop: -280,
+                marginLeft: 30
+            },
+            [theme.breakpoints.down('xs')]: {
+                width: '100%',
+                marginTop: 10,
+                marginBottom: 10,
+                marginLeft: 0
+            },
+        },
+        
+        imgPrincipalMobile: {
+            height: 550,
+            marginTop: -50,
+            marginLeft: 150,
+            borderRadius: '20px',
+            [theme.breakpoints.up('lg')]: {
+                marginLeft: 50,
+                marginTop: -70,
+            },
+            [theme.breakpoints.up('md')]: {
+                height: 500,
+                marginLeft: 50,
+                marginTop: -70,
+            },
+            [theme.breakpoints.down('sm')]: {
+                height: 500,
+                marginLeft: 180,
+                marginTop: -300,
+            },
+        },
+        
+        typo: {
+            marginLeft: -100,
+            marginRight: '50px',
+            [theme.breakpoints.down('sm')]: {
+                marginLeft: 30,
+            },
+        },
+        
+        typoPrinc: {
+            marginLeft: -100,
+            marginRight: '50px',
+            [theme.breakpoints.only('xl')]: {
+                paddingTop: 80
+            },
+            [theme.breakpoints.only('lg')]: {
+                marginLeft: -70,
+                paddingTop: 50
+            },
+            [theme.breakpoints.only('md')]: {
+                marginLeft: -50,
+                paddingTop: 50
+            },
+            [theme.breakpoints.only('sm')]: {
+                marginLeft: -30,
+                paddingTop: 50
+            },
+        },
+        
+        chips: {
+            marginLeft: -100,
+            marginTop: 10,
+            [theme.breakpoints.down('sm')]: {
+                marginLeft: 30,
+            },
+            [theme.breakpoints.only('xs')]: {
+                marginTop: 10,
+                marginLeft: 0,
+            },
+        },
+        
+        repoButton: {
+            borderRadius: '10px', 
+            marginTop: 10, 
+            textTransform: 'capitalize',
+            [theme.breakpoints.only('md')]: {
+                marginTop: 10,
+                marginLeft: -70,
+            },
+        }
 
     })
 );

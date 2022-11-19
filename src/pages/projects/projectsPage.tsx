@@ -16,7 +16,7 @@ const ProjectsPage = () => {
     return (
         <>
             <MyAppBar />
-            <Grid className={classes.paperProjects} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
+            <Grid className={classes.paper} style={{ padding: 60 }} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
                 <Grid item xl={12} lg={12} md={11} sm={12} xs={12}>
                     <Typography style={{ paddingTop: '1vh', marginBottom: '5vh' }} variant='h2' color='secondary'>
                         {language === 'english' ? (
