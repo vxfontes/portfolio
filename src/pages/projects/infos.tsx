@@ -31,31 +31,31 @@ const Infos = () => {
     function colunasDesktop(proj: ProjectProps) {
         const quant = proj.imgDesktop.length;
 
-        if (quant == 1) return 1
-        else if (quant == 2) return 2
-        else if (quant == 3) return 3
-        else if (quant == 4) return 2
+        if (quant === 1) return 1
+        else if (quant === 2) return 2
+        else if (quant === 3) return 3
+        else if (quant === 4) return 2
         else if (quant > 4 && quant <= 6) return 3
         else if (quant > 6 && quant <= 8) return 4
-        else if (quant == 9) return 3
+        else if (quant === 9) return 3
         else if (quant > 9 && quant <= 12) return 4
-        else if (quant == 13) return 5
+        else if (quant === 13) return 5
         else return 4
     }
 
     function colunasMobile(proj: ProjectProps) {
         const quant = proj.imgDesktop.length;
 
-        if (quant == 1) return 1
-        else if (quant == 2) return 2
-        else if (quant == 3) return 3
-        else if (quant == 4) return 4
-        else if (quant == 5) return 5
-        else if (quant == 6) return 3
+        if (quant === 1) return 1
+        else if (quant === 2) return 2
+        else if (quant === 3) return 3
+        else if (quant === 4) return 4
+        else if (quant === 5) return 5
+        else if (quant === 6) return 3
         else if (quant > 6 && quant <= 8) return 4
-        else if (quant == 9) return 3
+        else if (quant === 9) return 3
         else if (quant > 9 && quant <= 12) return 4
-        else if (quant == 13) return 5
+        else if (quant === 13) return 5
         else return 4
     }
 
@@ -67,7 +67,6 @@ const Infos = () => {
         <>
             {data.map((proj: ProjectProps) => {
                 if (proj.id === id) {
-
                     return (
                         <>
                             <MyAppBar />
@@ -123,7 +122,6 @@ const Infos = () => {
                                 </Grid>
 
                             ) : (
-
                                 <Grid className={classes.paperInfo} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
                                     <Grid style={{ height: '20vh' }} item xl={10} lg={10} md={10} sm={10} xs={10}>
                                         <Typography className={classes.typoPrinc} style={{ marginTop: 45 }} align="left" variant="h4" color='secondary'>
@@ -131,7 +129,7 @@ const Infos = () => {
                                         </Typography>
                                     </Grid>
 
-                                    <Grid style={{ height: '50vh' }} item xl={5} lg={5} md={5} sm={12} xs={12}>
+                                    <Grid style={{ height: '60vh' }} item xl={5} lg={5} md={5} sm={12} xs={12}>
                                         <Typography className={classes.typo} align="left" variant="h6" color='secondary'>
                                             {language === 'portuguese' ? (
                                                 proj.details[0]
@@ -147,7 +145,7 @@ const Infos = () => {
                                                 <>Technologies</>
                                             )}
                                         </Typography>
-
+                                        
                                         <Box className={classes.chips}>
                                             {proj.tecnologies.map((tec: string) => (
                                                 <>
@@ -182,23 +180,24 @@ const Infos = () => {
 
                             <Grid className={classes.paperColor} style={{ padding: 160 }} container direction='row' justifyContent='center' alignItems="flex-start" spacing={1}>
 
-                                {proj.imgDesktop.length !== 0 && (
-                                    <Box>
-                                        <Grid item xl={10} lg={10} md={10} sm={10} xs={10}>
-                                            <Typography className={classes.typo} align="left" variant="h5" color='secondary'>Imagens da versão desktop da aplicação: </Typography>
-                                        </Grid>
-                                        <Grid item className={classes.alignGrid} xl={12} lg={12} md={12} sm={12} xs={12}>
-                                            {/* desktop */}
-                                            <ImageList rowHeight={300} className={classes.imageList} cols={1.75}>
-                                                {proj.imgDesktop.map((item) => (
-                                                    <ImageListItem key={item} cols={1}>
-                                                        <img src={item} alt={proj.title} />
-                                                    </ImageListItem>
-                                                ))}
-                                            </ImageList>
-                                        </Grid>
-                                    </Box>
-                                )}
+                                {/* {proj.imgDesktop.length !== 0 && ( */}
+                                <Box className={classes.boxImg}>
+                                    <Grid item xl={10} lg={10} md={10} sm={10} xs={10}>
+                                        <Typography className={classes.typo} align="left" variant="h5" color='secondary'>Imagens da versão desktop da aplicação: </Typography>
+                                    </Grid>
+                                    <Grid item className={classes.alignGrid} xl={12} lg={12} md={12} sm={12} xs={12}>
+                                        {/* desktop */}
+                                    </Grid>
+                                </Box>
+                                {/* )} */}
+                                <ImageList rowHeight={300} className={classes.imageList} cols={1.75}>
+                                    {proj.imgDesktop.map((item) => (
+                                        <ImageListItem key={item}>
+                                            <img src={item} alt={proj.title} />
+                                        </ImageListItem>
+                                    ))}
+                                </ImageList>
+
 
                                 {proj.imgMobile.length !== 0 && (
                                     <Box style={{ marginTop: 40 }}>
@@ -208,7 +207,7 @@ const Infos = () => {
 
                                         <Grid item className={classes.alignGrid} xl={12} lg={12} md={12} sm={12} xs={12}>
                                             {/* mobile */}
-                                            <ImageList rowHeight={400} className={classes.imageList} cols={colunasMobile(proj)}>
+                                            <ImageList rowHeight={200} className={classes.imageList} cols={colunasMobile(proj)}>
                                                 {proj.imgMobile.map((item) => (
                                                     <ImageListItem key={item} cols={1}>
                                                         <img src={item} alt={proj.title} />
@@ -219,6 +218,17 @@ const Infos = () => {
                                     </Box>
                                 )}
                             </Grid>
+
+                            <div className={classes.boxImg}>
+                                <ImageList className={classes.imageList} cols={2.5}>
+                                    {proj.imgDesktop.map((item) => (
+                                        <ImageListItem key={item}>
+                                            <img key={item} src={item} alt={proj.title} />
+                                        </ImageListItem>
+                                    ))}
+                                </ImageList>
+                            </div>
+                            
                         </>
                     )
                 }

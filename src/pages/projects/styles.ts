@@ -140,7 +140,7 @@ const styles = makeStyles((theme: Theme) =>
         },
 
         alignGrid: {
-            display: 'flex',
+            // display: 'flex',
             justifyContent: 'center'
         },
 
@@ -260,13 +260,15 @@ const styles = makeStyles((theme: Theme) =>
             marginLeft: -70,
         },
 
+        boxImg: {
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-around',
+            overflow: 'hidden',
+        },
+
         imageList: {
-            // width: '60%',
-            // [theme.breakpoints.down('sm')]: {
-            //     width: '90%'
-            // }
             flexWrap: 'nowrap',
-            // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
             transform: 'translateZ(0)',
         },
 
