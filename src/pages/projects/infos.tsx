@@ -1,4 +1,5 @@
 import { Box, Button, Chip, Dialog, DialogContent, Grid, ImageList, ImageListItem, Link, Typography, useMediaQuery } from "@material-ui/core";
+import Carousel from 'react-material-ui-carousel';
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import MyAppBar from "../../components/appBar";
@@ -6,7 +7,13 @@ import data from '../../data/projects.json';
 import { ProjectProps } from '../../interface/ProjectProps';
 import theme from "../../theme";
 import styles from "./styles";
+import TestProj from "./testProj";
 
+interface BannerProps {
+    proj: ProjectProps,
+    item: string,
+    length?: number,
+}
 
 const Infos = () => {
     let navigate = useNavigate();
@@ -28,39 +35,39 @@ const Infos = () => {
         setOpen(false);
     };
 
-    function colunasDesktop(proj: ProjectProps) {
-        const quant = proj.imgDesktop.length;
-
-        if (quant === 1) return 1
-        else if (quant === 2) return 2
-        else if (quant === 3) return 3
-        else if (quant === 4) return 2
-        else if (quant > 4 && quant <= 6) return 3
-        else if (quant > 6 && quant <= 8) return 4
-        else if (quant === 9) return 3
-        else if (quant > 9 && quant <= 12) return 4
-        else if (quant === 13) return 5
-        else return 4
-    }
-
-    function colunasMobile(proj: ProjectProps) {
-        const quant = proj.imgDesktop.length;
-
-        if (quant === 1) return 1
-        else if (quant === 2) return 2
-        else if (quant === 3) return 3
-        else if (quant === 4) return 4
-        else if (quant === 5) return 5
-        else if (quant === 6) return 3
-        else if (quant > 6 && quant <= 8) return 4
-        else if (quant === 9) return 3
-        else if (quant > 9 && quant <= 12) return 4
-        else if (quant === 13) return 5
-        else return 4
-    }
-
     const imgOpen = (img: string) => {
         setImgTemp(img)
+    }
+
+
+    const Banner = (props: BannerProps) => {
+        const totalItems: number = props.length ? props.length : 3;
+        const mediaLength = totalItems;
+        const total: number = props.proj.imgMobile.length;
+        let items = [];
+        let count = [];
+
+        for (let i = 0; i < total; i++) {
+            count.push(props.proj.imgMobile[i])
+        }
+        console.log(count);
+        
+
+        for (let i = 0; i < mediaLength; i++) {
+            const item = count[i];
+    
+            const media = (
+                <img className={classes.picsMobile} key={i} src={item} alt={props.proj.title} />
+            )
+    
+            items.push(media);
+        }
+
+        return (
+            <Grid container spacing={0} className="BannerGrid">
+                {items}
+            </Grid>
+        )
     }
 
     return (
@@ -145,7 +152,7 @@ const Infos = () => {
                                                 <>Technologies</>
                                             )}
                                         </Typography>
-                                        
+
                                         <Box className={classes.chips}>
                                             {proj.tecnologies.map((tec: string) => (
                                                 <>
@@ -180,55 +187,45 @@ const Infos = () => {
 
                             <Grid className={classes.paperColor} style={{ padding: 160 }} container direction='row' justifyContent='center' alignItems="flex-start" spacing={1}>
 
-                                {/* {proj.imgDesktop.length !== 0 && ( */}
-                                <Box className={classes.boxImg}>
-                                    <Grid item xl={10} lg={10} md={10} sm={10} xs={10}>
-                                        <Typography className={classes.typo} align="left" variant="h5" color='secondary'>Imagens da versão desktop da aplicação: </Typography>
-                                    </Grid>
-                                    <Grid item className={classes.alignGrid} xl={12} lg={12} md={12} sm={12} xs={12}>
-                                        {/* desktop */}
-                                    </Grid>
-                                </Box>
-                                {/* )} */}
-                                <ImageList rowHeight={300} className={classes.imageList} cols={1.75}>
-                                    {proj.imgDesktop.map((item) => (
-                                        <ImageListItem key={item}>
-                                            <img src={item} alt={proj.title} />
-                                        </ImageListItem>
-                                    ))}
-                                </ImageList>
+                                {proj.imgDesktop.length !== 0 && (
+                                    <Box>
+                                        <Grid item xl={11} lg={11} md={11} sm={11} xs={11}>
+                                            <Typography className={classes.typo} align="left" variant="h5" color='secondary'>Imagens da versão desktop da aplicação: </Typography>
+                                        </Grid>
+                                        <Grid item className={classes.alignGrid} xl={12} lg={12} md={12} sm={12} xs={12}>
+                                            {/* desktop */}
+                                            <Carousel fullHeightHover={false}>
+                                                {proj.imgDesktop.map((item, i) => (
+                                                    <img className={classes.picsDesktop} key={i} src={item} alt={proj.title} />
+                                                ))}
+                                            </Carousel>
+                                        </Grid>
+                                    </Box>
+                                )}
 
 
                                 {proj.imgMobile.length !== 0 && (
                                     <Box style={{ marginTop: 40 }}>
-                                        <Grid item xl={10} lg={10} md={10} sm={10} xs={10}>
+                                        <Grid item xl={11} lg={11} md={11} sm={11} xs={11}>
                                             <Typography className={classes.typo} align="left" variant="h5" color='secondary'>Imagens da versão mobile da aplicação: </Typography>
                                         </Grid>
 
                                         <Grid item className={classes.alignGrid} xl={12} lg={12} md={12} sm={12} xs={12}>
                                             {/* mobile */}
-                                            <ImageList rowHeight={200} className={classes.imageList} cols={colunasMobile(proj)}>
-                                                {proj.imgMobile.map((item) => (
-                                                    <ImageListItem key={item} cols={1}>
-                                                        <img src={item} alt={proj.title} />
-                                                    </ImageListItem>
-                                                ))}
-                                            </ImageList>
+                                            <Carousel fullHeightHover={false}>
+                                                {proj.imgMobile.map((item, i) => {
+
+                                                    return (
+                                                        // <img className={classes.picsMobile} key={i} src={item} alt={proj.title} />
+                                                        <Banner proj={proj} item={item} key={i} />
+                                                    )
+                                                })}
+                                            </Carousel>
                                         </Grid>
                                     </Box>
                                 )}
                             </Grid>
-
-                            <div className={classes.boxImg}>
-                                <ImageList className={classes.imageList} cols={2.5}>
-                                    {proj.imgDesktop.map((item) => (
-                                        <ImageListItem key={item}>
-                                            <img key={item} src={item} alt={proj.title} />
-                                        </ImageListItem>
-                                    ))}
-                                </ImageList>
-                            </div>
-                            
+                            <TestProj />
                         </>
                     )
                 }

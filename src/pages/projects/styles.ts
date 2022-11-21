@@ -282,11 +282,13 @@ const styles = makeStyles((theme: Theme) =>
             padding: '0 12px',
         },
 
-        pics: {
-            transition: 'all 350ms ease',
-            cursor: 'pointer',
-            marginBottom: '12px'
-        }
+        picsDesktop: {
+            height: 500,
+        },
+
+        picsMobile: {
+            height: 500,
+        },
 
     })
 );
