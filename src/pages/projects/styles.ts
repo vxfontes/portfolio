@@ -140,7 +140,7 @@ const styles = makeStyles((theme: Theme) =>
         },
 
         alignGrid: {
-            // display: 'flex',
+            display: 'flex',
             justifyContent: 'center'
         },
 
@@ -258,6 +258,9 @@ const styles = makeStyles((theme: Theme) =>
             marginTop: 10,
             textTransform: 'capitalize',
             marginLeft: -70,
+            [theme.breakpoints.down('sm')]: {
+                marginLeft: 0,
+            }
         },
 
         boxImg: {
@@ -266,8 +269,9 @@ const styles = makeStyles((theme: Theme) =>
             justifyContent: 'space-around',
             overflow: 'hidden',
         },
-
+        
         imageList: {
+            flexDirection: 'row',
             flexWrap: 'nowrap',
             transform: 'translateZ(0)',
         },
