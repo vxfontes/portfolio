@@ -73,9 +73,12 @@ const MyAppBar = () => {
         <>
             <AppBar color='transparent' position="fixed" elevation={0}>
                 <Toolbar className={classes.toolbar}>
-                    <Typography variant="h5" className={classes.name}>Port
-                        <span className={classes.span}>folio.</span>
-                    </Typography>
+                    <Link className={classes.decoration} to={`/${language}`}>
+                        <Typography variant="h5" className={classes.name}>
+                            Port
+                            <span className={classes.span}>folio.</span>
+                        </Typography>
+                    </Link>
 
                     {/* menu */}
                     {showMenu && <>

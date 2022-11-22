@@ -47,6 +47,11 @@ const styles = makeStyles((theme: Theme) =>
                 fontSize: 45,
                 fontWeight: 'bold'
             }
+        },
+
+        decoration: {
+            textDecoration: 'none', 
+            color: 'white'
         }
     })
 );
