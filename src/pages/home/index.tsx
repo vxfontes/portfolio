@@ -8,7 +8,7 @@ import About from "../about";
 import Presentation from "../presentation";
 import Skills from "../skills";
 import { dataBaseApp } from "../../firebase";
-import { addDoc, collection, doc, setDoc } from "firebase/firestore";
+import { collection, doc, getDocs, setDoc } from "firebase/firestore";
 
 const Transition = React.forwardRef(function Transition(
     props: TransitionProps & { children?: React.ReactElement<any, any> },
@@ -39,17 +39,32 @@ const styles = makeStyles((theme: Theme) =>
 const Home = () => {
     const classes = styles();
     const [language, setLanguage] = useState<string>('portuguese');
+    let count = 0;
     const [open, setOpen] = React.useState(true);
     const [loading, setLoading] = React.useState(false);
 
+    const docRef = collection(dataBaseApp, "acessos");
+    getDocs(docRef).then((res) => {
+        let data = (res.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+        data.map((d: any) => {
+            let valor;
+            if(Number(d.acesso) === NaN) {
+                valor = 0;
+            } else {
+                valor = Number(d.acesso)
+            }
+            count = (valor + 1);
+        })
+    })
+    
+
     async function enviandoValores(value: string) {
         try {
-            await setDoc(doc(dataBaseApp, "language", "lang"), {
-                language: value,
+            await setDoc(doc(dataBaseApp, "acessos", "acesso"), {
+                acesso: count,
             });
         } catch (e) {
             console.error("Error adding document: ", e);
-            alert("Erro ao salvar linguagem, reinicie e tente novamente")
         }
     }
 
@@ -58,6 +73,7 @@ const Home = () => {
         setOpen(false);
         enviandoValores(e);
         setTimeout(() => {
+
             setLoading(true);
         }, 1000);
     };
