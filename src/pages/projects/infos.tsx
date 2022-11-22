@@ -1,4 +1,4 @@
-import { Box, Button, Chip, Dialog, DialogContent, Grid, ImageList, ImageListItem, Link, Typography, useMediaQuery } from "@material-ui/core";
+import { Box, Button, Chip, Dialog, DialogContent, Grid, Link, Typography, useMediaQuery } from "@material-ui/core";
 import Carousel from 'react-material-ui-carousel';
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
@@ -7,7 +7,6 @@ import data from '../../data/projects.json';
 import { ProjectProps } from '../../interface/ProjectProps';
 import theme from "../../theme";
 import styles from "./styles";
-import TestProj from "./testProj";
 
 interface BannerProps {
     proj: ProjectProps,
@@ -51,15 +50,15 @@ const Infos = () => {
             count.push(props.proj.imgMobile[i])
         }
         console.log(count);
-        
+
 
         for (let i = 0; i < mediaLength; i++) {
             const item = count[i];
-    
+
             const media = (
                 <img className={classes.picsMobile} key={i} src={item} alt={props.proj.title} />
             )
-    
+
             items.push(media);
         }
 
@@ -130,13 +129,13 @@ const Infos = () => {
 
                             ) : (
                                 <Grid className={classes.paperInfo} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
-                                    <Grid style={{ height: '20vh' }} item xl={10} lg={10} md={10} sm={10} xs={10}>
+                                    <Grid style={{ height: '20vh', marginTop: -30 }} item xl={10} lg={10} md={10} sm={10} xs={10}>
                                         <Typography className={classes.typoPrinc} style={{ marginTop: 45 }} align="left" variant="h4" color='secondary'>
                                             {proj.title}
                                         </Typography>
                                     </Grid>
 
-                                    <Grid style={{ height: '60vh' }} item xl={5} lg={5} md={5} sm={12} xs={12}>
+                                    <Grid style={{ height: '60vh', marginTop: -60 }} item xl={5} lg={5} md={5} sm={12} xs={12}>
                                         <Typography className={classes.typo} align="left" variant="h6" color='secondary'>
                                             {language === 'portuguese' ? (
                                                 proj.details[0]
@@ -173,7 +172,7 @@ const Infos = () => {
                                         )}
                                     </Grid>
 
-                                    <Grid style={{ height: '60vh' }} item xl={4} lg={4} md={4} sm={12} xs={12}>
+                                    <Grid style={{ height: '60vh', marginTop: -20 }} item xl={4} lg={4} md={4} sm={12} xs={12}>
                                         <Box className={classes.principal} >
                                             {proj.id === 7 ? (
                                                 <img className={classes.imgPrincipalMobile} src={proj.imgPrincipal} alt="imagem principal" />
@@ -213,19 +212,14 @@ const Infos = () => {
                                         <Grid item className={classes.alignGrid} xl={12} lg={12} md={12} sm={12} xs={12}>
                                             {/* mobile */}
                                             <Carousel fullHeightHover={false}>
-                                                {proj.imgMobile.map((item, i) => {
-
-                                                    return (
-                                                        // <img className={classes.picsMobile} key={i} src={item} alt={proj.title} />
-                                                        <Banner proj={proj} item={item} key={i} />
-                                                    )
-                                                })}
+                                                {proj.imgMobile.map((item, i) => (
+                                                    <img className={classes.picsDesktop} key={i} src={item} alt={proj.title} />
+                                                ))}
                                             </Carousel>
                                         </Grid>
                                     </Box>
                                 )}
                             </Grid>
-                            <TestProj />
                         </>
                     )
                 }
