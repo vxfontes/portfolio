@@ -2,72 +2,21 @@ import { Box, Button, Chip, Dialog, DialogContent, Grid, Link, Typography, useMe
 import Carousel from 'react-material-ui-carousel';
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import MyAppBar from "../../components/appBar";
-import data from '../../data/projects.json';
-import { ProjectProps } from '../../interface/ProjectProps';
-import theme from "../../theme";
-import styles from "./styles";
+import MyAppBar from "../../../components/appBar";
+import data from '../../../data/projects.json';
+import { ProjectProps } from '../../../interface/ProjectProps';
+import theme from "../../../theme";
+import styles from "./style";
 
-interface BannerProps {
-    proj: ProjectProps,
-    item: string,
-    length?: number,
-}
-
-const Infos = () => {
-    let navigate = useNavigate();
+const Project = () => {
     const params = useParams();
     const language = params.language;
+    const id = Number(params.project);
+
     const classes = styles();
     const showBig = useMediaQuery(theme.breakpoints.up('lg'));
     const mobileVersion = useMediaQuery(theme.breakpoints.down('sm'));
-    const id = Number(params.project);
 
-    const [open, setOpen] = useState(false);
-    const [imgTemp, setImgTemp] = useState<string>('');
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
-
-    const imgOpen = (img: string) => {
-        setImgTemp(img)
-    }
-
-
-    const Banner = (props: BannerProps) => {
-        const totalItems: number = props.length ? props.length : 3;
-        const mediaLength = totalItems;
-        const total: number = props.proj.imgMobile.length;
-        let items = [];
-        let count = [];
-
-        for (let i = 0; i < total; i++) {
-            count.push(props.proj.imgMobile[i])
-        }
-        console.log(count);
-
-
-        for (let i = 0; i < mediaLength; i++) {
-            const item = count[i];
-
-            const media = (
-                <img className={classes.picsMobile} key={i} src={item} alt={props.proj.title} />
-            )
-
-            items.push(media);
-        }
-
-        return (
-            <Grid container spacing={0} className="BannerGrid">
-                {items}
-            </Grid>
-        )
-    }
 
     return (
         <>
@@ -76,12 +25,6 @@ const Infos = () => {
                     return (
                         <>
                             <MyAppBar />
-
-                            <Dialog open={open} onClose={handleClose}>
-                                <DialogContent>
-                                    {/* <img src={}/> */}
-                                </DialogContent>
-                            </Dialog>
 
                             {mobileVersion ? (
                                 <Grid className={classes.paper} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
@@ -96,7 +39,7 @@ const Infos = () => {
                                     </Grid>
 
                                     <Grid item sm={12} xs={12}>
-                                        <Typography align="left" variant="h6" color='secondary'>
+                                        <Typography style={{ textAlign: 'justify' }} align="left" variant="h6" color='secondary'>
                                             {language === 'portuguese' ? (
                                                 proj.details[0]
                                             ) : (
@@ -128,23 +71,30 @@ const Infos = () => {
                                 </Grid>
 
                             ) : (
-                                <Grid className={classes.paperInfo} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
-                                    <Grid style={{ height: '20vh', marginTop: -30 }} item xl={10} lg={10} md={10} sm={10} xs={10}>
-                                        <Typography className={classes.typoPrinc} style={{ marginTop: 45 }} align="left" variant="h4" color='secondary'>
+                                <Grid className={classes.paper} container direction='row' justifyContent='space-around' alignItems="flex-start" spacing={1}>
+                                    <Grid item xl={11} lg={11} md={11} sm={11} xs={11}>
+                                        <Typography className={classes.typoPrinc} align="left" variant="h4" color='secondary'>
                                             {proj.title}
                                         </Typography>
                                     </Grid>
 
-                                    <Grid style={{ height: '60vh', marginTop: -60 }} item xl={5} lg={5} md={5} sm={12} xs={12}>
-                                        <Typography className={classes.typo} align="left" variant="h6" color='secondary'>
+                                    <Grid className={classes.principal} item xl={5} lg={5} md={5} sm={12} xs={12}>
+                                        {proj.id === 7 ? (
+                                            <img className={classes.imgPrincipalMobile} src={proj.imgPrincipal} alt="imagem principal" />
+                                        ) : (
+                                            <img className={classes.imgPrincipal} src={proj.imgPrincipal} alt="imagem principal" />
+                                        )}
+                                    </Grid>
+
+                                    <Grid item xl={5} lg={5} md={5} sm={12} xs={12}>
+                                        <Typography className={classes.typo} align="right" variant="h6" color='secondary'>
                                             {language === 'portuguese' ? (
                                                 proj.details[0]
                                             ) : (
                                                 proj.details[1]
                                             )}
                                         </Typography>
-                                        <br />
-                                        <Typography className={classes.typo} style={{ fontWeight: 'bold' }} align="left" variant="h6" color='secondary'>
+                                        <Typography className={classes.typo} style={{ fontWeight: 'bold' }} align="right" variant="h6" color='secondary'>
                                             {language === 'portuguese' ? (
                                                 <>Tecnologias</>
                                             ) : (
@@ -163,6 +113,7 @@ const Infos = () => {
                                                 </>
                                             ))}
                                         </Box>
+
                                         {proj.link !== "" && (
                                             <Button className={classes.repoButton} fullWidth variant='outlined' color='secondary'>
                                                 <Link style={{ width: '100%', textDecoration: 'none' }} href={proj.link}>
@@ -171,53 +122,69 @@ const Infos = () => {
                                             </Button>
                                         )}
                                     </Grid>
-
-                                    <Grid style={{ height: '60vh', marginTop: -20 }} item xl={4} lg={4} md={4} sm={12} xs={12}>
-                                        <Box className={classes.principal} >
-                                            {proj.id === 7 ? (
-                                                <img className={classes.imgPrincipalMobile} src={proj.imgPrincipal} alt="imagem principal" />
-                                            ) : (
-                                                <img className={classes.imgPrincipal} src={proj.imgPrincipal} alt="imagem principal" />
-                                            )}
-                                        </Box>
-                                    </Grid>
                                 </Grid>
                             )}
 
-                            <Grid className={classes.paperColor} style={{ padding: 160 }} container direction='row' justifyContent='center' alignItems="flex-start" spacing={1}>
+                            <Grid className={classes.paperColor} container direction='row' justifyContent='center' alignItems="flex-start" spacing={1}>
+                                <Grid className={classes.alignGrid} item xl={12} lg={12} md={12} sm={12} xs={12}>
+                                    {proj.imgMobile.length !== 0 ? (
+                                        <Typography className={classes.typo} align="center" variant="h5" color='secondary'>Imagens da versão desktop e mobile da aplicação</Typography>
+                                    ) : (
+                                        <Typography className={classes.typo} align="center" variant="h5" color='secondary'>Imagens da versão desktop da aplicação</Typography>
+                                    )}
+                                </Grid>
 
-                                {proj.imgDesktop.length !== 0 && (
-                                    <Box>
-                                        <Grid item xl={11} lg={11} md={11} sm={11} xs={11}>
-                                            <Typography className={classes.typo} align="left" variant="h5" color='secondary'>Imagens da versão desktop da aplicação: </Typography>
-                                        </Grid>
-                                        <Grid item className={classes.alignGrid} xl={12} lg={12} md={12} sm={12} xs={12}>
-                                            {/* desktop */}
+                                {mobileVersion ? (
+                                    <>
+                                        <Box className={classes.desktop}>
                                             <Carousel fullHeightHover={false}>
                                                 {proj.imgDesktop.map((item, i) => (
-                                                    <img className={classes.picsDesktop} key={i} src={item} alt={proj.title} />
+                                                    <>
+                                                        {proj.id !== 7 ? (
+                                                            <img className={classes.pics} key={i} src={item} alt={proj.title} />
+                                                        ) : (
+                                                            <img className={classes.picsMobile} key={i} src={item} alt={proj.title} />
+                                                        )}
+                                                    </>
                                                 ))}
                                             </Carousel>
-                                        </Grid>
-                                    </Box>
-                                )}
-
-
-                                {proj.imgMobile.length !== 0 && (
-                                    <Box style={{ marginTop: 40 }}>
-                                        <Grid item xl={11} lg={11} md={11} sm={11} xs={11}>
-                                            <Typography className={classes.typo} align="left" variant="h5" color='secondary'>Imagens da versão mobile da aplicação: </Typography>
-                                        </Grid>
-
-                                        <Grid item className={classes.alignGrid} xl={12} lg={12} md={12} sm={12} xs={12}>
-                                            {/* mobile */}
+                                        </Box>
+                                        <Box className={classes.mob}>
+                                            {proj.imgMobile.length !== 0 && (
+                                                <Carousel fullHeightHover={false}>
+                                                    {proj.imgMobile.map((item, i) => (
+                                                        <img className={classes.picsMob} key={i} src={item} alt={proj.title} />
+                                                    ))}
+                                                </Carousel>
+                                            )}
+                                        </Box>
+                                    </>
+                                ) : (
+                                    <Grid item className={classes.carousel} xl={10} lg={12} md={12} sm={12} xs={12}>
+                                        {/* desktop */}
+                                        <Box className={classes.desktop}>
                                             <Carousel fullHeightHover={false}>
-                                                {proj.imgMobile.map((item, i) => (
-                                                    <img className={classes.picsDesktop} key={i} src={item} alt={proj.title} />
+                                                {proj.imgDesktop.map((item, i) => (
+                                                    <>
+                                                        {proj.id !== 7 ? (
+                                                            <img className={classes.pics} key={i} src={item} alt={proj.title} />
+                                                        ) : (
+                                                            <img className={classes.picsMobile} key={i} src={item} alt={proj.title} />
+                                                        )}
+                                                    </>
                                                 ))}
                                             </Carousel>
-                                        </Grid>
-                                    </Box>
+                                        </Box>
+                                        <Box className={classes.mob}>
+                                            {proj.imgMobile.length !== 0 && (
+                                                <Carousel fullHeightHover={false}>
+                                                    {proj.imgMobile.map((item, i) => (
+                                                        <img className={classes.pics} key={i} src={item} alt={proj.title} />
+                                                    ))}
+                                                </Carousel>
+                                            )}
+                                        </Box>
+                                    </Grid>
                                 )}
                             </Grid>
                         </>
@@ -228,4 +195,4 @@ const Infos = () => {
     );
 }
 
-export default Infos;
+export default Project;

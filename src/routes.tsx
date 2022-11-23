@@ -6,7 +6,7 @@ import './main.css'
 import About from './pages/about';
 import Home from './pages/home';
 import CallingPages from './pages/home/callingPages';
-import Infos from './pages/projects/infos';
+import Project from './pages/projects/project/project';
 import ProjectsPage from './pages/projects/projectsPage';
 import Skills from './pages/skills';
 import TestBreakpoint from './test/breakpoints';
@@ -24,7 +24,7 @@ const RoutesApp = () => {
 
                     {/* projects */}
                     <Route path='/projectsPage/:language' element={<ProjectsPage />} />
-                    <Route path='/project/:language/:project' element={<Infos />} />
+                    <Route path='/project/:language/:project' element={<Project />} />
 
                     {/* ingles */}
                     <Route path='/about/:language' element={<About />} />
