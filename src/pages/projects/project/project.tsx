@@ -150,7 +150,7 @@ const Project = () => {
                                 </Grid>
                             )}
 
-                            <Grid className={classes.paperColor} container direction='row' justifyContent='center' alignItems="flex-start" spacing={1}>
+                            <Grid className={classes.paperColor} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
                                 <Grid className={classes.alignGrid} item xl={12} lg={12} md={12} sm={12} xs={12}>
                                     {proj.imgMobile.length !== 0 ? (
                                         <Typography className={classes.typo} align="center" variant="h5" color='secondary'>Imagens da versão desktop e mobile da aplicação</Typography>
