@@ -3,7 +3,7 @@ import layers from '../../../assets/image/backLayers.svg'
 
 const styles = makeStyles((theme: Theme) =>
     createStyles({
-        
+
         paper: {
             width: '100%',
             minHeight: '100vh',
@@ -39,7 +39,7 @@ const styles = makeStyles((theme: Theme) =>
             display: 'flex',
             justifyContent: 'center',
         },
-        
+
         imgPrincipal: {
             width: '100%',
             borderRadius: '20px',
@@ -60,7 +60,7 @@ const styles = makeStyles((theme: Theme) =>
                 width: '100%',
             },
         },
-        
+
         imgPrincipalMobile: {
             height: 500,
             borderRadius: '20px',
@@ -115,6 +115,11 @@ const styles = makeStyles((theme: Theme) =>
             },
         },
 
+        picsDialog: {
+            height: 'auto',
+            width: '100%'
+        },
+
         picsMob: {
             height: 500,
             [theme.breakpoints.down('sm')]: {
@@ -144,6 +149,10 @@ const styles = makeStyles((theme: Theme) =>
 
         mob: {
             marginLeft: 10,
+        },
+
+        dialog: {
+            height: '100%'
         }
 
     })

@@ -1,12 +1,21 @@
-import { Box, Button, Chip, Dialog, DialogContent, Grid, Link, Typography, useMediaQuery } from "@material-ui/core";
+import { Box, Button, Chip, Dialog, DialogContent, DialogContentText, Grid, Link, Slide, Typography, useMediaQuery } from "@material-ui/core";
 import Carousel from 'react-material-ui-carousel';
 import React, { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import MyAppBar from "../../../components/appBar";
 import data from '../../../data/projects.json';
 import { ProjectProps } from '../../../interface/ProjectProps';
 import theme from "../../../theme";
 import styles from "./style";
+import { TransitionProps } from "@material-ui/core/transitions/transition";
+
+const Transition = React.forwardRef(function Transition(
+    props: TransitionProps & { children?: React.ReactElement<any, any> },
+    ref: React.Ref<unknown>,
+) {
+    return <Slide direction="up" ref={ref} {...props} />;
+});
+
 
 const Project = () => {
     const params = useParams();
@@ -17,9 +26,25 @@ const Project = () => {
     const showBig = useMediaQuery(theme.breakpoints.up('lg'));
     const mobileVersion = useMediaQuery(theme.breakpoints.down('sm'));
 
+    const [open, setOpen] = React.useState(false);
+    const [imgTemp, setImgTemp] = useState<string>('');
+
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const imgOpen = (img: string) => {
+        setImgTemp(img)
+        setOpen(true);
+    }
 
     return (
         <>
+            <Dialog className={classes.dialog} open={open} TransitionComponent={Transition} keepMounted onClose={handleClose}>
+                <img className={classes.picsDialog} src={imgTemp} />
+            </Dialog>
+
             {data.map((proj: ProjectProps) => {
                 if (proj.id === id) {
                     return (
@@ -141,9 +166,9 @@ const Project = () => {
                                                 {proj.imgDesktop.map((item, i) => (
                                                     <>
                                                         {proj.id !== 7 ? (
-                                                            <img className={classes.pics} key={i} src={item} alt={proj.title} />
+                                                            <img className={classes.pics} key={i} src={item} alt={proj.title} onClick={() => imgOpen(item)} />
                                                         ) : (
-                                                            <img className={classes.picsMobile} key={i} src={item} alt={proj.title} />
+                                                            <img className={classes.picsMobile} key={i} src={item} alt={proj.title} onClick={() => imgOpen(item)} />
                                                         )}
                                                     </>
                                                 ))}
@@ -153,7 +178,7 @@ const Project = () => {
                                             {proj.imgMobile.length !== 0 && (
                                                 <Carousel fullHeightHover={false}>
                                                     {proj.imgMobile.map((item, i) => (
-                                                        <img className={classes.picsMob} key={i} src={item} alt={proj.title} />
+                                                        <img className={classes.picsMob} key={i} src={item} alt={proj.title} onClick={() => imgOpen(item)} />
                                                     ))}
                                                 </Carousel>
                                             )}
@@ -167,9 +192,9 @@ const Project = () => {
                                                 {proj.imgDesktop.map((item, i) => (
                                                     <>
                                                         {proj.id !== 7 ? (
-                                                            <img className={classes.pics} key={i} src={item} alt={proj.title} />
+                                                            <img className={classes.pics} key={i} src={item} alt={proj.title} onClick={() => imgOpen(item)} />
                                                         ) : (
-                                                            <img className={classes.picsMobile} key={i} src={item} alt={proj.title} />
+                                                            <img className={classes.picsMobile} key={i} src={item} alt={proj.title} onClick={() => imgOpen(item)} />
                                                         )}
                                                     </>
                                                 ))}
@@ -179,7 +204,7 @@ const Project = () => {
                                             {proj.imgMobile.length !== 0 && (
                                                 <Carousel fullHeightHover={false}>
                                                     {proj.imgMobile.map((item, i) => (
-                                                        <img className={classes.pics} key={i} src={item} alt={proj.title} />
+                                                        <img className={classes.pics} key={i} src={item} alt={proj.title} onClick={() => imgOpen(item)} />
                                                     ))}
                                                 </Carousel>
                                             )}
