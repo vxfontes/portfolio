@@ -16,7 +16,7 @@
         "imgDesktop": ["https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mainPage.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/dashboard.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/recibo.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/reciboRejected.png"],
         "videos": ["https://user-images.githubusercontent.com/63061509/200879209-9e556423-d3b2-4265-ba62-1b80835274f7.mp4", "https://user-images.githubusercontent.com/63061509/200878749-48c52e41-d6f1-4466-b625-af9009adfe88.mp4", "https://user-images.githubusercontent.com/63061509/200879167-e15d460d-751e-4c56-acf3-6bc38616fb03.mp4"],
         "another": ["https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/venda.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/comissao.png", "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/comprovante.png"],
-        "anotherDescription": ["Visualização de todos os tipos de PDFs gerados pelo sistema", "View all types of system-generated PDFs"]
+        "anotherDescription": ["Visualização de todos os tipos de PDFs gerados pelo sistema", "Showing all types of system-generated PDFs"]
     },
     {
         "id": 2,
