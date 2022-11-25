@@ -3,3 +3,13 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+
+.fade-ender {
+    opacity: 0;
+    z-index: 1;
+}
+
+.fade-ender .fade-enter-active {
+    opacity: 1;
+    transition: all 0.9s 0s ease;
+}

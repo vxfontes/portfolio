@@ -74,8 +74,7 @@ const MyAppBar = () => {
             <AppBar color='transparent' position="fixed" elevation={0}>
                 <Toolbar className={classes.toolbar}>
                     <Link className={classes.decoration} to={`/${language}`}>
-                        <Typography variant="h5" className={classes.name}>
-                            Port
+                        <Typography variant="h5" className={classes.name}>Port
                             <span className={classes.span}>folio.</span>
                         </Typography>
                     </Link>
@@ -93,8 +92,13 @@ const MyAppBar = () => {
                                 {language === 'english' ? (
                                     <>
                                         {data.english.map((type: string) => {
+                                            let proj = type.toLowerCase();
+                                            if (type.toLowerCase() === 'projects') {
+                                                proj = 'projectsPage'
+                                            }
+
                                             return (
-                                                <Link to={`/${type.toLowerCase()}/${language}`} style={{ textDecoration: 'none', color: 'white' }}>
+                                                <Link className={classes.decoration} to={`/${proj}/${language}`} >
                                                     <Typography className={classes.bar} variant="h6" color='secondary'>
                                                         {type}
                                                     </Typography>
@@ -105,8 +109,13 @@ const MyAppBar = () => {
                                 ) : (
                                     <>
                                         {data.portuguese.map((type: string) => {
+                                            let proj = type.toLowerCase();
+                                            if (type.toLowerCase() === 'projetos') {
+                                                proj = 'projectsPage'
+                                            }
+
                                             return (
-                                                <Link to={`/${type.toLowerCase()}/${language}`} style={{ textDecoration: 'none', color: 'white' }}>
+                                                <Link className={classes.decoration} to={`/${proj}/${language}`} >
                                                     <Typography className={classes.bar} variant="h6" color='secondary'>
                                                         {type}
                                                     </Typography>

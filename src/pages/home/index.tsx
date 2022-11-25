@@ -6,6 +6,7 @@ import { Navigate } from "react-router-dom";
 import MyAppBar from "../../components/appBar"
 import About from "../about";
 import Presentation from "../presentation";
+import Projects from "../projects";
 import Skills from "../skills";
 import { dataBaseApp } from "../../firebase";
 import { collection, doc, getDocs, setDoc } from "firebase/firestore";
@@ -43,6 +44,7 @@ const Home = () => {
     const [open, setOpen] = React.useState(true);
     const [loading, setLoading] = React.useState(false);
 
+  
     const docRef = collection(dataBaseApp, "acessos");
     getDocs(docRef).then((res) => {
         let data = (res.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
@@ -57,7 +59,6 @@ const Home = () => {
         })
     })
     
-
     async function enviandoValores(value: string) {
         try {
             await setDoc(doc(dataBaseApp, "acessos", "acesso"), {
@@ -71,7 +72,6 @@ const Home = () => {
     const handleClose = (e: string) => {
         setLanguage(e);
         setOpen(false);
-        enviandoValores(e);
         setTimeout(() => {
 
             setLoading(true);
