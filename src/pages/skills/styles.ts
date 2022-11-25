@@ -5,14 +5,11 @@ const styles = makeStyles((theme: Theme) =>
     createStyles({
         paper: {
             width: '100%',
-            height: '80vh',
+            height: '100vh',
             margin: 0,
             padding: 0,
             backgroundColor: theme.palette.mybackgroundColor?.main,
             textAlign: 'center',
-            [theme.breakpoints.only('xs')]: {
-                height: '100vh',
-            }
         },
 
         container: {
