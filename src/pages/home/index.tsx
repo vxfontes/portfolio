@@ -75,7 +75,7 @@ const Home = () => {
 
     return (
         <>
-            <Dialog style={{ border: 'none' }} open={open} TransitionComponent={Transition} keepMounted onClose={handleClose}>
+            <Dialog style={{ border: 'none' }} open={open} TransitionComponent={Transition} keepMounted>
                 <Box className={classes.dialog}>
                     <DialogContent>
                         <DialogContentText color="secondary">
