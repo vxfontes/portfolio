@@ -116,13 +116,11 @@
     {
         "id": 7,
         "title": "Agenda telefônica",
-        "descriptionPT": "Modelo de 3 telas que são indispensáveis para basicamente todos os sites hoje em dia: Cadastro, login e tela de perfil.",
-        "descriptionEN": "Model of 3 screens that are indispensable for basically all sites nowadays: Registration, login and profile screen.",
-        "details": [
-            "Telas de login, cadastro e de perfil de estilos diferentes para testar conhecimentos de HTML e CSS puro com estilizações distintas e alternativas focando no design.", 
-            "Login, registration and profile screens of different styles to test knowledge of HTML and pure CSS with distinct and alternative stylizations focusing on design."
-        ],
-        "tecnologies": ["Java", "Java Swing"],
+        "descriptionPT": "Agenda telefônica feita em java, possui uma tela inicial onde mostra os contatos, podendo adicionar, editar e remover um usuário de sua lista.",
+        "descriptionEN": "Phonebook made in java, has a home screen where it shows contacts, being able to add, edit and remove a user from your list.",
+        "details": ["Agenda telefônica feita em java, possui uma tela inicial onde mostra os contatos, podendo adicionar, editar e remover um usuário de sua lista.", 
+            "Phonebook made in java, has a home screen where it shows contacts, being able to add, edit and remove a user from your list."],
+        "tecnologies": ["Java", "Java Swing", "OO"],
         "finish": true,
         "link": "https://github.com/vxfontes/JavaPOO-university/tree/main/aulaPOO/src/main/java/aula6/agenda",
         "imgPrincipal": "https://raw.githubusercontent.com/vxfontes/JavaPOO-university/main/aulaPOO/src/main/java/aula6/agenda/img/principal.png",
