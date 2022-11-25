@@ -1,10 +1,11 @@
 import { Box, Button, CircularProgress, Dialog, DialogActions, DialogContent, DialogContentText, Slide, Theme } from "@material-ui/core";
 import { TransitionProps } from "@material-ui/core/transitions/transition";
 import { createStyles, makeStyles } from "@material-ui/styles";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { dataBaseApp } from "../../firebase";
 import { collection, doc, getDocs, setDoc } from "firebase/firestore";
+import axios from "axios";
 
 const Transition = React.forwardRef(function Transition(
     props: TransitionProps & { children?: React.ReactElement<any, any> },
@@ -12,6 +13,9 @@ const Transition = React.forwardRef(function Transition(
 ) {
     return <Slide direction="up" ref={ref} {...props} />;
 });
+
+const current = new Date();
+const date = `${current.getMonth()+1}/${current.getFullYear()}`;
 
 const styles = makeStyles((theme: Theme) =>
     createStyles({
@@ -35,9 +39,11 @@ const styles = makeStyles((theme: Theme) =>
 const Home = () => {
     const classes = styles();
     const [language, setLanguage] = useState<string>('english');
-    let count = 0;
+    const [IP, setIP] = useState<string>('');
+    const [IPArray, setIPArray] = useState<object>({});
     const [open, setOpen] = React.useState(true);
     const [loading, setLoading] = React.useState(false);
+    let count = 0;
 
     const docRef = collection(dataBaseApp, "acessos");
     getDocs(docRef).then((res) => {
@@ -51,12 +57,28 @@ const Home = () => {
             }
             count = (valor + 1);
         })
-    })
+    });
 
+    const getData = async () => {
+        const res = await axios.get('https://geolocation-db.com/json/');
+        setIPArray(res.data);
+        console.log(res.data);
+        setIP(res.data.IPv4);
+        console.log(IPArray);
+    }
+    
+    useEffect(() => {
+        getData()
+    }, []);
+    
     async function enviandoValores() {
         try {
             await setDoc(doc(dataBaseApp, "acessos", "acesso"), {
                 acesso: count,
+            });
+            await setDoc(doc(dataBaseApp, "IPs", date), {
+                IP: IP,
+                detalhes: IPArray,
             });
         } catch (e) {
             console.error("Error adding document: ", e);
