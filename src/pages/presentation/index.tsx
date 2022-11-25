@@ -1,6 +1,6 @@
-import { Button, Grid, Typography } from '@material-ui/core';
+import { Button, Grid, Typography, Link } from '@material-ui/core';
 import { ArrowForward } from '@material-ui/icons';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import NormalAvatar from '../../components/avatars/normalAvatar';
 import styles from './styles';
@@ -36,7 +36,7 @@ const Presentation = () => {
                     <Grid item xl={8} lg={7} md={9} sm={12} xs={12}>
                         <Grid container className={classes.justify} direction='row' spacing={1}>
                             <Grid item xl={6} lg={7} md={7} sm={10} xs={11}>
-                                <Link to='https://bit.ly/curriculovxfontes' style={{ textDecoration: 'none', color: 'white' }}>
+                                <Link style={{ textDecoration: 'none', color: 'white' }} href='https://drive.google.com/file/d/1gM8mLgrf04lyBxHpG40om1kM2iQSoTmz/view?usp=sharing'>
                                     <Button className={classes.typo} variant="outlined" color='secondary' fullWidth>
                                         {language === 'portuguese' ? (
                                             <Typography variant='h6'>
@@ -52,7 +52,7 @@ const Presentation = () => {
                                 </Link>
                             </Grid>
                             <Grid item xl={4} lg={4} md={4} sm={10} xs={11}>
-                                <Link to='https://api.whatsapp.com/send?phone=5575988389894' style={{ textDecoration: 'none', color: 'white' }}>
+                                <Link href='https://api.whatsapp.com/send?phone=5575988389894' style={{ textDecoration: 'none', color: 'white' }}>
                                     <Button className={classes.typo} variant="contained" color="primary" fullWidth>
                                         {language === 'portuguese' ? (
                                             <Typography variant='h6'>
