@@ -64,6 +64,9 @@ const Home = () => {
             await setDoc(doc(dataBaseApp, "acessos", "acesso"), {
                 acesso: count,
             });
+            await setDoc(doc(dataBaseApp, "acessos", "acessoTotal"), {
+                acesso: count,
+            });
         } catch (e) {
             console.error("Error adding document: ", e);
         }
