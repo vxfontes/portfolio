@@ -34,18 +34,17 @@ const styles = makeStyles((theme: Theme) =>
 
 const Home = () => {
     const classes = styles();
-    const [language, setLanguage] = useState<string>('portuguese');
+    const [language, setLanguage] = useState<string>('english');
     let count = 0;
     const [open, setOpen] = React.useState(true);
     const [loading, setLoading] = React.useState(false);
 
-  
     const docRef = collection(dataBaseApp, "acessos");
     getDocs(docRef).then((res) => {
         let data = (res.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
         data.map((d: any) => {
             let valor;
-            if(Number(d.acesso) === NaN) {
+            if (Number(d.acesso) === NaN) {
                 valor = 0;
             } else {
                 valor = Number(d.acesso)
@@ -53,7 +52,7 @@ const Home = () => {
             count = (valor + 1);
         })
     })
-    
+
     async function enviandoValores() {
         try {
             await setDoc(doc(dataBaseApp, "acessos", "acesso"), {
@@ -64,8 +63,16 @@ const Home = () => {
         }
     }
 
-    const handleClose = (e: string) => {
+    const setLanguageDefault = (e: string) => {
         setLanguage(e);
+        setOpen(false);
+        setTimeout(() => {
+            enviandoValores();
+            setLoading(true);
+        }, 1000);
+    }
+    
+    const handleClose = () => {
         setOpen(false);
         setTimeout(() => {
             enviandoValores();
@@ -84,10 +91,10 @@ const Home = () => {
                         </DialogContentText>
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={() => handleClose('portuguese')} color="secondary" variant="text">
+                        <Button onClick={() => setLanguageDefault('portuguese')} color="secondary" variant="text">
                             Português
                         </Button>
-                        <Button onClick={() => handleClose('english')} color="secondary" variant="text">
+                        <Button onClick={() => setLanguageDefault('english')} color="secondary" variant="text">
                             English
                         </Button>
                     </DialogActions>
