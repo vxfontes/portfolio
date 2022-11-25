@@ -3,11 +3,6 @@ import { TransitionProps } from "@material-ui/core/transitions/transition";
 import { createStyles, makeStyles } from "@material-ui/styles";
 import React, { useState } from "react";
 import { Navigate } from "react-router-dom";
-import MyAppBar from "../../components/appBar"
-import About from "../about";
-import Presentation from "../presentation";
-import Projects from "../projects";
-import Skills from "../skills";
 import { dataBaseApp } from "../../firebase";
 import { collection, doc, getDocs, setDoc } from "firebase/firestore";
 
@@ -59,12 +54,9 @@ const Home = () => {
         })
     })
     
-    async function enviandoValores(value: string) {
+    async function enviandoValores() {
         try {
             await setDoc(doc(dataBaseApp, "acessos", "acesso"), {
-                acesso: count,
-            });
-            await setDoc(doc(dataBaseApp, "acessos", "acessoTotal"), {
                 acesso: count,
             });
         } catch (e) {
@@ -76,7 +68,7 @@ const Home = () => {
         setLanguage(e);
         setOpen(false);
         setTimeout(() => {
-
+            enviandoValores();
             setLoading(true);
         }, 1000);
     };
