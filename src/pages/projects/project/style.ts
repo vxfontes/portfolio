@@ -1,5 +1,6 @@
 import { makeStyles, createStyles, Theme } from '@material-ui/core';
-import layers from '../../../assets/image/backLayers.svg'
+import layers from '../../../assets/image/backLayers.svg';
+import asfalttexture from '../../../assets/image/asfalttexture.png';
 
 const styles = makeStyles((theme: Theme) =>
     createStyles({
@@ -35,13 +36,31 @@ const styles = makeStyles((theme: Theme) =>
             },
         },
 
+        paperVid: {
+            width: '100%',
+            minHeight: '100%',
+            height: '100%',
+            borderTop: '1px solid #fff',
+            margin: 0,
+            padding: 50,
+            backgroundColor: theme.palette.mybackgroundColor?.main,
+            backgroundImage: `url(${asfalttexture})`,
+            [theme.breakpoints.only('sm')]: {
+                padding: 100
+            },
+            [theme.breakpoints.only('xs')]: {
+                padding: 50
+            },
+        },
+
         paperShadow: {
             width: '100%',
             minHeight: '100%',
             height: '100%',
-            boxShadow: '0px -9px 28px -10px rgba(0,0,0,0.78)',
+            boxShadow: '0px 3px 35px 5px rgba(0,0,0,0.75)',
             margin: 0,
             padding: 80,
+            zIndex: 2,
             backgroundColor: theme.palette.mybackgroundColor?.main,
             [theme.breakpoints.only('sm')]: {
                 padding: 100
@@ -174,7 +193,17 @@ const styles = makeStyles((theme: Theme) =>
         },
 
         dialog: {
-            height: '100%'
+            height: '100%',
+        },
+
+        dialogBox: {
+            backgroundColor: theme.palette.mybackgroundColor?.main,
+            padding: 20,
+        }, 
+
+        select: {
+            margin: 10,
+            marginRight: 5,
         }
 
     })

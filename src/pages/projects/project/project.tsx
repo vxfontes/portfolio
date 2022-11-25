@@ -1,7 +1,7 @@
-import { Box, Button, Chip, Dialog, DialogContent, DialogContentText, Grid, Link, Slide, Typography, useMediaQuery } from "@material-ui/core";
+import { Box, Button, Chip, Dialog, Grid, Link, Slide, Typography, useMediaQuery } from "@material-ui/core";
 import Carousel from 'react-material-ui-carousel';
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link as Routing } from "react-router-dom";
 import MyAppBar from "../../../components/appBar";
 import data from '../../../data/projects.json';
 import { ProjectProps } from '../../../interface/ProjectProps';
@@ -27,8 +27,14 @@ const Project = () => {
     const mobileVersion = useMediaQuery(theme.breakpoints.down('sm'));
 
     const [open, setOpen] = React.useState(false);
+    const [openVid, setOpenVid] = React.useState(false);
     const [imgTemp, setImgTemp] = useState<string>('');
+    const [vid, setVid] = useState<string[]>([]);
 
+
+    const handleCloseVid = () => {
+        setOpenVid(false);
+    };
 
     const handleClose = () => {
         setOpen(false);
@@ -39,10 +45,28 @@ const Project = () => {
         setOpen(true);
     }
 
+    const vidOpen = (img: string[]) => {
+        setVid(img);
+        setOpenVid(true);
+    }
+
     return (
         <>
             <Dialog className={classes.dialog} open={open} TransitionComponent={Transition} keepMounted onClose={handleClose}>
                 <img className={classes.picsDialog} src={imgTemp} />
+            </Dialog>
+
+            <Dialog className={classes.dialog} open={openVid} TransitionComponent={Transition} keepMounted onClose={handleCloseVid}>
+                <Box className={classes.dialogBox}>
+                    <Typography color='secondary' variant="h6">{language === 'portuguese' ? (<>Escolha: </>) : (<>Choose</>)}</Typography>
+                    {vid.map((vid: string, index) => (
+                        <Button className={classes.select} variant="contained" color='secondary'>
+                            <Link style={{ width: '100%', textDecoration: 'none', color: '#372554' }} href={vid}>
+                                {index+1}
+                            </Link>
+                        </Button>
+                    ))}
+                </Box>
             </Dialog>
 
             {data.map((proj: ProjectProps) => {
@@ -142,7 +166,7 @@ const Project = () => {
                                         {proj.link !== "" && (
                                             <Button className={classes.repoButton} fullWidth variant='outlined' color='secondary'>
                                                 <Link style={{ width: '100%', textDecoration: 'none' }} href={proj.link}>
-                                                    <Typography style={{ fontWeight: 'bold' }} align="center" variant="h6" color='secondary'>Repo</Typography>
+                                                    <Typography style={{ fontWeight: 'bold' }} align="center" variant="h6" color='secondary'>Github Repo</Typography>
                                                 </Link>
                                             </Button>
                                         )}
@@ -228,6 +252,30 @@ const Project = () => {
                                             ))}
                                         </Carousel>
                                     </Box>
+                                </Grid>
+                            )}
+
+                            {proj.videos.length !== 0 && (
+                                <Grid className={classes.paperVid} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
+                                    {proj.videos.length === 1 ? (
+                                        <Button variant="outlined" color='secondary'>
+                                            <Link style={{ width: '100%', textDecoration: 'none', color: '#fff' }} href={proj.videos[0]}>
+                                                {language === 'portuguese' ? (
+                                                    <>Clique para visualizar vídeos de demonstração</>
+                                                ) : (
+                                                    <>Click to view demo videos</>
+                                                )}
+                                            </Link>
+                                        </Button>
+                                    ) : (
+                                        <Button variant="outlined" color='secondary' onClick={() => vidOpen(proj.videos)}>
+                                            {language === 'portuguese' ? (
+                                                <>Clique para visualizar vídeos de demonstração</>
+                                            ) : (
+                                                <>Click to view demo videos</>
+                                            )}
+                                        </Button>
+                                    )}
                                 </Grid>
                             )}
                         </>
