@@ -212,6 +212,24 @@ const Project = () => {
                                     </Grid>
                                 )}
                             </Grid>
+
+                            {proj.another.length !== 0 && (
+                                <Grid className={classes.paperShadow} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
+                                    {language === 'portuguese' ? (
+                                        <Typography className={classes.typoDet} align="center" variant="h5" color='secondary'>{proj.anotherDescription[0]}</Typography>
+                                    ) : (
+                                        <Typography className={classes.typoDet} align="center" variant="h5" color='secondary'>{proj.anotherDescription[1]}</Typography>
+                                    )}
+
+                                    <Box style={{ minWidth: '90%', width: '90%', marginTop: 10 }}>
+                                        <Carousel fullHeightHover={false}>
+                                            {proj.another.map((image, item) => (
+                                                <img width={'100%'} key={item} src={image} alt={proj.title} onClick={() => imgOpen(image)} />
+                                            ))}
+                                        </Carousel>
+                                    </Box>
+                                </Grid>
+                            )}
                         </>
                     )
                 }

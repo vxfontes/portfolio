@@ -35,6 +35,22 @@ const styles = makeStyles((theme: Theme) =>
             },
         },
 
+        paperShadow: {
+            width: '100%',
+            minHeight: '100%',
+            height: '100%',
+            boxShadow: '0px -9px 28px -10px rgba(0,0,0,0.78)',
+            margin: 0,
+            padding: 80,
+            backgroundColor: theme.palette.mybackgroundColor?.main,
+            [theme.breakpoints.only('sm')]: {
+                padding: 100
+            },
+            [theme.breakpoints.only('xs')]: {
+                padding: 50
+            },
+        },
+
         alignGrid: {
             display: 'flex',
             justifyContent: 'center',
@@ -100,6 +116,12 @@ const styles = makeStyles((theme: Theme) =>
 
         typo: {
             marginBottom: 10,
+            textAlign: 'justify'
+        },
+
+        typoDet: {
+            marginBottom: 10,
+            marginTop: 10,
             textAlign: 'justify'
         },
 
