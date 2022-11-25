@@ -9,7 +9,6 @@ import CallingPages from './pages/home/callingPages';
 import Project from './pages/projects/project/project';
 import ProjectsPage from './pages/projects/projectsPage';
 import Skills from './pages/skills';
-import TestBreakpoint from './test/breakpoints';
 
 const RoutesApp = () => {
     const location = useLocation();
@@ -20,7 +19,6 @@ const RoutesApp = () => {
                 <Routes location={location}>
                     <Route path='/' element={<Home />} />
                     <Route path='/:language' element={<CallingPages />} />
-                    <Route path='/breakpoints' element={<TestBreakpoint />} />
 
                     {/* projects */}
                     <Route path='/projectsPage/:language' element={<ProjectsPage />} />

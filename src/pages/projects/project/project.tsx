@@ -1,7 +1,7 @@
 import { Box, Button, Chip, Dialog, Grid, Link, Slide, Typography, useMediaQuery } from "@material-ui/core";
 import Carousel from 'react-material-ui-carousel';
 import React, { useState } from "react";
-import { useParams, Link as Routing } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import MyAppBar from "../../../components/appBar";
 import data from '../../../data/projects.json';
 import { ProjectProps } from '../../../interface/ProjectProps';
