@@ -35,10 +35,10 @@ const MyAppBar = () => {
 
     const data = {
         "english": [
-            "About", "Skills", "Projects", "Contact"
+            "About", "Skills", "Projects"
         ],
         "portuguese": [
-            "Sobre", "Habilidades", "Projetos", "Contato"
+            "Sobre", "Habilidades", "Projetos"
         ]
     }
 
