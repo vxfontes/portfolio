@@ -50,7 +50,7 @@ const Presentation = () => {
                                     <Link style={{ textDecoration: 'none', color: 'white' }} href={'https://drive.google.com/file/d/1Xf3j0PX6t2cR6t1I4FiH3WDo_KCEJ2VZ/view?usp=sharing'}>
                                         <Button className={classes.typo} variant="outlined" color='secondary' fullWidth>
                                             <Typography variant='h6'>
-                                                <>Baixar currículo</>
+                                                <>Download Resume</>
                                             </Typography>
                                             <ArrowForward style={{ marginLeft: '1vw' }} />
                                         </Button>
