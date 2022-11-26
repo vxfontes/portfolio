@@ -15,7 +15,7 @@ const Transition = React.forwardRef(function Transition(
 });
 
 const current = new Date();
-const date = `${current.getMonth()+1}/${current.getFullYear()}`;
+const date = `${current.getMonth() + 1}/${current.getFullYear()}`;
 
 const styles = makeStyles((theme: Theme) =>
     createStyles({
@@ -41,43 +41,52 @@ const Home = () => {
     const [language, setLanguage] = useState<string>('english');
     const [IP, setIP] = useState<string>('');
     const [IPArray, setIPArray] = useState<object>({});
+    const [IPPlace, setIPPlace] = useState<string>(''); 
     const [open, setOpen] = React.useState(true);
     const [loading, setLoading] = React.useState(false);
-    let count = 0;
+    const [count, setCount] = useState<number>(0);
 
     const docRef = collection(dataBaseApp, "acessos");
     getDocs(docRef).then((res) => {
         let data = (res.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+        console.log(data);
+
         data.map((d: any) => {
-            let valor;
+            let valor = 0;
             if (Number(d.acesso) === NaN) {
                 valor = 0;
             } else {
                 valor = Number(d.acesso)
             }
-            count = (valor + 1);
+            setCount(valor + 1);
         })
     });
 
     const getData = async () => {
         const res = await axios.get('https://geolocation-db.com/json/');
         setIPArray(res.data);
-        console.log(res.data);
         setIP(res.data.IPv4);
-        console.log(IPArray);
+        setIPPlace(res.data.city+'-'+res.data.country_code)
     }
-    
+
     useEffect(() => {
         getData()
     }, []);
-    
+
+
     async function enviandoValores() {
         try {
             await setDoc(doc(dataBaseApp, "acessos", "acesso"), {
                 acesso: count,
             });
-            await setDoc(doc(dataBaseApp, "IPs", date), {
+        } catch (e) {
+            console.error("Error adding document: ", e);
+        }
+
+        try {
+            await setDoc(doc(dataBaseApp, "IPs", IP), {
                 IP: IP,
+                place: IPPlace,
                 detalhes: IPArray,
             });
         } catch (e) {
@@ -93,7 +102,7 @@ const Home = () => {
             setLoading(true);
         }, 1000);
     }
-    
+
     const handleClose = () => {
         setOpen(false);
         setTimeout(() => {
