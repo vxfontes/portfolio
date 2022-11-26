@@ -14,8 +14,9 @@ const Transition = React.forwardRef(function Transition(
     return <Slide direction="up" ref={ref} {...props} />;
 });
 
-const current = new Date();
-const date = `${current.getMonth() + 1}/${current.getFullYear()}`;
+const timeElapsed = Date.now();
+const today = new Date(timeElapsed);
+const data = today.toLocaleDateString();
 
 const styles = makeStyles((theme: Theme) =>
     createStyles({
@@ -39,18 +40,14 @@ const styles = makeStyles((theme: Theme) =>
 const Home = () => {
     const classes = styles();
     const [language, setLanguage] = useState<string>('english');
-    const [IP, setIP] = useState<string>('');
-    const [IPArray, setIPArray] = useState<object>({});
-    const [IPPlace, setIPPlace] = useState<string>(''); 
     const [open, setOpen] = React.useState(true);
     const [loading, setLoading] = React.useState(false);
-    const [count, setCount] = useState<number>(0);
-    let ip;
+    let count = 0;
+    let ip: any;
 
     const docRef = collection(dataBaseApp, "acessos");
     getDocs(docRef).then((res) => {
         let data = (res.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-        console.log(data);
 
         data.map((d: any) => {
             let valor = 0;
@@ -59,15 +56,13 @@ const Home = () => {
             } else {
                 valor = Number(d.acesso)
             }
-            setCount(valor + 1);
+            count = (valor + 1);
         })
     });
 
     const getData = async () => {
         const res = await axios.get('https://geolocation-db.com/json/');
-        setIPArray(res.data);
-        setIP(res.data.IPv4);
-        setIPPlace(res.data.city+'-'+res.data.country_code)
+        ip = (res.data)
     }
 
     useEffect(() => {
@@ -75,8 +70,8 @@ const Home = () => {
     }, []);
 
 
-    async function enviandoValores(res: any) {
-        
+    async function enviandoValores() {
+
         try {
             await setDoc(doc(dataBaseApp, "acessos", "acesso"), {
                 acesso: count,
@@ -86,24 +81,24 @@ const Home = () => {
         }
 
         try {
-            await setDoc(doc(dataBaseApp, "IPs", res.data.IPv4), {
-                IP: res.data.IPv4,
-                place: res.data.city+'-'+res.data.country_code,
-                detalhes: res.data,
+            await setDoc(doc(dataBaseApp, "IPs", ip.IPv4), {
+                IP: ip.IPv4,
+                data: data,
+                place: ip.city + '-' + ip.country_code,
+                detalhes: ip,
             });
         } catch (e) {
             console.error("Error adding document: ", e);
         }
     }
-    
+
     const setLanguageDefault = (e: string) => {
-        const res = axios.get('https://geolocation-db.com/json/');
         setLanguage(e);
         setOpen(false);
         setTimeout(() => {
-            enviandoValores(res);
+            enviandoValores();
             setLoading(true);
-        }, 1000);
+        }, 2000);
     }
 
     return (
