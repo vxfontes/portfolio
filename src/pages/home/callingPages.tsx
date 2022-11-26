@@ -1,4 +1,3 @@
-import { useParams } from 'react-router-dom';
 import MyAppBar from '../../components/appBar';
 import About from '../about';
 import Presentation from '../presentation';
@@ -7,12 +6,6 @@ import Skills from '../skills';
 
 const CallingPages = () => {
     
-    const params = useParams();
-    const language = params.language;
-
-    console.log(language);
-    
-
     return (
         <>
             <MyAppBar />
