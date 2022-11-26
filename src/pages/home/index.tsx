@@ -45,6 +45,7 @@ const Home = () => {
     const [open, setOpen] = React.useState(true);
     const [loading, setLoading] = React.useState(false);
     const [count, setCount] = useState<number>(0);
+    let ip;
 
     const docRef = collection(dataBaseApp, "acessos");
     getDocs(docRef).then((res) => {
@@ -74,7 +75,8 @@ const Home = () => {
     }, []);
 
 
-    async function enviandoValores() {
+    async function enviandoValores(res: any) {
+        
         try {
             await setDoc(doc(dataBaseApp, "acessos", "acesso"), {
                 acesso: count,
@@ -84,32 +86,25 @@ const Home = () => {
         }
 
         try {
-            await setDoc(doc(dataBaseApp, "IPs", IP), {
-                IP: IP,
-                place: IPPlace,
-                detalhes: IPArray,
+            await setDoc(doc(dataBaseApp, "IPs", res.data.IPv4), {
+                IP: res.data.IPv4,
+                place: res.data.city+'-'+res.data.country_code,
+                detalhes: res.data,
             });
         } catch (e) {
             console.error("Error adding document: ", e);
         }
     }
-
+    
     const setLanguageDefault = (e: string) => {
+        const res = axios.get('https://geolocation-db.com/json/');
         setLanguage(e);
         setOpen(false);
         setTimeout(() => {
-            enviandoValores();
+            enviandoValores(res);
             setLoading(true);
         }, 1000);
     }
-
-    const handleClose = () => {
-        setOpen(false);
-        setTimeout(() => {
-            enviandoValores();
-            setLoading(true);
-        }, 1000);
-    };
 
     return (
         <>
