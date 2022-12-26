@@ -40,6 +40,25 @@ const ProjectsPage = () => {
 
                             <CardContent className={classes.description}>
                                 <Typography className={classes.chip} variant="h6" style={{ fontWeight: 'bold' }} color='secondary'>{project.title}</Typography>
+                                <Typography className={classes.chip} variant="body1" color='secondary'>
+                                    {language === 'english' ? (
+                                        <>
+                                            {project.finish ? (
+                                                <>Done</>
+                                            ) : (
+                                                <>Doing...</>
+                                            )}
+                                        </>
+                                    ) : (
+                                        <>
+                                            {project.finish ? (
+                                                <>Finalizado</>
+                                            ) : (
+                                                <>Em progresso...</>
+                                            )}
+                                        </>
+                                    )}
+                                </Typography>
 
                                 <Box>
                                     {project.tecnologies.slice(0, 3).map((tec: string) => (
