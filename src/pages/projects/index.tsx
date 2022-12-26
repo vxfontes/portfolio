@@ -7,57 +7,13 @@ import { useParams, Link } from 'react-router-dom';
 import theme from '../../theme';
 import data from '../../data/projects.json';
 import { ProjectProps } from "../../interface/ProjectProps";
+import ProjectCard from '../../components/projectCard/card';
 
 const Projects = () => {
     const params = useParams();
     const language = params.language;
     const classes = styles();
     const showMore = useMediaQuery(theme.breakpoints.up('sm'));
-
-    function getProgress(progress: boolean) {
-        if (progress === true) {
-            if (language === "portuguese") {
-                return "Finalizado";
-            } else {
-                return "Done";
-            }
-        } else {
-            if (language === "portuguese") {
-                return "Em progresso";
-            } else {
-                return "In Progress";
-            }
-        }
-    }
-
-    function Thumbnail(project: any) {
-        const projeto = project.project;
-        return (
-            <Grid className={classes.page} container direction='row' justifyContent='center' alignItems="center" spacing={1}>
-                <Grid className={classes.progressBar} container xl={11} lg={11} md={11} sm={11} xs={11}>
-                    <Grid item xl={2} lg={2} md={2} sm={2} xs={2}>
-                        <DeveloperModeIcon style={{ fontSize: 30, paddingTop: 2 }} />
-                    </Grid>
-                    <Grid style={{ display: 'flex' }} item xl={10} lg={10} md={10} sm={10} xs={10}>
-                        <Typography className={classes.progressText} variant="h6" align="right">{getProgress(projeto.finish)}</Typography>
-                    </Grid>
-                </Grid>
-                <Grid item xl={11} lg={11} md={11} sm={11} xs={11}>
-                    <Typography variant="h4" color='secondary'>{projeto.title}</Typography>
-                    <Typography variant="body1" color='secondary'>{projeto.descriptionPT.substr(0, 50)}...</Typography>
-                </Grid>
-
-                {showMore && (
-                    <Grid item xl={11} lg={11} md={11} sm={11} xs={11}>
-                        {projeto.tecnologies.slice(0, 5).map((tec: string[]) =>
-                            <Chip className={classes.chip} label={tec} variant='outlined' color='secondary' />
-                        )}
-                        <Chip className={classes.chip} label='...' variant='outlined' color='secondary' />
-                    </Grid>
-                )}
-            </Grid>
-        )
-    }
 
     return (
         <>
@@ -79,9 +35,9 @@ const Projects = () => {
                         </Typography>
                     </Grid>
                     {data.slice(0, 3).map((project) =>
-                        <Grid item xl={4} lg={4} md={4} sm={11} xs={11} style={{ marginTop: '4vh' }}>
+                        <Grid key={project.id} item xl={4} lg={4} md={4} sm={11} xs={11} style={{ marginTop: '4vh' }}>
                             <Link className={classes.decoration} to={`/project/${language}/${project.id}`}>
-                                <Thumbnail project={project} />
+                                <ProjectCard language={language} project={project} />
                             </Link>
                         </Grid>
                     )}
