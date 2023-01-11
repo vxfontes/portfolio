@@ -26,7 +26,7 @@ const About = () => {
                         </Typography>
                         <br />
                         <Typography className={classes.typoText} variant='h6' color='secondary'>
-                            Cursando bacharelado em ciências exatas e tecnológicas com terminalidade em engenharia da computação.
+                            Cursando bacharelado em ciências exatas e tecnológicas com terminalidade em engenharia da computação pela UFRB e tecnólogo em ciências de dados pela UNOPAR.
                             Tenho facilidade em aprendizado e alto desempenho voltado a atingir ou superar metas. Oferecendo conhecimentos
                             em tecnologia, exatas e design, com experiência em elaboração de estratégias em equipe.
                         </Typography>
@@ -37,7 +37,7 @@ const About = () => {
                             <span style={{ borderBottom: "3px solid #000000", marginRight: '0.22em' }}>About</span> me
                         </Typography>
                         <Typography className={classes.typoText} variant='h6' color='secondary'>
-                            Doing bachelor's degree in exact sciences and technology with terminality in computer engineering.
+                            Doing bachelor's degree in exact sciences and technology with terminality in computer engineering by UFRB and technologist in data sciences by UNOPAR.
                             I have a high performance returned to achieve or exceed goals and ease of learning. Offering knowledge in
                             technology, exacts and design, with experience in team strategy development.
                         </Typography>
