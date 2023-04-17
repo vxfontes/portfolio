@@ -49,7 +49,7 @@ const Skills = () => {
                             <Box>
                                 <img src={typescript} alt='typescript' height='90' />
                                 <Typography variant="h6" color='secondary'>TypeScript</Typography>
-                                <Typography variant="body2" style={{ color: '#b8b8b89e' }}>75%</Typography>
+                                <Typography variant="body2" style={{ color: '#b8b8b89e' }}>85%</Typography>
                             </Box>
                             <Box>
                                 <img src={css} alt='css' height='90' />

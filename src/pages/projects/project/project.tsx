@@ -166,7 +166,7 @@ const Project = () => {
                                         {proj.link !== "" && (
                                             <Button className={classes.repoButton} fullWidth variant='outlined' color='secondary'>
                                                 <Link style={{ width: '100%', textDecoration: 'none' }} href={proj.link}>
-                                                    <Typography style={{ fontWeight: 'bold' }} align="center" variant="h6" color='secondary'>Github Repo</Typography>
+                                                    <Typography style={{ fontWeight: 'bold' }} align="center" variant="h6" color='secondary'>Links</Typography>
                                                 </Link>
                                             </Button>
                                         )}
