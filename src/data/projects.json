@@ -1,5 +1,24 @@
 [
     {
+        "id": 27,
+        "title": "Coin Saves",
+        "descriptionPT": "O Coin saves é uma ferramenta completa para gerenciar despesas e receitas pessoais ou empresariais com interface intuitiva, controle de orçamento, conciliação com a conta do google e recursos de segurança.",
+        "descriptionEN": "Coin saves is a complete tool for managing personal or business expenses and income with intuitive interface, budget control, reconciliation with google account and security features.",
+        "details": [
+            "O coin saves é uma ferramenta completa para gerenciar despesas e receitas pessoais ou empresariais. Com interface intuitiva e gráficos, ele oferece controle de orçamento, alertas de limite de gastos e conciliação com a conta do google. É acessível via smartphone, tablet ou computador. Com ele, é possível ter controle eficiente e preciso das finanças.",
+            "Coin saves is a complete tool for managing personal or business expenses and income. With intuitive interface and graphics, it offers budget control, spending limit alerts and reconciliation with the google account. It is accessible via smartphone, tablet or computer. With it, it is possible to have efficient and precise control of finances."
+        ],
+        "tecnologies": ["Next JS", "React JS", "Typescript", "Firebase", "Mantine", "Dayjs", "Tailwind CSS", "Post CSS", "Icons React", "Autoprefixer"],
+        "finish": true,
+        "link": "http://coinsaves.web.app",
+        "videos": ["https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/Coin%20Saves.mp4?alt=media&token=f88179da-4d8f-42b9-8b21-fdcd4a433904"],
+        "imgPrincipal": "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page3.png?alt=media&token=040eb79f-386a-44a5-b294-1757e8069260",
+        "imgMobile": ["https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/IMG_3640.png?alt=media&token=e0bc3e20-0474-4825-ad5c-64ebf6a87b0f", "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/IMG_3637.png?alt=media&token=56fb8e12-a296-45fc-92c2-853851846609", "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/IMG_3638.png?alt=media&token=037c9d12-516e-4074-a6c6-ab4dd7f8735b", "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/IMG_3639.png?alt=media&token=e45a2516-e1e9-4132-906c-9af2fc1a544f"],
+        "imgDesktop": ["https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page1.png?alt=media&token=dc73dfa7-dc93-4504-9596-01fb05a62212", "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page2.png?alt=media&token=6598dea5-a396-497d-983c-3e6b37c2eacd", "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page3.png?alt=media&token=040eb79f-386a-44a5-b294-1757e8069260", "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page5.png?alt=media&token=1023e3e2-7de4-4c33-918d-08c947953af0", "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page6.png?alt=media&token=74bcef54-5e45-452a-acbf-c8dcfefe00b6", "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page7.png?alt=media&token=c12f3bc8-6e43-4f1d-8a9d-a1ea834d41d8"],
+        "another": ["https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page8.png?alt=media&token=a68d0e08-4d45-41a4-8d6f-8b0b3d21f671", "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page9.png?alt=media&token=5f9be795-f9b2-4a5b-8aae-443b84ff6593"],
+        "anotherDescription": ["Visualização de todos os dados do usuário", "Possibilidade de alteração"]
+    },
+    {
         "id": 1,
         "title": "JM System",
         "descriptionPT": "Sistema de compras e despesas com gerador de PDF. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
