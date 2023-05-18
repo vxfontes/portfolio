@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import './main.css'
 
@@ -12,6 +12,11 @@ import Skills from './pages/skills';
 
 const RoutesApp = () => {
     const location = useLocation();
+
+    const ExternalRedirect = () => {
+        window.location.href = 'https://excalidraw.com/#json=_ITqEgLh4wL_xARk1rjzF,IlLf5W8Psj4IbLgBYXbPaA';
+        return null;
+    };
 
     return (
         <TransitionGroup>
@@ -31,6 +36,8 @@ const RoutesApp = () => {
                     {/* portugues */}
                     <Route path='/sobre/:language' element={<About />} />
                     <Route path='/habilidades/:language' element={<Skills />} />
+
+                    <Route path="/planoformar" element={<ExternalRedirect />} />
                 </Routes>
             </CSSTransition>
         </TransitionGroup>
