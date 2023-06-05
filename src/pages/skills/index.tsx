@@ -4,8 +4,11 @@ import theme from "../../theme";
 
 // icons
 import javascript from '../../assets/icons/javascript.svg';
+import datascience from '../../assets/icons/datascience.svg';
+import sql from '../../assets/icons/sql.svg';
 import css from '../../assets/icons/css3.svg';
 import git from '../../assets/icons/git.svg';
+import machine from '../../assets/icons/machine.svg';
 import html from '../../assets/icons/html-5.svg';
 import java from '../../assets/icons/java.svg';
 import typescript from '../../assets/icons/typescript.svg';
@@ -37,7 +40,7 @@ const Skills = () => {
                         </Typography>
                     )}
                 </Grid>
-                
+
                 {gridGrande && (
                     <>
                         <Grid item className={classes.icons} xl={9} lg={10} md={10} sm={12}>
@@ -81,7 +84,7 @@ const Skills = () => {
                             <Box>
                                 <img src={python} alt='python' height='90' />
                                 <Typography variant="h6" color='secondary'>Python</Typography>
-                                <Typography variant="body2" style={{ color: '#b8b8b89e' }}>36%</Typography>
+                                <Typography variant="body2" style={{ color: '#b8b8b89e' }}>60%</Typography>
                             </Box>
                             <Box>
                                 <img src={react} alt='ReactJS' height='90' />
@@ -92,6 +95,23 @@ const Skills = () => {
                                 <img src={react} alt='React native' height='90' />
                                 <Typography variant="h6" color='secondary'>React Native</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>45%</Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item className={classes.icons} xl={9} lg={10} md={10} sm={12}>
+                            <Box>
+                                <img src={sql} alt='sql' height='90' />
+                                <Typography variant="h6" color='secondary'>SQL</Typography>
+                                <Typography variant="body2" style={{ color: '#b8b8b89e' }}>90%</Typography>
+                            </Box>
+                            <Box>
+                                <img src={datascience} alt='datascience' height='90' />
+                                <Typography variant="h6" color='secondary'>DataScience</Typography>
+                                <Typography variant="body2" style={{ color: '#b8b8b89e' }}>36%</Typography>
+                            </Box>
+                            <Box>
+                                <img src={machine} alt='machine learning' height='90' />
+                                <Typography variant="h6" color='secondary'>Machine Learning</Typography>
+                                <Typography variant="body2" style={{ color: '#b8b8b89e' }}>36%</Typography>
                             </Box>
                         </Grid>
                     </>
@@ -144,7 +164,7 @@ const Skills = () => {
                             <Box>
                                 <img src={python} alt='pyhton' height='60' />
                                 <Typography variant="h6" color='secondary'>Python</Typography>
-                                <Typography variant="body2" style={{ color: '#b8b8b89e' }}>36%</Typography>
+                                <Typography variant="body2" style={{ color: '#b8b8b89e' }}>60%</Typography>
                             </Box>
                         </Grid>
                         <Grid item className={classes.icons} xs={12}>
@@ -157,6 +177,25 @@ const Skills = () => {
                                 <img src={react} alt='React native' height='60' />
                                 <Typography variant="h6" color='secondary'>React<br />Native</Typography>
                                 <Typography variant="body2" style={{ color: '#b8b8b89e' }}>45%</Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item className={classes.icons} xs={12}>
+                            <Box>
+                                <img src={sql} alt='sql' height='60' />
+                                <Typography variant="h6" color='secondary'>SQL</Typography>
+                                <Typography variant="body2" style={{ color: '#b8b8b89e' }}>90%</Typography>
+                            </Box>
+                            <Box>
+                                <img src={datascience} alt='datascience' height='60' />
+                                <Typography variant="h6" color='secondary'>DataScience</Typography>
+                                <Typography variant="body2" style={{ color: '#b8b8b89e' }}>36%</Typography>
+                            </Box>
+                        </Grid>
+                        <Grid item className={classes.icons} xs={12}>
+                            <Box>
+                                <img src={machine} alt='machine learning' height='60' />
+                                <Typography variant="h6" color='secondary'>Machine Learning</Typography>
+                                <Typography variant="body2" style={{ color: '#b8b8b89e' }}>36%</Typography>
                             </Box>
                         </Grid>
                     </>
