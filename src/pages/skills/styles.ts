@@ -13,7 +13,7 @@ const styles = makeStyles((theme: Theme) =>
         },
 
         container: {
-            width: '80%',
+            width: '90%',
             backgroundColor: theme.palette.mybackgroundColor?.dark,
             borderRadius: '20px',
             padding: '0.4em 0 1em 0',
