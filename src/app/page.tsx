@@ -1,8 +1,14 @@
+'use client'
+
+import Intro from "@/components/Intro";
 
 export default function Home() {
     return (
-        <main className="flex flex-col items-center px-4">
-            <h1 className={`text-red-500`}>teste de css</h1>
+        <main className=" text-white h-screen bg-[#242424] snap-y snap-mandatory overflow-scroll z-0">
+
+            {/* <section className="snap-center"> */}
+                <Intro />
+            {/* </section> */}
         </main>
     )
 }
