@@ -1,7 +1,8 @@
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Link from "next/link";
-import Image from "next/image";
+import { HiDownload } from "react-icons/hi";
+import { motion } from "framer-motion";
 
 const Intro = () => {
     const [text, count] = useTypewriter({
@@ -13,7 +14,7 @@ const Intro = () => {
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <BackgroundCircles />
 
-            <img className="relative rounded-full h-32 w-32 mx-auto object-cover" src="https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Feu%2Feu.JPG?alt=media&token=21cc3d8d-1f79-4890-9f71-df3c31f7ac5a"/>
+            <img className="relative rounded-full h-32 w-32 shadow-xl mx-auto object-cover" src="https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Feu%2Feu600.JPG?alt=media&token=fd233d13-3edf-4b63-b2f6-5a27a8345150" />
 
             <div className="z-20">
                 <div>
@@ -25,20 +26,30 @@ const Intro = () => {
                     </h1>
                 </div>
 
-                <div>
+                <motion.div
+                    className="flex flex-row font-medium"
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                        delay: 0.1,
+                    }}
+                >
                     <Link href='#' className="pt-5">
-                        <button className="introButton">but 1</button>
+                        <button className="introButton">but</button>
                     </Link>
                     <Link href='#' className="pt-5">
-                        <button className="introButton">but 1</button>
+                        <button className="introButton">but</button>
                     </Link>
                     <Link href='#' className="pt-5">
-                        <button className="introButton">but 1</button>
+                        <button className="introButton">but</button>
                     </Link>
                     <Link href='#' className="pt-5">
-                        <button className="introButton">but 1</button>
+                        <button className="introButton group flex items-center gap-1 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer">
+                            Download CV{" "}
+                            <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+                        </button>
                     </Link>
-                </div>
+                </motion.div>
             </div>
         </div>
     );
