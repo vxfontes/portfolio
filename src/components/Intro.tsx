@@ -1,6 +1,7 @@
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Link from "next/link";
+import Image from "next/image";
 
 const Intro = () => {
     const [text, count] = useTypewriter({
@@ -12,11 +13,11 @@ const Intro = () => {
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <BackgroundCircles />
 
-            <img className="relative rounded-fill h-32 w-32 mx-auto object-cover" />
+            <img className="relative rounded-full h-32 w-32 mx-auto object-cover" src="https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Feu%2Feu.JPG?alt=media&token=21cc3d8d-1f79-4890-9f71-df3c31f7ac5a"/>
 
             <div className="z-20">
                 <div>
-                    <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">Teste asdadasd</h2>
+                    <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">vanessa fontes</h2>
 
                     <h1 className="text-5xl lg:6xl font-semibold px-10">
                         <span className="mr-3">{text}</span>
