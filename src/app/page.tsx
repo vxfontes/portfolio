@@ -6,7 +6,7 @@ import Intro from "@/components/Intro";
 
 export default function Home() {
     return (
-        <main className="text-white h-screen bg-[#242424] snap-y snap-mandatory z-0">
+        <main className="text-white h-screen bg-[#242424] snap-y snap-mandatory overflow-scroll z-0">
 
             <Header />
 
