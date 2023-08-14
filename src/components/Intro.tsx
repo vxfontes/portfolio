@@ -1,7 +1,7 @@
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Link from "next/link";
-import { HiDownload } from "react-icons/hi";
+// import { HiDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
 
 const Intro = () => {
@@ -46,7 +46,7 @@ const Intro = () => {
                     <Link href='#' className="pt-5">
                         <button className="introButton group flex items-center gap-1 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer">
                             Download CV{" "}
-                            <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+                            {/* <HiDownload className="opacity-60 group-hover:translate-y-1 transition" /> */}
                         </button>
                     </Link>
                 </motion.div>
