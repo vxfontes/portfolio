@@ -1,0 +1,15 @@
+export const skillsData = [
+    { icon: '/icons/javascript.svg', name: 'JavaScript', percentage: '80%' },
+    { icon: '/icons/typescript.svg', name: 'TypeScript', percentage: '85%' },
+    { icon: '/icons/css3.svg', name: 'CSS', percentage: '95%' },
+    { icon: '/icons/html-5.svg', name: 'HTML', percentage: '90%' },
+    { icon: '/icons/git.svg', name: 'Git', percentage: '80%' },
+    { icon: '/icons/java.svg', name: 'Java', percentage: '60%' },
+    { icon: '/icons/node-js.svg', name: 'NodeJS', percentage: '65%' },
+    { icon: '/icons/python.svg', name: 'Python', percentage: '60%' },
+    { icon: '/icons/react-native.svg', name: 'ReactJS', percentage: '90%' },
+    { icon: '/icons/react-native.svg', name: 'React Native', percentage: '45%' },
+    { icon: '/icons/sql.svg', name: 'SQL', percentage: '90%' },
+    { icon: '/icons/datascience.svg', name: 'DataScience', percentage: '36%' },
+    { icon: '/icons/machine.svg', name: 'Machine Learning', percentage: '36%' },
+];
