@@ -1,12 +1,13 @@
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Link from "next/link";
-// import { HiDownload } from "react-icons/hi";
+import { HiDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
+import { ptBR as locale } from '../data/infos'
 
 const Intro = () => {
     const [text, count] = useTypewriter({
-        words: ['teste1', 'teste2asda', 'askdald'],
+        words: locale.intro.frases,
         loop: true,
         delaySpeed: 2000,
     })
@@ -27,26 +28,28 @@ const Intro = () => {
                 </div>
 
                 <motion.div
-                    className="flex flex-row font-medium"
+                    className="pt-5"
                     initial={{ opacity: 0, y: 100 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{
                         delay: 0.1,
                     }}
                 >
-                    <Link href='#' className="pt-5">
+                    <Link href='#'>
                         <button className="introButton">but</button>
                     </Link>
-                    <Link href='#' className="pt-5">
+                    <Link href='#'>
                         <button className="introButton">but</button>
                     </Link>
-                    <Link href='#' className="pt-5">
+                    <Link href='#'>
                         <button className="introButton">but</button>
                     </Link>
-                    <Link href='#' className="pt-5">
-                        <button className="introButton group flex items-center gap-1 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer">
-                            Download CV{" "}
-                            {/* <HiDownload className="opacity-60 group-hover:translate-y-1 transition" /> */}
+                    <Link href='#'>
+                        <button className="introButton group gap-1 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer">
+                            <div className="flex">
+                                {locale.intro.baixar} {" "}
+                                <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+                            </div>
                         </button>
                     </Link>
                 </motion.div>
