@@ -1,11 +1,17 @@
+import { ptBR as locale } from '../data/infos'
+
 export const links = [
     {
-        name: "Home",
+        name: "Intro",
         hash: "#intro",
     },
     {
-        name: "About",
+        name: locale.about.title,
         hash: "#about",
+    },
+    {
+        name: locale.experience.title,
+        hash: "#experience",
     },
     {
         name: "Projects",
@@ -14,10 +20,6 @@ export const links = [
     {
         name: "Skills",
         hash: "#skills",
-    },
-    {
-        name: "Experience",
-        hash: "#experience",
     },
     {
         name: "Contact",
