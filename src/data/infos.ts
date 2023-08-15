@@ -14,6 +14,10 @@ export const enUS = {
     experience: {
         title: "Experiences",
     },
+    skill: {
+        title: `Skills`,
+        sub: 'HOVER OVER A SKILL FOR CURRENCY PROFIENCYS'
+    }
 }
 
 export const ptBR = {
@@ -32,4 +36,8 @@ export const ptBR = {
     experience: {
         title: "Experiências",
     },
+    skill: {
+        title: `Habilidades`,
+        sub: 'PASSE O MOUSE SOBRE UMA HABILIDADE PARA ver proficiência'
+    }
 }
