@@ -1,10 +1,11 @@
 import { motion } from "framer-motion";
+import { ptBR as locale } from '../data/infos';
 
 const About = () => {
     return (
         <div className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center bg-[#242424]">
             <h3 className="uppercase absolute top-24 tracking-[20px] text-gray-500 text-2xl">
-                about
+                {locale.about.title}
             </h3>
 
             <motion.img
@@ -22,18 +23,12 @@ const About = () => {
 
             <div className="space-y-10 px-0 md:px-10">
                 <h4 className="text-4xl font-semibold">
-                    Here
-                    {" "}<span className="underline decoration-[#F7AB0A]/50">alala</span>{" "}
-                    background
+                    {" "}<span className="underline decoration-[#F7AB0A]/50">{locale.about.span}</span>{" "}
+                    {locale.about.frase}
                 </h4>
             </div>
 
-            <p className="text-base">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quo voluptatum expedita repellat doloremque? Ipsam
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quo voluptatum expedita repellat doloremque? Ipsam
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam quo voluptatum expedita repellat doloremque? Ipsam
-            </p>
-
+            <p className="text-base">{locale.about.sobremim}</p>
         </div>
     );
 }
