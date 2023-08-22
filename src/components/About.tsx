@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { ptBR as locale } from '../data/infos';
+import Title from "./Title";
 
 const About = () => {
     return (
         <div className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center bg-[#242424]">
-            <h3 className="uppercase absolute top-24 tracking-[20px] text-gray-500 text-2xl">
+            <Title>
                 {locale.about.title}
-            </h3>
+            </Title>
 
             <motion.img
                 className="-mb-24 md:mb-0 mt-10 md:mt-0 flex-shrink-0 w-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"

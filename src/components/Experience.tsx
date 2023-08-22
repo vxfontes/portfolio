@@ -3,14 +3,15 @@ import { ptBR as locale } from "@/data/infos";
 import React from "react";
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component'
 import "react-vertical-timeline-component/style.min.css";
+import Title from "./Title";
 
 
 const Experience = () => {
     return (
         <div className="flex flex-col relative min-h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center bg-[#242424]">
-            <h3 className="uppercase absolute top-24 tracking-[20px] text-gray-500 text-2xl">
+            <Title>
                 {locale.experience.title}
-            </h3>
+            </Title>
 
 
             <VerticalTimeline>

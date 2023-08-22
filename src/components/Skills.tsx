@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import Skill from "./Skill";
 import { skillsData } from "@/data/skillts";
 import { ptBR as locale } from "@/data/infos";
+import Title from "./Title";
 
 
 const Skills = () => {
@@ -12,9 +13,9 @@ const Skills = () => {
             transition={{ duration: 1.5 }}
             className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mt-4 mx-auto items-center"
         >
-            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+            <Title>
                 {locale.skill.title}
-            </h3>
+            </Title>
 
             <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">{locale.skill.sub}</h3>
 
