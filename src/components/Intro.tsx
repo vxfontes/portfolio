@@ -4,6 +4,10 @@ import Link from "next/link";
 import { HiDownload } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { ptBR as locale } from '../data/infos'
+import { AiOutlineInstagram } from 'react-icons/ai'
+import { AiOutlineLinkedin } from 'react-icons/ai'
+import { AiOutlineGithub } from 'react-icons/ai'
+import { social } from "@/data/links";
 
 const Intro = () => {
     const [text, count] = useTypewriter({
@@ -35,16 +39,22 @@ const Intro = () => {
                         delay: 0.1,
                     }}
                 >
-                    <Link href='#'>
-                        <button className="introButton">but</button>
+                    <Link href={social.github}>
+                        <button className="introButton">
+                            <AiOutlineGithub className="opacity-60 group-hover:translate-y-1 transition" />
+                        </button>
                     </Link>
-                    <Link href='#'>
-                        <button className="introButton">but</button>
+                    <Link href={social.instagram}>
+                        <button className="introButton">
+                            <AiOutlineInstagram className="opacity-60 group-hover:translate-y-1 transition" />
+                        </button>
                     </Link>
-                    <Link href='#'>
-                        <button className="introButton">but</button>
+                    <Link href={social.linkedin}>
+                        <button className="introButton">
+                            <AiOutlineLinkedin className="opacity-60 group-hover:translate-y-1 transition" />
+                        </button>
                     </Link>
-                    <Link href='#'>
+                    <Link href={social.curriculo}>
                         <button className="introButton group gap-1 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer">
                             <div className="flex">
                                 {locale.intro.baixar} {" "}
