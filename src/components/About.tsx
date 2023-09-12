@@ -10,7 +10,7 @@ const About = () => {
             </Title>
 
             <motion.img
-                className="-mb-24 md:mb-0 mt-10 md:mt-0 flex-shrink-0 w-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
+                className="-mb-24 md:mb-0 mt-10 md:mt-0 flex-shrink-0 w-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[400px] xl:h-[500px]"
                 initial={{
                     x: -200,
                     opacity: 0,
