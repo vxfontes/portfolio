@@ -160,7 +160,7 @@ export const projects = [
     {
         "id": 93,
         "title": "Trenzinho Acadêmico",
-        "descriptionPT": "A aplicação de gerenciamento de eventos universitários da Universidade Federal do Recôncavo Baiano permite monitorar o interesse dos usuários por meio de curtidas, proporcionando uma avaliação do número de interessados em cada evento.",
+        "descriptionPT": "A aplicação de gerenciamento de eventos universitários da UFRB permite monitorar o interesse dos usuários por meio de curtidas, proporcionando uma avaliação do número de interessados em cada evento.",
         "descriptionEN": "The application for managing university events at the Federal University of Recôncavo Baiano allows monitoring user interest through likes, providing an assessment of the number of people interested in each event.",
         "details": [
             "Esse trabalho ocorreu em equipe, em conjunto com minha equipe realizei a criação do banco de dados e de algumas consultas do backend, o frontend foi feito por mim. É uma aplicação que permite o gerenciamento de eventos universitários da Universidade federal do recôncavo baiano. Cada um desses eventos será tratado como um evento distinto, e a aplicação contará com a funcionalidade de monitorar o nível de interesse dos usuários por meio de curtidas, permitindo assim avaliar o número de interessados de cada um. A plataforma será acessada por administradores, usuários cadastrados e também por usuários sem cadastro, porém, somente os administradores e os usuários cadastrados terão permissão para adicionar o interesse em um determinado evento. Banco de dados bem estruturado e normalizado com backend MVC realizando consultas também em SQL.",
