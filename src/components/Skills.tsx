@@ -19,7 +19,7 @@ const Skills = () => {
 
             <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-500 text-sm">{locale.skill.sub}</h3>
 
-            <div className="grid grid-cols-4 md:grid-cols-5 gap-5">
+            <div className="mt-36 grid grid-cols-3 md:grid-cols-7 gap-5">
                 {skillsData.map(skill => (
                     <Skill key={skill.name} icon={skill.icon} name={skill.name} percentage={skill.percentage} />
                 ))}
