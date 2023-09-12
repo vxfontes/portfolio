@@ -8,7 +8,7 @@ import Title from "./Title";
 
 const Study = () => {
     return (
-        <div className="flex flex-col relative min-h-screen text-center md:text-left md:flex-row max-w-screen-xl px-10 justify-evenly mx-auto items-end md:pb-12 bg-[#242424]">
+        <div className="flex flex-col relative min-h-screen text-center md:text-left md:flex-row max-w-screen-xl px-10 justify-evenly mx-auto items-end 2xl:items-center md:pb-12 xl:pb-32 2xl:pb-0 bg-[#242424]">
             <Title>
                 {locale.study.title}
             </Title>
