@@ -1,18 +1,15 @@
-'use client'
 import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
 import { ProjectProps } from "@/interface/ProjectProps";
 import { ptBR as locale } from "@/data/infos";
-import { useParams } from "next/navigation";
 import Page1 from "@/components/project/page1";
 import Link from "next/link";
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs'
-import Title from "@/components/Title";
 import Page2 from "@/components/project/page2";
 
-const Project = () => {
+export default function Project({ params }: { params: { id: number } }) {
 
-    const router = Number(useParams().id);
+    const router = Number(params.id);
     const project: ProjectProps | undefined = projects.find(item => item.id === router);
     console.log(project);
 
@@ -58,5 +55,3 @@ const Project = () => {
         </div>
     );
 }
-
-export default Project;
