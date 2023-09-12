@@ -33,8 +33,14 @@ export const ptBR = {
         Tenho facilidade em aprendizado e alto desempenho voltado a atingir ou superar metas. Oferecendo conhecimentos
         em tecnologia, exatas e design, com experiência em elaboração de estratégias em equipe.`
     },
+    study: {
+        title: "Estudos",
+    },
     experience: {
         title: "Experiências",
+    },
+    projects: {
+        title: "Projetos",
     },
     skill: {
         title: `Habilidades`,

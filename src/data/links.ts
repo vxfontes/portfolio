@@ -10,21 +10,21 @@ export const links = [
         hash: "#about",
     },
     {
-        name: locale.experience.title,
-        hash: "#experience",
+        name: locale.study.title,
+        hash: "#study",
     },
     {
-        name: "Projects",
-        hash: "#projects",
+        name: locale.experience.title,
+        hash: "#experience",
     },
     {
         name: locale.skill.title,
         hash: "#skills",
     },
     {
-        name: "Contact",
-        hash: "#contact",
-    },
+        name: locale.projects.title,
+        hash: "#projects",
+    }
 ] as const;
 
 export const social = {

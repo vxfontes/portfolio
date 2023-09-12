@@ -1,31 +1,58 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
+import { BsCodeSlash, BsFillJournalBookmarkFill } from "react-icons/bs";
 import { LuGraduationCap } from "react-icons/lu";
 
 export const experiencesData = [
     {
-        title: "Graduated bootcamp",
-        location: "Miami, FL",
+        title: "Desenvolvedora FrontEnd",
+        location: "Recode Jr.",
         description:
-            "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-        icon: <LuGraduationCap />,
-        date: "2019",
+            "Desenvolvimento de frontend em empresa júnior universitária",
+        icon: <BsCodeSlash />,
+        date: "Set 2021 - Mai 2023",
     },
     {
-        title: "Front-End Developer",
-        location: "Orlando, FL",
+        title: "Desenvolvedora FullStack",
+        location: "Izzistrit",
         description:
-            "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+            "Iniciação científica de desenvolvimento de plataforma voltada para acessibilidade de pessoas deficientes nas cidades Foz do Iguaçu e Salvador.",
+        icon: <BsCodeSlash />,
+        date: "Set 2022 - Set 2023",
+    },
+    {
+        title: "Estagiária FullStack",
+        location: "QQTech",
+        description:
+            "Estágio utilizando tecnologias como: HTML, CSS, Node.js, Javascript, Python, SQL e Postgres",
         icon: <CgWorkAlt />,
-        date: "2019 - 2021",
+        date: "Ago 2022 - atual",
+    },
+] as const;
+
+export const studyData = [
+    {
+        title: "Ensino médio",
+        location: "Escola SESI José Carvalho",
+        description:
+            "Conclusão do ensino médio",
+        icon: <LuGraduationCap />,
+        date: "Fev 2017 - Nov 2019",
     },
     {
-        title: "Full-Stack Developer",
-        location: "Houston, TX",
+        title: "Engenharia da computação",
+        location: "Universidade Federal do Recôncavo da Bahia",
         description:
-            "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB",
-        icon: <FaReact />,
-        date: "2021 - present",
+            "Bacharelado em Ciências Exatas e Tecnológicas com terminalidade em Engenharia da Computação",
+        icon: <BsFillJournalBookmarkFill />,
+        date: "Jul 2021 - Não concluído",
+    },
+    {
+        title: "Tecnólogo em ciências de dados",
+        location: "Universidade unopar",
+        description:
+            "Análise de dados, machine learning, inteligência artificial e manipulação de dados com python",
+        icon: <BsFillJournalBookmarkFill />,
+        date: "Fev 2023 - Não concluído",
     },
 ] as const;

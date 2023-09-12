@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import Intro from "@/components/Intro";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import Study from "@/components/Study";
 
 export default function Home() {
     return (
@@ -19,6 +20,10 @@ export default function Home() {
 
             <section id="about" className="snap-center">
                 <About />
+            </section>
+
+            <section id="study" className="snap-center">
+                <Study />
             </section>
 
             <section id="experience" className="snap-center">
