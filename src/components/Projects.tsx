@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Title from "./Title";
 import { ptBR as locale } from '../data/infos'
 import { projects } from "@/data/projects";
+import Link from "next/link";
 
 const Projects = () => {
 
@@ -20,6 +21,7 @@ const Projects = () => {
             className="relative flex overflow-hidden flex-col text-left max-w-full justify-evenly mx-auto items-center z-0"
         >
             <Title>{locale.projects.title}</Title>
+            <h3 className="absolute top-36 uppercase tracking-[3px] mb-12 text-gray-500 text-sm">{locale.projects.sub}</h3>
 
             <div className="columns-1 md:columns-2 gap-2 px-16 pt-40 w-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
                 {projects.map((project, index) => (
@@ -38,26 +40,24 @@ const Projects = () => {
                         }}
                         className="group mb-3 sm:mb-8 last:mb-0"
                     >
-                        <section className="cursor-pointer max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] transition sm:group-even:pl-8 text-white bg-white/10 hover:bg-white/20">
-                            <div className="pt-4 pb-7 px-5 sm:pl-6 sm:pr-2 sm:pt-6 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-                                <h3 className="text-2xl font-semibold">{project.title}</h3>
-                                <p className="mt-2 leading-relaxed text-white/70">
-                                    {project.descriptionPT.slice(0, 101) + '...'}
-                                </p>
-                                <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-                                    {project.tecnologies.map((tag, index) => (
-                                        <li className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider rounded-full text-white/70"
-                                            key={index}>
-                                            {tag}
+                        <Link href={`/projects/${project.id}`}>
+                            <section className="cursor-pointer max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] transition sm:group-even:pl-8 text-white bg-white/10 hover:bg-white/20">
+                                <div className="pt-4 pb-7 px-5 sm:pl-6 sm:pr-2 sm:pt-6 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
+                                    <h3 className="text-2xl font-semibold">{project.title}</h3>
+                                    <p className="mt-2 leading-relaxed text-white/70 hidden sm:block">
+                                        {project.descriptionPT}
+                                    </p>
+                                    <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
+                                        <li className={`${project.finish ? 'bg-green-900' : 'bg-red-900'} px-3 py-1 text-[0.7rem] uppercase tracking-wider rounded-full text-white/70`} key={index}>
+                                            {!project.finish ?  <>Em progresso...</>  :  <>Finalizado</>}
                                         </li>
-                                    ))}
-                                </ul>
-                            </div>
+                                    </ul>
+                                </div>
 
-                            <img
-                                src={project.imgPrincipal}
-                                alt="Project I worked on"
-                                className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
+                                <img
+                                    src={project.imgPrincipal}
+                                    alt="Project I worked on"
+                                    className="sm:absolute block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
                                     transition 
                                     group-hover:scale-[1.04]
                                     group-hover:-translate-x-3
@@ -69,8 +69,9 @@ const Projects = () => {
                                     group-even:group-hover:rotate-2
 
                                     group-even:right-[initial] group-even:-left-40"
-                            />
-                        </section>
+                                />
+                            </section>
+                        </Link>
                     </motion.div>
                 ))}
             </div>

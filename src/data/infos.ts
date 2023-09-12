@@ -41,6 +41,14 @@ export const ptBR = {
     },
     projects: {
         title: "Projetos",
+        sub: "Clique para ver mais",
+        button: 'Repositório ou link da aplicação',
+        404: `Projeto não encontrado`,
+        imgs: {
+            imgsDesktop: 'Imagens da aplicação',
+            imgsMobile: 'Imagens mobile da aplicação'
+        },
+        arraste: 'Arraste para os lados para ver mais imagens'
     },
     skill: {
         title: `Habilidades`,
