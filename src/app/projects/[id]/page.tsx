@@ -1,3 +1,4 @@
+"use client"
 import { projects } from "@/data/projects";
 import { motion } from "framer-motion";
 import { ProjectProps } from "@/interface/ProjectProps";
