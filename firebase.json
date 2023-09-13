@@ -2,6 +2,7 @@
   "hosting": {
     "site": "vxfontes",
     "public": "out",
+    "cleanUrls": true,
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -9,8 +10,8 @@
     ],
     "rewrites": [
       {
-        "source": "**",
-        "destination": "/index.html"
+        "destination": "/projects/[id]/index.html",
+        "regex": "^/projects/([^/]+?)(?:/)?$"
       }
     ],
     "frameworksBackend": {
