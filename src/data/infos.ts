@@ -48,7 +48,8 @@ export const ptBR = {
             imgsDesktop: 'Imagens da aplicação',
             imgsMobile: 'Imagens mobile da aplicação'
         },
-        arraste: 'Arraste para os lados para ver mais imagens'
+        arraste: 'Arraste para os lados para ver mais imagens',
+        video: 'Videos de demonstração'
     },
     skill: {
         title: `Habilidades`,
