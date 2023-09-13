@@ -13,8 +13,9 @@ const Page4 = ({ title, videos }: Props) => {
             {videos.length === 1 ? (
 
                 <div className={`grid grid-cols-1 gap-4`}>
-                    {videos.map((vid) => (
+                    {videos.map((vid, i) => (
                         <iframe
+                            key={i}
                             className="w-screen z-20"
                             src={vid}
                             title="Video demonstração"
