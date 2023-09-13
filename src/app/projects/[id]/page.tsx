@@ -7,14 +7,13 @@ import Page1 from "@/components/project/page1";
 import Link from "next/link";
 import { BsFillArrowLeftCircleFill } from 'react-icons/bs'
 import Page2 from "@/components/project/page2";
+import Page3 from "@/components/project/page3";
+import Page4 from "@/components/project/page4";
 
 export default function Project({ params }: { params: { id: number } }) {
 
     const router = Number(params.id);
     const project: ProjectProps | undefined = projects.find(item => item.id === router);
-    console.log(project);
-
-
 
     return (
         <div className="text-white h-screen bg-[#242424] overflow-scroll -z-10 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
@@ -41,6 +40,13 @@ export default function Project({ params }: { params: { id: number } }) {
                     )}
                     {project.imgMobile.length !== 0 && (
                         <Page2 title={locale.projects.imgs.imgsMobile} imgs={project.imgMobile} key={2} mobile />
+                    )}
+                    {project.another.length !== 0 && (
+                        <Page3 title={project.anotherDescription[0]} imgs={project.another} />
+                    )}
+
+                    {project.videos.length !== 0 && (
+                        <Page4 title={locale.projects.video} videos={project.videos} />
                     )}
 
                 </>
