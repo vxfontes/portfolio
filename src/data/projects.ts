@@ -196,7 +196,7 @@ export const projects = [
             "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Ftrenzinho%2Fpagina9.png?alt=media&token=0e79bb68-3c2a-4c89-bdd6-c64dc7dd7943&_gl=1*1g62xkb*_ga*MTczNjg0MzE0NC4xNjcxNzUwNTA2*_ga_CW55HF8NVT*MTY4NTk3ODU4NS4xNy4xLjE2ODU5NzkxNzMuMC4wLjA."
         ],
         "videos": [
-            "hhttps://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Ftrenzinho%2FTrenzinho%20News%20-%20Brave%202023-06-05%2012-25-41.mp4?alt=media&token=b005c996-dd93-41ab-ae62-4b5eb25d07bd&_gl=1*1q02zi2*_ga*MTczNjg0MzE0NC4xNjcxNzUwNTA2*_ga_CW55HF8NVT*MTY4NTk3ODU4NS4xNy4xLjE2ODU5NzkzMjQuMC4wLjA."
+            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Ftrenzinho%2FTrenzinho%20News%20-%20Brave%202023-06-05%2012-25-41.mp4?alt=media&token=b005c996-dd93-41ab-ae62-4b5eb25d07bd&_gl=1*1q02zi2*_ga*MTczNjg0MzE0NC4xNjcxNzUwNTA2*_ga_CW55HF8NVT*MTY4NTk3ODU4NS4xNy4xLjE2ODU5NzkzMjQuMC4wLjA."
         ],
         "another": [],
         "anotherDescription": []
