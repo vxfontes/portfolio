@@ -21,10 +21,10 @@ export const experiencesData = [
         date: "Set 2022 - Set 2023",
     },
     {
-        title: "Estagiária FullStack",
+        title: "Estagiária  e Mobile",
         location: "QQTech",
         description:
-            "Estágio utilizando tecnologias como: HTML, CSS, Node.js, Javascript, Python, SQL e Postgres",
+            "Estágio utilizando tecnologias como: HTML, CSS, Node.js, Javascript, Typescript, NestJS, ReactJS, Python, SQL, Postgres e Flutter",
         icon: <CgWorkAlt />,
         date: "Ago 2022 - atual",
     },
