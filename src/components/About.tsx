@@ -42,9 +42,9 @@ const professionalWork = [
 
 const impact = [
     {
-        metric: "Em segundo plano",
-        title: "Atualização cadastral sem travar a jornada",
-        description: "No QQPag App, a atualização passou a ser processada de forma assíncrona, com status no app e aviso quando a análise é concluída.",
+        metric: "86%",
+        title: "Dos registros críticos concentrados no Pix",
+        description: "Identifiquei concentração de falhas no fluxo de chave Pix e recuperei a jornada com correções coordenadas em Flutter, BFF e Oracle.",
     },
     {
         metric: "95,60% → 96,49%",
@@ -65,6 +65,16 @@ const impact = [
         metric: "Pix · biometria · QR",
         title: "Jornadas críticas mais confiáveis",
         description: "Investiguei e corrigi fluxos de produção do QQPag a partir de logs, incluindo home, Pix, biometria e QR code.",
+    },
+    {
+        metric: "RLS · IDOR · testes",
+        title: "Vazamentos entre tenants eliminados",
+        description: "Expandi Row-Level Security, reforcei escopo explícito de tenant e adicionei regressões para Defender360 Security.",
+    },
+    {
+        metric: "Locks · sync · idempotência",
+        title: "Componentes distribuídos restabelecidos",
+        description: "Recuperei confiabilidade com Advisory Locks, sincronização transacional e cancelamento entre workers.",
     },
     {
         metric: "+240,1%",
