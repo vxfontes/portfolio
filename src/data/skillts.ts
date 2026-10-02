@@ -1,18 +1,18 @@
 export const skillsData = [
-    { icon: '/icons/javascript.svg', name: 'JavaScript', percentage: '80%' },
-    { icon: '/icons/typescript.svg', name: 'TypeScript', percentage: '85%' },
-    { icon: '/icons/css3.svg', name: 'CSS', percentage: '95%' },
-    { icon: '/icons/html-5.svg', name: 'HTML', percentage: '90%' },
-    { icon: '/icons/git.svg', name: 'Git', percentage: '80%' },
-    { icon: '/icons/java.svg', name: 'Java', percentage: '60%' },
-    { icon: '/icons/node-js.svg', name: 'NodeJS', percentage: '85%' },
-    { icon: '/icons/nestjs.svg', name: 'NestJS', percentage: '65%' },
-    { icon: '/icons/python.svg', name: 'Python', percentage: '60%' },
-    { icon: '/icons/react-native.svg', name: 'ReactJS', percentage: '90%' },
-    { icon: '/icons/react-native.svg', name: 'React Native', percentage: '45%' },
-    { icon: '/icons/flutter.svg', name: 'Flutter', percentage: '35%' },
-    { icon: '/icons/sql.svg', name: 'SQL', percentage: '90%' },
-    { icon: '/icons/datascience.svg', name: 'DataScience', percentage: '56%' },
-    { icon: '/icons/machine.svg', name: 'Machine Learning', percentage: '36%' },
-    { icon: '/icons/docker.svg', name: 'Docker', percentage: '36%' },
-];
+    {
+        category: "Linguagens",
+        items: ["Go", "Python", "TypeScript", "JavaScript", "Dart", "C#", "Swift", "Rust", "SQL", "PL/SQL"],
+    },
+    {
+        category: "Frameworks e ecossistema",
+        items: ["React", "Next.js", "NestJS", "FastAPI", "Flask", "Flutter", ".NET", "SwiftUI", "LangGraph"],
+    },
+    {
+        category: "Dados e mensageria",
+        items: ["PostgreSQL", "Oracle", "MySQL", "SQLite", "Redis", "RabbitMQ", "NATS", "Prisma", "SQLAlchemy", "Alembic"],
+    },
+    {
+        category: "Cloud, DevOps e ferramentas",
+        items: ["Docker", "AWS", "Azure", "Google Cloud", "Git", "GitHub", "GitHub Actions", "Azure DevOps", "Datadog", "Jest", "Tailscale"],
+    },
+] as const;

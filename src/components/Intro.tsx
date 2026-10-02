@@ -1,71 +1,50 @@
-import { Cursor, useTypewriter } from "react-simple-typewriter";
-import BackgroundCircles from "./BackgroundCircles";
 import Link from "next/link";
-import { HiDownload } from "react-icons/hi";
-import { motion } from "framer-motion";
-import { ptBR as locale } from '../data/infos'
-import { AiOutlineInstagram } from 'react-icons/ai'
-import { AiOutlineLinkedin } from 'react-icons/ai'
-import { AiOutlineGithub } from 'react-icons/ai'
+import { AiOutlineGithub, AiOutlineInstagram, AiOutlineLinkedin } from "react-icons/ai";
+import { HiArrowDown, HiArrowRight, HiMail } from "react-icons/hi";
 import { social } from "@/data/links";
+import HeroSignal from "@/components/HeroSignal";
 
-const Intro = () => {
-    const [text, count] = useTypewriter({
-        words: locale.intro.frases,
-        loop: true,
-        delaySpeed: 2000,
-    })
-    return (
-        <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
-            <BackgroundCircles />
+const Intro = () => (
+    <section
+        id="intro"
+        className="editorial-grid relative isolate flex min-h-[94svh] items-start overflow-hidden border-b border-stone-900/15 px-5 pb-14 pt-36 sm:px-8 sm:pt-40 lg:min-h-screen"
+    >
+            <div className="mx-auto grid w-full max-w-6xl items-center gap-14 lg:grid-cols-[1.2fr_0.8fr] lg:gap-20">
+            <div className="intro-copy">
+                <p className="eyebrow mb-6 flex items-center gap-2">
+                    <span aria-hidden="true" className="h-2 w-2 rounded-full bg-orange-700" />
+                    Engenheira de software · Brasil
+                </p>
+                <h1 className="max-w-3xl text-5xl font-bold leading-[0.98] tracking-[-0.055em] sm:text-7xl lg:text-[5.6rem]">
+                    Vanessa<br />Fontes<span className="text-orange-700">.</span>
+                </h1>
+                <p className="mt-7 max-w-xl text-base leading-7 text-stone-900/60 sm:text-lg sm:leading-8">
+                    Construo produtos full-stack e mobile, sistemas backend confiáveis e soluções de IA aplicadas a problemas reais.
+                </p>
 
-            <img className="relative rounded-full h-32 w-32 shadow-xl mx-auto object-cover" src="https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Feu%2Feu600.JPG?alt=media&token=fd233d13-3edf-4b63-b2f6-5a27a8345150" />
-
-            <div className="z-20">
-                <div>
-                    <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">vanessa fontes</h2>
-
-                    <h1 className="text-5xl lg:6xl font-semibold px-10">
-                        <span className="mr-3">{text}</span>
-                        <Cursor cursorColor='#fff' />
-                    </h1>
+                <div className="mt-9 flex flex-wrap gap-3">
+                    <Link href="#experience" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-orange-700 px-5 py-3 text-sm font-semibold text-white transition-[transform,background-color] duration-150 hover:-translate-y-0.5 hover:bg-orange-800 active:scale-[0.98]">
+                        Ver experiências <HiArrowDown aria-hidden="true" />
+                    </Link>
                 </div>
 
-                <motion.div
-                    className="pt-5"
-                    initial={{ opacity: 0, y: 100 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                        delay: 0.1,
-                    }}
-                >
-                    <Link href={social.github}>
-                        <button className="introButton">
-                            <AiOutlineGithub className="opacity-60 group-hover:translate-y-1 transition" />
-                        </button>
-                    </Link>
-                    <Link href={social.instagram}>
-                        <button className="introButton">
-                            <AiOutlineInstagram className="opacity-60 group-hover:translate-y-1 transition" />
-                        </button>
-                    </Link>
-                    <Link href={social.linkedin}>
-                        <button className="introButton">
-                            <AiOutlineLinkedin className="opacity-60 group-hover:translate-y-1 transition" />
-                        </button>
-                    </Link>
-                    <Link href={social.curriculo}>
-                        <button className="introButton group gap-1 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer">
-                            <div className="flex">
-                                {locale.intro.baixar} {" "}
-                                <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-                            </div>
-                        </button>
-                    </Link>
-                </motion.div>
+                <div className="mt-8 flex items-center gap-2">
+                    <span className="mr-2 text-xs uppercase tracking-[0.16em] text-stone-900/35">Conecte-se</span>
+                    <a className="contact-icon" href={`mailto:${social.email}`} aria-label="Enviar e-mail"><HiMail size={18} /></a>
+                    <a className="contact-icon" href={social.github} aria-label="GitHub" target="_blank" rel="noreferrer"><AiOutlineGithub size={18} /></a>
+                    <a className="contact-icon" href={social.linkedin} aria-label="LinkedIn" target="_blank" rel="noreferrer"><AiOutlineLinkedin size={18} /></a>
+                    <a className="contact-icon" href={social.instagram} aria-label="Instagram" target="_blank" rel="noreferrer"><AiOutlineInstagram size={18} /></a>
+                </div>
             </div>
+
+            <aside className="intro-aside relative mx-auto hidden w-full max-w-[30rem] lg:block lg:justify-self-end" aria-label="Visão de sistemas conectados">
+                <HeroSignal />
+                <Link href="#projects" className="mt-4 flex items-center justify-between border-b border-stone-900/20 py-3 text-sm text-stone-900/65 transition-[color,transform] duration-150 hover:translate-x-1 hover:text-orange-700 active:scale-[0.99]">
+                    Explorar projetos <HiArrowRight aria-hidden="true" className="-rotate-45" />
+                </Link>
+            </aside>
         </div>
-    );
-}
+    </section>
+);
 
 export default Intro;

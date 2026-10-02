@@ -1,6 +1,4 @@
-import { ptBR as locale } from "@/data/infos";
-import Title, { SubTitle } from "../Title";
-import React from "react";
+import Image from "next/image";
 
 interface Props {
     title: string,
@@ -8,29 +6,32 @@ interface Props {
     mobile: boolean
 }
 
-const Page2 = ({ title, imgs, mobile }: Props) => {
-    return (
-        <div className="flex h-screen items-center z-10 relative overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto">
-            <Title>{title}</Title>
-            <SubTitle>{locale.projects.arraste}</SubTitle>
-
-            <div className="relative flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+const Page2 = ({ title, imgs, mobile }: Props) => (
+    <section className="border-t border-stone-900/[0.06] py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+            <div className="mb-8 flex items-end justify-between gap-4">
+                <div>
+                    <p className="eyebrow">Galeria</p>
+                    <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">{title}</h2>
+                </div>
+                <p className="hidden text-xs text-stone-900/35 sm:block">Deslize para explorar</p>
+            </div>
+            <div aria-label={title} className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4">
                 {imgs.map((img, index) => (
-                    <React.Fragment key={index}>
-                        {mobile ? (
-                            <div className="flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 mt-12">
-                                <img src={img} width={'200px'} />
-                            </div>
-                        ) : (
-                            <div className="w-[550px] md:w-[870px] flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
-                                <img src={img} />
-                            </div>
-                        )}
-                    </React.Fragment>
+                    <div key={img} className={`relative flex shrink-0 snap-start items-center justify-center overflow-hidden rounded-2xl border border-stone-900/10 bg-[#eee8dc] p-3 ${mobile ? "h-[28rem] w-[14rem]" : "aspect-[16/10] w-[min(48rem,85vw)]"}`}>
+                        <Image
+                            src={img}
+                            alt={`${title} — tela ${index + 1}`}
+                            loading="lazy"
+                            fill
+                            sizes={mobile ? "224px" : "(max-width: 640px) 80vw, 400px"}
+                            className="h-full w-full rounded-xl object-contain"
+                        />
+                    </div>
                 ))}
             </div>
         </div>
-    )
-}
+    </section>
+);
 
 export default Page2;

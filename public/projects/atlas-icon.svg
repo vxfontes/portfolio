@@ -1,0 +1,8 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Atlas">
+  <rect width="512" height="512" fill="#0B0F0A"/>
+  <circle cx="256" cy="256" r="186" fill="none" stroke="#C8F26F" stroke-width="7"/>
+  <circle cx="256" cy="256" r="150" fill="none" stroke="#C8F26F" stroke-width="1.5" opacity="0.35"/>
+  <polygon points="256,96 295.6,216.4 416,256 295.6,295.6 256,416 216.4,295.6 96,256 216.4,216.4" fill="#C8F26F"/>
+  <polygon points="256,96 273,240 256,256 239,240" fill="#9BC93C"/>
+  <circle cx="256" cy="256" r="16" fill="#0B0F0A" stroke="#C8F26F" stroke-width="5"/>
+</svg>

@@ -1,405 +1,240 @@
-export const projects = [
+import { ProjectProps } from "@/interface/ProjectProps";
+
+export const projects: ProjectProps[] = [
     {
-        "id": 27,
-        "title": "Coin Saves",
-        "descriptionPT": "O Coin saves é uma ferramenta completa para gerenciar despesas e receitas pessoais ou empresariais com interface intuitiva, controle de orçamento, conciliação com a conta do google e recursos de segurança.",
-        "descriptionEN": "Coin saves is a complete tool for managing personal or business expenses and income with intuitive interface, budget control, reconciliation with google account and security features.",
-        "details": [
-            "O coin saves é uma ferramenta completa para gerenciar despesas e receitas pessoais ou empresariais. Com interface intuitiva e gráficos, ele oferece controle de orçamento, alertas de limite de gastos e conciliação com a conta do google. É acessível via smartphone, tablet ou computador. Com ele, é possível ter controle eficiente e preciso das finanças.",
-            "Coin saves is a complete tool for managing personal or business expenses and income. With intuitive interface and graphics, it offers budget control, spending limit alerts and reconciliation with the google account. It is accessible via smartphone, tablet or computer. With it, it is possible to have efficient and precise control of finances."
+        id: 105,
+        title: "ZimaDash",
+        category: "Produto autoral · painel self-hosted",
+        status: "Em produção pessoal",
+        descriptionPT: "Cockpit self-hosted com cerca de 19 módulos para operar servidor, apps, Cofre, túneis, dados e agentes em um só painel.",
+        descriptionEN: "A self-hosted cockpit with roughly 19 modules for operating a server, apps, Vault, tunnels, data, and agents in one place.",
+        details: [
+            "O ZimaDash é o cockpit do meu servidor pessoal. Além do painel de CPU, memória, disco, temperatura e containers em tempo real, ele concentra cerca de 19 módulos: operações de containers e processos, banco PostgreSQL, Redis, Gitea, logs, arquivos, serviços self-hosted, desktop remoto, alertas e acompanhamento de apps e agentes. Cada integração é independente e tolerante a falhas: se um serviço externo cai, o módulo degrada para offline sem derrubar o painel.\n\nTambém construí ferramentas próprias dentro dele. O Cofre compartilha segredos por links temporários com expiração e burn-after-read; os Túneis Cloudflare expõem serviços, upload ou arquivos sem abrir porta no roteador; e as áreas Apps e Agentes acompanham projetos autorais, Cutuque e sessões de IA. React, Fastify, WebSocket, Docker e nginx formam uma arquitetura modular e stateless.",
+            "ZimaDash is the cockpit for my personal server. Beyond real-time CPU, memory, disk, temperature, and container monitoring, it brings together roughly 19 modules: container and process operations, PostgreSQL, Redis, Gitea, logs, files, self-hosted services, remote desktop, alerts, and app and agent monitoring. Each integration is independent and failure-tolerant: if an external service goes down, its module degrades to offline without taking down the dashboard.\n\nI also built product capabilities into it. Vault shares secrets through temporary links with expiry and burn-after-read; Cloudflare Tunnels expose services, uploads, or files without opening router ports; and Apps and Agents monitor personal products, Cutuque, and AI sessions. React, Fastify, WebSocket, Docker, and nginx form a modular stateless architecture."
         ],
-        "tecnologies": [
-            "Next JS",
-            "React JS",
-            "Typescript",
-            "Firebase",
-            "Mantine",
-            "Dayjs",
-            "Tailwind CSS",
-            "Post CSS",
-            "Icons React",
-            "Autoprefixer"
+        tecnologies: ["React", "Vite", "Fastify", "Node.js", "WebSocket", "Docker", "nginx", "Cloudflare"],
+        finish: true,
+        link: "",
+        repoAvailability: "Disponível em breve",
+        icon: "/projects/zimadash-icon.svg",
+        imgPrincipal: "/projects/zimadash-dashboard.png",
+        imageContain: false,
+        imgMobile: [],
+        imgDesktop: [
+            "/projects/zimadash-dashboard.png",
+            "/projects/zimadash-containers.png",
+            "/projects/zimadash-databases.png",
+            "/projects/zimadash-tunnels.png",
+            "/projects/zimadash-vault.png",
         ],
-        "finish": true,
-        "link": "http://coinsaves.web.app",
-        "videos": [
-            "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/Coin%20Saves.mp4?alt=media&token=f88179da-4d8f-42b9-8b21-fdcd4a433904"
-        ],
-        "imgPrincipal": "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page3.png?alt=media&token=040eb79f-386a-44a5-b294-1757e8069260",
-        "imgMobile": [
-            "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/IMG_3640.png?alt=media&token=e0bc3e20-0474-4825-ad5c-64ebf6a87b0f",
-            "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/IMG_3637.png?alt=media&token=56fb8e12-a296-45fc-92c2-853851846609",
-            "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/IMG_3638.png?alt=media&token=037c9d12-516e-4074-a6c6-ab4dd7f8735b",
-            "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/IMG_3639.png?alt=media&token=e45a2516-e1e9-4132-906c-9af2fc1a544f"
-        ],
-        "imgDesktop": [
-            "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page1.png?alt=media&token=dc73dfa7-dc93-4504-9596-01fb05a62212",
-            "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page2.png?alt=media&token=6598dea5-a396-497d-983c-3e6b37c2eacd",
-            "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page3.png?alt=media&token=040eb79f-386a-44a5-b294-1757e8069260",
-            "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page5.png?alt=media&token=1023e3e2-7de4-4c33-918d-08c947953af0",
-            "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page6.png?alt=media&token=74bcef54-5e45-452a-acbf-c8dcfefe00b6",
-            "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page7.png?alt=media&token=c12f3bc8-6e43-4f1d-8a9d-a1ea834d41d8"
-        ],
-        "another": [
-            "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page8.png?alt=media&token=a68d0e08-4d45-41a4-8d6f-8b0b3d21f671",
-            "https://firebasestorage.googleapis.com/v0/b/coin-save.appspot.com/o/page9.png?alt=media&token=5f9be795-f9b2-4a5b-8aae-443b84ff6593"
-        ],
-        "anotherDescription": [
-            "Visualização de todos os dados do usuário",
-            "Possibilidade de alteração"
-        ]
+        videos: [], another: [], anotherDescription: []
     },
     {
-        "id": 1,
-        "title": "JM System",
-        "descriptionPT": "Sistema de compras e despesas com gerador de PDF. Implementado um dashboard com as informações da empresa como: lucro bruto, lucro líquido, despesas e outros.",
-        "descriptionEN": "System for purchasing and expense business with PDF generator. Implemented a dashboard with company information such as: gross profit, net income, expenses and others.",
-        "details": [
-            "Sistema de uma empresa que utiliza de recibos para a comprovação de recebimento de comissão para funcionários, recibo de clentes e comprovante de compras. Com isso cadastra-se também despesas e cria-se um dashboard que abrange todos esses valores, retornando então lucro bruto, lucro líquido, quantidade de compra e venda além de dois tipos de gráficos exibindo todas as informações com aba de transições recentes",
-            "System of a company that uses receipts to prove receipt of commission to employees, receipt of lenses and proof of purchases. This also includes expenses and creates a dashboard that covers all these values, then returning gross profit, net profit, purchase and sale quantity plus two types of charts displaying all information with recent transitions tab"
+        id: 104,
+        title: "Cutuque",
+        category: "Produto autoral · iOS, watchOS e backend",
+        status: "Em evolução",
+        descriptionPT: "Controle sessões de agentes de código pelo iPhone e Apple Watch, com notificações hápticas e um hub próprio em Go.",
+        descriptionEN: "Control coding-agent sessions from iPhone and Apple Watch, with haptic notifications and a self-hosted Go hub.",
+        details: [
+            "O Cutuque leva sessões de agentes de código para o iPhone, iPad e Apple Watch. Pelo app, dá para iniciar e acompanhar sessões, ver o terminal ao vivo e responder quando um agente pede autorização. No relógio, avisos hápticos chamam a atenção quando uma decisão é necessária; sessões em andamento também podem aparecer na Dynamic Island e na tela bloqueada.\n\nUm hub em Go conecta os dispositivos às sessões de Claude Code, Codex e OpenCode por uma rede privada. O ecossistema inclui ainda um board Kanban compartilhado, uma CLI e um deck físico. O desenho prioriza controle remoto sem transferir o código-fonte para uma nuvem de terceiros.",
+            "Cutuque brings coding-agent sessions to iPhone, iPad, and Apple Watch. The app can start and monitor sessions, show a live terminal, and respond when an agent asks for permission. Haptic alerts on the watch call attention when a decision is needed; active sessions can also appear in the Dynamic Island and Lock Screen.\n\nA Go hub connects devices to Claude Code, Codex, and OpenCode sessions over a private network. The ecosystem also includes a shared Kanban board, a CLI, and a physical deck. Its design prioritizes remote control without sending source code to a third-party cloud."
         ],
-        "tecnologies": [
-            "React JS",
-            "Typescript",
-            "Firebase",
-            "Formik",
-            "Yup",
-            "PDFMake",
-            "ApexCharts",
-            "Material UI v4",
-            "React Router Dom"
+        tecnologies: ["Go", "Swift", "SwiftUI", "WebSocket", "Tailscale", "Docker"],
+        finish: false,
+        link: "https://github.com/vxfontes/cutuque",
+        icon: "/projects/cutuque-icon.png",
+        imgPrincipal: "/projects/cutuque-ipad-sessoes.png",
+        imageContain: true,
+        imgMobile: [
+            "/projects/cutuque-iphone-sessoes.png",
+            "/projects/cutuque-iphone-board.png",
+            "/projects/cutuque-iphone-terminal.png",
+            "/projects/cutuque-watch-acao.png",
+            "/projects/cutuque-watch-lista.png",
         ],
-        "finish": true,
-        "link": "https://github.com/vxfontes/jm-system",
-        "imgPrincipal": "https://i.imgur.com/fC7wHPU.png",
-        "imgMobile": [
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/main.PNG",
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/navbar.PNG",
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/dashboard.PNG",
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/dashboard2.PNG",
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/dashboard3.PNG",
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/recibo.PNG",
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/reciboRejected.PNG",
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/reciboModal1.PNG",
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/reciboModal2.PNG",
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mobile/reciboOk.PNG"
+        imgDesktop: [
+            "/projects/cutuque-ipad-sessoes.png",
+            "/projects/cutuque-ipad-board.png",
+            "/projects/cutuque-ipad-terminal.png",
         ],
-        "imgDesktop": [
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/mainPage.png",
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/dashboard.png",
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/recibo.png",
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/reciboRejected.png"
-        ],
-        "videos": [
-            "https://user-images.githubusercontent.com/63061509/200879209-9e556423-d3b2-4265-ba62-1b80835274f7.mp4",
-            "https://user-images.githubusercontent.com/63061509/200878749-48c52e41-d6f1-4466-b625-af9009adfe88.mp4",
-            "https://user-images.githubusercontent.com/63061509/200879167-e15d460d-751e-4c56-acf3-6bc38616fb03.mp4"
-        ],
-        "another": [
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/venda.png",
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/comissao.png",
-            "https://raw.githubusercontent.com/vxfontes/jm-system/master/src/image/project/pdfs/comprovante.png"
-        ],
-        "anotherDescription": [
-            "Visualização de todos os tipos de PDFs gerados pelo sistema",
-            "Showing all types of system-generated PDFs"
-        ]
+        videos: [], another: [], anotherDescription: []
     },
     {
-        "id": 15,
-        "title": "Atlética predadores UFRB",
-        "descriptionPT": "Site de uma atlética universitária com jogos e escalações, aba de notícias, troféus, galeria, inscrição, dashboard completo.",
-        "descriptionEN": "Site of an university athletics with games and lineups, news tab, trophies, gallery, inscription, complete dashboard.",
-        "details": [
-            "Site para uma atlética universitária que possui diversas funções, como inscrição de membros e calouros, formulários para produtos, escalações, notícias e outros, visualização de todos os jogos seguintes e antigos além de um tratamento de erros incrível e um dashboard para gestão completo. O site gerencia toda a gestão da atletica e é feito com diversas tecnologias atuais.",
-            "Site for an university athletics who has several functions, such as member and freshman registration, forms for products, rosters, news and others, viewing all the following and old games plus an incredible error handling and a dashboard for complete management. The site manages the entire management of the atletica and is done with several current technologies."
+        id: 103,
+        title: "SchemaDock",
+        category: "Produto autoral · aplicativo desktop",
+        status: "Versão 1.0",
+        descriptionPT: "Cliente SQL para macOS que reúne editor, exploração de schemas e ferramentas de projeto em um só ambiente.",
+        descriptionEN: "A macOS SQL client that brings a query editor, schema explorer, and project tools into one workspace.",
+        details: [
+            "O SchemaDock reúne em um aplicativo desktop as tarefas que normalmente ficam espalhadas entre clientes de banco e ferramentas de desenvolvimento. Ele conecta a PostgreSQL, MySQL, Oracle e SQL Server e combina editor SQL com execução em streaming, exploração de schemas e visualização e edição de dados tabulares.\n\nHistórico de consultas, snippets, terminal e ferramentas Git completam o espaço de trabalho. O objetivo é reduzir a troca de contexto sem esconder o que importa para quem trabalha diretamente com bancos de dados.",
+            "SchemaDock brings work that is often spread across database clients and developer tools into one desktop app. It connects to PostgreSQL, MySQL, Oracle, and SQL Server, combining a SQL editor with streaming execution, schema exploration, and tabular data viewing and editing.\n\nQuery history, snippets, a terminal, and Git tools complete the workspace. The goal is to reduce context switching without hiding the details database work depends on."
         ],
-        "tecnologies": [
-            "React JS",
-            "Typescript",
-            "Firebase",
-            "Formik",
-            "Yup",
-            "vite",
-            "Material UI v5",
-            "React Router Dom"
-        ],
-        "finish": false,
-        "link": "https://www.predadoresufrb.com.br",
-        "imgPrincipal": "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2Fsome.png?alt=media&token=66341226-0aa8-4444-98dc-69b4f63707ca",
-        "imgMobile": [
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2FD90BE28D-9CF0-4BAC-837E-0F6728F66437.png?alt=media&token=5de5a437-4889-4d26-a070-75db1006634a",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2FB311F135-852E-488B-B374-6FD3525E27D3.png?alt=media&token=c21e3c11-f57a-4f98-aa51-68eda84f028b",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2F76B3373B-3948-4BCE-9348-492C9B8EF96F.png?alt=media&token=13f10852-9069-4526-8cdc-fc2a4f70a090",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2FAC7B15D2-2E79-4BC8-833E-4EC68DA2D8E5.png?alt=media&token=cb071238-58ab-4623-85c1-ba49c60b0d1a",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2F016141D4-2869-4D8D-8EEE-375869C81B00.png?alt=media&token=8e9aaaf7-8dbb-4fc4-a59c-3909130f3c0f",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2F4C3DC45E-8E55-4053-AFC8-29084F96F239.png?alt=media&token=70f2504f-5483-4aee-b6f4-3385ad7efb44",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2F3D87844F-D564-4A0B-BB8A-CA70965A1580.png?alt=media&token=e9b59df3-e1a3-43b3-9539-eed2da314f09"
-        ],
-        "imgDesktop": [
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2Fdesktop1.png?alt=media&token=de4d1018-957b-4aae-9d33-650284d48f19",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2Fdesktop2.png?alt=media&token=dda26393-6dc4-41b8-826c-a067e4d6e07d",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2Fdesktop4.png?alt=media&token=f479583b-69d0-4d44-89aa-7427d4ac944f",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2Fdesktop5.png?alt=media&token=ee7653d1-52d6-468d-80cb-cb94aab72fea",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2Fdesktop6.png?alt=media&token=7432141c-23d1-4a24-9745-08692af0433e"
-        ],
-        "videos": [
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2FSITE%20-%20Lan%C3%A7amento%20oficial%20%5BTEASER%5D.mp4?alt=media&token=4f383cc3-12a8-49fb-8408-5f050d6cff7f"
-        ],
-        "another": [
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2Fdashdesktop2.png?alt=media&token=c4043870-40d9-4adc-a132-e35cde443320",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2Fdashdesktop3.png?alt=media&token=db30fb5f-20ef-4b90-bed9-dbee4104a69f",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2Fdashdesktop4.png?alt=media&token=91a48fa6-fc9f-4d85-92fa-97172f4a5eae",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Fpredadores%2Fdashdesktop5.png?alt=media&token=a9769efa-91da-41b9-8258-17c4d0731037"
-        ],
-        "anotherDescription": [
-            "Visualização de todo o dashboard de administração",
-            "Showing all admin dashboard"
-        ]
+        tecnologies: ["Tauri", "Rust", "SolidJS", "TypeScript", "Monaco Editor", "SQLite"],
+        finish: true,
+        link: "",
+        repoAvailability: "Disponível em breve",
+        icon: "/projects/schemadock.png",
+        imgPrincipal: "/projects/schemadock.png",
+        imageContain: true,
+        imgMobile: [], imgDesktop: [], videos: [], another: [], anotherDescription: []
     },
     {
-        "id": 93,
-        "title": "Trenzinho Acadêmico",
-        "descriptionPT": "A aplicação de gerenciamento de eventos universitários da UFRB permite monitorar o interesse dos usuários por meio de curtidas, proporcionando uma avaliação do número de interessados em cada evento.",
-        "descriptionEN": "The application for managing university events at the Federal University of Recôncavo Baiano allows monitoring user interest through likes, providing an assessment of the number of people interested in each event.",
-        "details": [
-            "Esse trabalho ocorreu em equipe, em conjunto com minha equipe realizei a criação do banco de dados e de algumas consultas do backend, o frontend foi feito por mim. É uma aplicação que permite o gerenciamento de eventos universitários da Universidade federal do recôncavo baiano. Cada um desses eventos será tratado como um evento distinto, e a aplicação contará com a funcionalidade de monitorar o nível de interesse dos usuários por meio de curtidas, permitindo assim avaliar o número de interessados de cada um. A plataforma será acessada por administradores, usuários cadastrados e também por usuários sem cadastro, porém, somente os administradores e os usuários cadastrados terão permissão para adicionar o interesse em um determinado evento. Banco de dados bem estruturado e normalizado com backend MVC realizando consultas também em SQL.",
-            "This project was did with a team, together with my team I performed the creation of the database and some queries from the backend, the frontend was done by me. It is an application that allows the management of university events of the Federal University of the Bahian recôncavo. Each of these events will be treated as a distinct event, and the application will have the functionality to monitor the level of interest of users through likes, thus allowing to evaluate the number of interested of each one. The platform will be accessed by administrators, registered users and also by users without registration, however, only administrators and registered users will be allowed to add interest in a particular event. Well-structured and normalized database with MVC backend performing queries also in SQL."
+        id: 102,
+        title: "WaterCue",
+        category: "Produto autoral · macOS e Windows",
+        status: "Mac App Store · Windows beta",
+        descriptionPT: "App desktop de hidratação com lembretes e validação por câmera e IA, mantendo dados localmente.",
+        descriptionEN: "A desktop hydration app with reminders and camera-based AI verification, keeping data on-device.",
+        details: [
+            "O WaterCue transforma uma meta diária de hidratação em lembretes que interrompem o uso do computador até a pessoa registrar uma pausa para beber água. Uma verificação por câmera e visão computacional confirma a ação antes de liberar a tela, e o histórico ajuda a acompanhar a rotina.\n\nA versão para macOS está na App Store; a versão para Windows está em beta. Os registros do usuário ficam localmente no dispositivo.",
+            "WaterCue turns a daily hydration goal into reminders that pause computer use until the person logs a water break. A camera and computer-vision check verifies the action before unlocking the screen, while history helps track the habit.\n\nThe macOS version is on the App Store; the Windows version is in beta. User records stay on the device."
         ],
-        "tecnologies": [
-            "React JS",
-            "Node Js",
-            "PostgreSQL",
-            "Axios",
-            "Cors",
-            "React Router Dom",
-            "Express",
-            "Material UI v5",
-            "Nodemon",
-            "Vite",
-            "Styled-components",
-            "Typescript"
-        ],
-        "finish": true,
-        "link": "https://github.com/vxfontes/trenzinho-news.git",
-        "imgPrincipal": "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Ftrenzinho%2Fpagina1.png?alt=media&token=fa227a94-87aa-4fba-88db-71d63bd74c8d&_gl=1*knyo4h*_ga*MTczNjg0MzE0NC4xNjcxNzUwNTA2*_ga_CW55HF8NVT*MTY4NTk3ODU4NS4xNy4xLjE2ODU5Nzg5OTUuMC4wLjA.",
-        "imgMobile": [],
-        "imgDesktop": [
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Ftrenzinho%2Fpagina2.png?alt=media&token=860b3714-4082-43e2-ac5b-e45c8649fa1f&_gl=1*19jv8eb*_ga*MTczNjg0MzE0NC4xNjcxNzUwNTA2*_ga_CW55HF8NVT*MTY4NTk3ODU4NS4xNy4xLjE2ODU5NzkwMjYuMC4wLjA.",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Ftrenzinho%2Fpagina1.png?alt=media&token=fa227a94-87aa-4fba-88db-71d63bd74c8d&_gl=1*knyo4h*_ga*MTczNjg0MzE0NC4xNjcxNzUwNTA2*_ga_CW55HF8NVT*MTY4NTk3ODU4NS4xNy4xLjE2ODU5Nzg5OTUuMC4wLjA.",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Ftrenzinho%2Fpagina3.png?alt=media&token=a3665aa2-98fc-4645-9481-b6750e1c0f3a&_gl=1*1dgpqbm*_ga*MTczNjg0MzE0NC4xNjcxNzUwNTA2*_ga_CW55HF8NVT*MTY4NTk3ODU4NS4xNy4xLjE2ODU5NzkwNTcuMC4wLjA.",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Ftrenzinho%2Fpagina4.png?alt=media&token=2926f070-9bfe-4fe3-9194-dcb8fa7bccd2&_gl=1*je89go*_ga*MTczNjg0MzE0NC4xNjcxNzUwNTA2*_ga_CW55HF8NVT*MTY4NTk3ODU4NS4xNy4xLjE2ODU5NzkwOTQuMC4wLjA.",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Ftrenzinho%2Fpagina5.png?alt=media&token=4b0c2ba0-9bf1-4905-af06-594d2040f531&_gl=1*jccjqu*_ga*MTczNjg0MzE0NC4xNjcxNzUwNTA2*_ga_CW55HF8NVT*MTY4NTk3ODU4NS4xNy4xLjE2ODU5NzkxMDguMC4wLjA.",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Ftrenzinho%2Fpagina6.png?alt=media&token=24fbf9a7-cd62-4c49-ba22-9aba46e8a0aa&_gl=1*zbreu6*_ga*MTczNjg0MzE0NC4xNjcxNzUwNTA2*_ga_CW55HF8NVT*MTY4NTk3ODU4NS4xNy4xLjE2ODU5NzkxMjAuMC4wLjA.",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Ftrenzinho%2Fpagina7.png?alt=media&token=ffd6b95c-7dc9-4547-8ea1-ad14ceefada6&_gl=1*1xslkwn*_ga*MTczNjg0MzE0NC4xNjcxNzUwNTA2*_ga_CW55HF8NVT*MTY4NTk3ODU4NS4xNy4xLjE2ODU5NzkxNDQuMC4wLjA.",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Ftrenzinho%2Fpagina8.png?alt=media&token=be0aa8f5-4594-49aa-8903-1dc20f103439&_gl=1*2fzk8e*_ga*MTczNjg0MzE0NC4xNjcxNzUwNTA2*_ga_CW55HF8NVT*MTY4NTk3ODU4NS4xNy4xLjE2ODU5NzkxNjAuMC4wLjA.",
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Ftrenzinho%2Fpagina9.png?alt=media&token=0e79bb68-3c2a-4c89-bdd6-c64dc7dd7943&_gl=1*1g62xkb*_ga*MTczNjg0MzE0NC4xNjcxNzUwNTA2*_ga_CW55HF8NVT*MTY4NTk3ODU4NS4xNy4xLjE2ODU5NzkxNzMuMC4wLjA."
-        ],
-        "videos": [
-            "https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/pics%20projects%2Ftrenzinho%2FTrenzinho%20News%20-%20Brave%202023-06-05%2012-25-41.mp4?alt=media&token=b005c996-dd93-41ab-ae62-4b5eb25d07bd&_gl=1*1q02zi2*_ga*MTczNjg0MzE0NC4xNjcxNzUwNTA2*_ga_CW55HF8NVT*MTY4NTk3ODU4NS4xNy4xLjE2ODU5NzkzMjQuMC4wLjA."
-        ],
-        "another": [],
-        "anotherDescription": []
+        tecnologies: ["Swift", "SwiftUI", "AppKit", "C#", "WPF", "SQLite", "Groq Vision"],
+        finish: false,
+        link: "https://github.com/vxfontes/WaterCue",
+        icon: "/projects/watercue.png",
+        imgPrincipal: "/projects/watercue.png",
+        imageContain: true,
+        imgMobile: [], imgDesktop: [], videos: [], another: [], anotherDescription: []
     },
     {
-        "id": 2,
-        "title": "Clone Netflix",
-        "descriptionPT": "Imitação da interface principal da netflix utilizando ReactJS com login, exibição de filmes e série com temporadas e episódios.",
-        "descriptionEN": "Imitation of netflix's main interface using ReactJS with login, showing movies and series with seasons and episodes.",
-        "details": [
-            "Login com usuários pré-definidos em um banco de dados do MongoDB, pré-salvos em um JSON. Após ser logado, o usuario é automaticamente redirecionado para a página principal onde teremos os filme ou série em destaque no momento e outros divididos em categorias distintas. Página home exibe um filme principal, e gera aleatoriamente todas as colunas, colocando o nome da categoria do primeiro filme da linha. Todos os filmes abrem com um pop-up, mas as séries exibem as temporadas e os episódios cadastrados. O usuário também pode realizar o logout. Possui CRUD, sendo possível utilizar rotas de get, post, put e delete para manipular o banco de dados.",
-            "Login with predefined users in a MongoDB database and pre-saved in a JSON. After being logged in, the user is automatically redirected to the main page where we will have the film or series featured at the moment and others divided into different categories. Home page displays a main movie, and randomly generates all the columns by placing the category name of the first movie in the row. All films open with a pop-up, but the series show the seasons and episodes registered. The user can also log out. It has CRUD, being possible to use get, post, put and delete routes to manipulate the database."
+        id: 101,
+        title: "Cobrei",
+        category: "Produto autoral · aplicativo mobile",
+        status: "Em desenvolvimento",
+        descriptionPT: "Gestão simples para pequenos negócios: produtos, precificação, estoque, vendas e despesas.",
+        descriptionEN: "Simple operations management for small businesses: products, pricing, inventory, sales, and expenses.",
+        details: [
+            "O Cobrei foi pensado para pequenos negócios que precisam organizar a operação sem depender de planilhas desconectadas. O app reúne produtos, cálculo de preço, estoque, vendas e despesas, e transforma esses registros em uma visão rápida da atividade financeira.\n\nA experiência mobile prioriza tarefas recorrentes: consultar um item, registrar uma venda e entender como os custos afetam o resultado. O escopo foi desenhado para manter o fluxo leve para quem toca o negócio no dia a dia.",
+            "Cobrei is designed for small businesses that need to organize daily operations without relying on disconnected spreadsheets. The app brings together products, pricing, inventory, sales, and expenses, turning those records into a quick view of financial activity.\n\nThe mobile experience prioritizes recurring tasks: checking an item, recording a sale, and understanding how costs affect the result. Its scope keeps the workflow light for people running the business day to day."
         ],
-        "tecnologies": [
-            "React JS",
-            "Node Js",
-            "MongoDB",
-            "Axios",
-            "Cors",
-            "React Router Dom",
-            "Express",
-            "Bootstrap",
-            "Moongose",
-            "Morgan",
-            "Underscore"
-        ],
-        "finish": true,
-        "link": "https://github.com/vxfontes/clone-netflix-reactjs",
-        "imgPrincipal": "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-inicial.png",
-        "imgMobile": [],
-        "imgDesktop": [
-            "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/login.png",
-            "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-inicial.png",
-            "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-inicial2.png",
-            "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-filme.png",
-            "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-serie.png",
-            "https://raw.githubusercontent.com/vxfontes/clone-netflix-reactjs/main/frontend/src/assets/project/pagina-serie2.png"
-        ],
-        "videos": [
-            "https://user-images.githubusercontent.com/63061509/202825264-2763d07c-b473-43d7-bee3-006a3aa61025.mp4"
-        ],
-        "another": [],
-        "anotherDescription": []
+        tecnologies: ["Flutter", "Dart", "Riverpod", "Firebase", "Firestore"],
+        finish: false,
+        link: "",
+        repoAvailability: "Disponível em breve",
+        icon: "/projects/cobrei-logo.png",
+        imgPrincipal: "/projects/cobrei-logo.png",
+        imageContain: true,
+        imgMobile: [], imgDesktop: [], videos: [], another: [], anotherDescription: []
     },
     {
-        "id": 3,
-        "title": "Find Your Duo",
-        "descriptionPT": "Site e aplicativo que tem como objetivo unir jogadores para que possam jogar juntos independente do tipo de jogo.",
-        "descriptionEN": "Site and app that aims to unite players so they can play together all the type of game.",
-        "details": [
-            "A versão web tem como objetivo a publicação de anúncios de 'procurando meu duo' em diferentes tipos de jogos, selecionando então o jogo, colocando o 'nickname', discord e outras informações. O aplicativo para celular permite então que o usuário passei entre os anúncios criados e selecione o seu duo para a partida. O backend faz toda essa ligação utilizando um banco de dados com prisma.",
-            "The web version aims to publish ads of 'looking for my duo' in different types of games, then selecting the game, putting the 'nickname', discord and other information. The mobile app then allows the user to search between the created ads and select their duo for the match. The backend makes all this connection using a prism database."
+        id: 100,
+        title: "Organiq",
+        category: "Produto autoral · app, backend e IA",
+        status: "Na App Store · versão 1.0",
+        descriptionPT: "Inbox com IA que organiza notas soltas em tarefas, lembretes, eventos e listas.",
+        descriptionEN: "An AI-powered inbox that turns rough notes into organized tasks, reminders, events, and lists.",
+        details: [
+            "O OrganiQ é uma caixa de entrada para pensamentos que ainda não estão organizados. A pessoa escreve ou dita uma nota; a IA sugere se aquilo deve virar tarefa, lembrete, evento ou item de compras. A sugestão é editável e só entra na agenda ou lista depois da confirmação — a IA ajuda a classificar, mas não decide pela pessoa.\n\nO app inclui agenda unificada, notificações e organização por flags e subflags. A versão iOS já está publicada na App Store. A arquitetura reúne o aplicativo Flutter, uma API em Go e persistência PostgreSQL.",
+            "OrganiQ is an inbox for thoughts that are not organized yet. A person types or dictates a note; AI suggests whether it should become a task, reminder, event, or shopping-list item. The suggestion is editable and only enters the calendar or list after confirmation—the AI helps classify, but does not decide for the user.\n\nThe app includes a unified agenda, notifications, and organization with flags and subflags. The iOS version is available on the App Store. Its architecture combines a Flutter app, a Go API, and PostgreSQL persistence."
         ],
-        "tecnologies": [
-            "React JS",
-            "Node Js",
-            "Typescript",
-            "express",
-            "hoppscotch",
-            "ts-node-dev",
-            "prisma",
-            "SQLite",
-            "cors",
-            "vite",
-            "tailwind css",
-            "photosphor",
-            "expo",
-            "typescript",
-            "ngrok",
-            "React navigation"
+        tecnologies: ["Flutter", "Go", "Gin", "PostgreSQL", "LLMs", "Firebase"],
+        finish: false,
+        link: "https://github.com/vxfontes/organiq",
+        appLink: "https://apps.apple.com/br/app/organiq/id6760727396",
+        icon: "/projects/organiq.png",
+        imgPrincipal: "/projects/organiq-home.jpg",
+        imageContain: true,
+        imgMobile: [
+            "/projects/organiq-home.jpg",
+            "/projects/organiq-ai-suggestion.jpg",
+            "/projects/organiq-confirmation.jpg",
+            "/projects/organiq-agenda.jpg",
+            "/projects/organiq-shopping.jpg",
         ],
-        "finish": false,
-        "link": "https://github.com/vxfontes/findYourDuo",
-        "imgPrincipal": "https://i.imgur.com/kN9AP5a.png",
-        "imgMobile": [
-            "https://i.imgur.com/oPD8X2q.png",
-            "https://i.imgur.com/2VgMDQu.png",
-            "https://i.imgur.com/feyuYML.png",
-            "https://i.imgur.com/XFqrivG.png"
+        imgDesktop: [
+            "/projects/organiq-ipad-home.jpg",
+            "/projects/organiq-ipad-ai-suggestion.jpg",
+            "/projects/organiq-ipad-agenda.jpg",
         ],
-        "imgDesktop": [
-            "https://i.imgur.com/kN9AP5a.png",
-            "https://i.imgur.com/f1V516V.png"
-        ],
-        "videos": [],
-        "another": [],
-        "anotherDescription": []
+        videos: [], another: [], anotherDescription: []
     },
     {
-        "id": 4,
-        "title": "To Do React",
-        "descriptionPT": "Lista de tarefas utilizando react.js e sem a utilização de banco de dados. Onde adicionamos, marcamos uma tarefa como concluida e a excluirmos.",
-        "descriptionEN": "Task list using react.js and without database usage. We can add a task, mark a task as completed and delete it.",
-        "details": [
-            "Uma lista de tarefas que se pode adicionar, marcar como feita e deletar uma tarefa. Não tem vinculo com banco de dados, utilização de um JSON armazenado na nuvem para consumir dados. IDs são gerados por biblioteca para maior facilidade de marcação de tarefas.",
-            "A list of tasks that you can add, mark as done, and delete a task. It has no link to database, It was use a JSON stored in the cloud to consume data. IDs are generated per library for easier task markup."
+        id: 108,
+        title: "Atlas",
+        category: "Produto autoral · planejamento de viagens",
+        status: "Em uso · acesso pessoal",
+        descriptionPT: "Um workspace que reúne agenda, mapa, reservas, lugares salvos e custos de cada viagem.",
+        descriptionEN: "A workspace that brings each trip’s itinerary, map, reservations, saved places, and expenses together.",
+        details: [
+            "O Atlas organiza cada viagem em um workspace com agenda, mapa, lugares, reservas, gastos e diário. Em vez de espalhar informações por documentos e conversas, reúne o planejamento e o que acontece durante a viagem em um só lugar.\n\nA agenda permite planejar por dia e período; o mapa mostra lugares com coordenadas verificadas; reservas e custos podem ser associados às pessoas. Um modo de convidada oferece acesso de leitura limitado à janela da viagem. O produto é mobile-first e roda em infraestrutura pessoal, sem expor o banco de dados.",
+            "Atlas organizes each trip in a workspace with an itinerary, map, places, reservations, expenses, and a journal. Instead of scattering information across documents and chats, it keeps planning and in-trip updates together.\n\nThe itinerary supports day-by-day and time-of-day planning; the map only shows places with verified coordinates; reservations and costs can be associated with travelers. A guest mode provides read-only access for a limited travel window. The product is mobile-first and runs on private infrastructure without exposing its database."
         ],
-        "tecnologies": [
-            "React JS",
-            "React Icons",
-            "Axios",
-            "React Router Dom",
-            "UUID"
-        ],
-        "finish": true,
-        "link": "https://github.com/vxfontes/to-do-react",
-        "imgPrincipal": "https://raw.githubusercontent.com/vxfontes/to-do-react/main/src/image/principal.png",
-        "imgMobile": [
-            "https://raw.githubusercontent.com/vxfontes/to-do-react/main/src/image/principalMobile.PNG",
-            "https://raw.githubusercontent.com/vxfontes/to-do-react/main/src/image/about.PNG"
-        ],
-        "imgDesktop": [
-            "https://raw.githubusercontent.com/vxfontes/to-do-react/main/src/image/principal.png"
-        ],
-        "videos": [
-            "https://user-images.githubusercontent.com/63061509/202737466-df8d0042-789b-4cdb-b614-d07b118676a3.mp4"
-        ],
-        "another": [],
-        "anotherDescription": []
+        tecnologies: ["React", "TypeScript", "Vite", "NestJS", "Prisma", "PostgreSQL"],
+        finish: true,
+        link: "",
+        repoAvailability: "Disponível em breve",
+        icon: "/projects/atlas-icon.svg",
+        imgPrincipal: "/projects/atlas-icon.svg",
+        imageContain: true,
+        imgMobile: [], imgDesktop: [], videos: [], another: [], anotherDescription: []
     },
     {
-        "id": 5,
-        "title": "Gamigo",
-        "descriptionPT": "Página que exibe os principais jogos da atualidade para todo tipo de dispositivo, inspirado no site aeriagames.",
-        "descriptionEN": "Page that displays the most famous games currently for all types of devices, inspired by the site aeriagames.",
-        "details": [
-            "Site que mostra todo tipo de jogo famoso na atualidade. Jogos tanto para computador quanto para celular com uma pequena descrição para que o usuário decida se vale ou não jogar determinado jogo, além de mostrar a categoria do jogo, caso o jogador deseje algo específico.",
-            "Site that shows all kind of famous game nowadays. Games for both computer and mobile with a short description for the user to decide whether or not to play a particular game, in addition to showing the category of the game, if the player wants something specific."
+        id: 107,
+        title: "Wardrobe",
+        category: "Produto autoral · catálogo pessoal",
+        status: "Em uso",
+        descriptionPT: "Catálogo visual para pesquisar peças do guarda-roupa, montar looks e planejar malas.",
+        descriptionEN: "A visual wardrobe catalog for finding pieces, composing outfits, and planning what to pack.",
+        details: [
+            "O Wardrobe transforma um inventário pessoal em um catálogo visual pesquisável. Cada peça tem fotos, ficha em Markdown e dados estruturados; a busca aceita código, nome, categoria, cor e tecido, e os filtros ajudam a navegar por grupos de peças.\n\nUm estúdio de composição combina itens por categoria para montar looks salvos. O fluxo também permite planejar uma mala para uma viagem e manter um histórico de uso, com uma interface pensada para funcionar no celular e hospedagem pessoal.",
+            "Wardrobe turns a personal inventory into a searchable visual catalog. Each item has photos, a Markdown record, and structured data; search accepts code, name, category, color, and fabric, while filters help browse item groups.\n\nAn outfit builder combines pieces by category and saves looks. The workflow also supports packing for a trip and keeping a wear history, with a mobile-friendly interface and self-hosted deployment."
         ],
-        "tecnologies": [
-            "HTML",
-            "CSS",
-            "Bootstrap"
-        ],
-        "finish": true,
-        "link": "https://github.com/vxfontes/games-bootstrap",
-        "imgPrincipal": "https://raw.githubusercontent.com/vxfontes/games-bootstrap/main/img/interfaces/principal1.png",
-        "imgMobile": [],
-        "imgDesktop": [
-            "https://raw.githubusercontent.com/vxfontes/games-bootstrap/main/img/interfaces/principal1.png",
-            "https://raw.githubusercontent.com/vxfontes/games-bootstrap/main/img/interfaces/principal2.png"
-        ],
-        "videos": [
-            "https://user-images.githubusercontent.com/63061509/202736119-f8cad550-0208-4fec-b119-61cb8c23f2fe.mp4"
-        ],
-        "another": [],
-        "anotherDescription": []
+        tecnologies: ["Python", "HTML", "CSS", "JavaScript", "JSON", "PWA"],
+        finish: true,
+        link: "",
+        repoAvailability: "Disponível em breve",
+        icon: "/projects/wardrobe-icon.svg",
+        imgPrincipal: "/projects/wardrobe-cover.png",
+        imageContain: false,
+        imgMobile: [], imgDesktop: ["/projects/wardrobe-cover.png"], videos: [], another: [], anotherDescription: []
     },
     {
-        "id": 6,
-        "title": "Main Interfaces",
-        "descriptionPT": "Modelo de 3 telas que são indispensáveis para basicamente todos os sites hoje em dia: Cadastro, login e tela de perfil.",
-        "descriptionEN": "Model of 3 screens that are indispensable for basically all sites nowadays: Registration, login and profile screen.",
-        "details": [
-            "Telas de login, cadastro e de perfil de estilos diferentes para testar conhecimentos de HTML e CSS puro com estilizações distintas e alternativas focando no design.",
-            "Login, registration and profile screens of different styles to test knowledge of HTML and pure CSS with distinct and alternative stylizations focusing on design."
+        id: 106,
+        title: "Sem Queimar",
+        category: "Produto autoral · PWA de culinária",
+        status: "MVP em evolução",
+        descriptionPT: "Receitas guiadas passo a passo, com explicações claras para quem está começando a cozinhar.",
+        descriptionEN: "Step-by-step guided recipes with clear explanations for people learning to cook.",
+        details: [
+            "O Sem Queimar parte de uma necessidade simples: ajudar quem está começando a cozinhar a chegar ao fim de uma receita com mais confiança. A experiência dá destaque ao passo a passo, em linguagem direta, e apresenta tempo, dificuldade e categorias para a pessoa escolher algo que caiba no momento.\n\nA área pública permite descobrir e consultar receitas sem criar conta; a edição fica reservada à administração. A aplicação é uma PWA construída como monorepo, com web em Next.js, API NestJS, tipos compartilhados e PostgreSQL.",
+            "Sem Queimar starts from a simple need: helping beginners finish a recipe with more confidence. The experience emphasizes clear, direct instructions and surfaces cooking time, difficulty, and categories so people can choose something that fits the moment.\n\nThe public area lets visitors discover recipes without an account, while editing is reserved for an administrator. The app is a PWA in a monorepo, with a Next.js web app, NestJS API, shared types, and PostgreSQL."
         ],
-        "tecnologies": [
-            "HTML",
-            "CSS"
+        tecnologies: ["Next.js", "TypeScript", "NestJS", "Prisma", "PostgreSQL", "PWA"],
+        finish: false,
+        link: "",
+        repoAvailability: "Disponível em breve",
+        icon: "/projects/sem-queimar-icon.png",
+        imgPrincipal: "/projects/sem-queimar-home.png",
+        imageContain: false,
+        imgMobile: [],
+        imgDesktop: [
+            "/projects/sem-queimar-home.png",
+            "/projects/sem-queimar-recipe.png",
+            "/projects/sem-queimar-cooking.png",
         ],
-        "finish": true,
-        "link": "https://github.com/vxfontes/login-cadastro-e-perfil",
-        "imgPrincipal": "https://raw.githubusercontent.com/vxfontes/login-cadastro-e-perfil/main/img/cadastro.png",
-        "imgMobile": [],
-        "imgDesktop": [
-            "https://raw.githubusercontent.com/vxfontes/login-cadastro-e-perfil/main/img/cadastro.png",
-            "https://raw.githubusercontent.com/vxfontes/login-cadastro-e-perfil/main/img/login.png",
-            "https://raw.githubusercontent.com/vxfontes/login-cadastro-e-perfil/main/img/perfil.png"
-        ],
-        "videos": [
-            "https://user-images.githubusercontent.com/63061509/202739328-fe946710-a7fa-4fdf-8f92-d2b9dd7447a3.mp4"
-        ],
-        "another": [],
-        "anotherDescription": []
+        videos: [], another: [], anotherDescription: []
     },
     {
-        "id": 7,
-        "title": "Agenda telefônica",
-        "descriptionPT": "Agenda telefônica feita em java, possui uma tela inicial onde mostra os contatos, podendo adicionar, editar e remover um usuário de sua lista.",
-        "descriptionEN": "Phonebook made in java, has a home screen where it shows contacts, being able to add, edit and remove a user from your list.",
-        "details": [
-            "Agenda telefônica feita em java, possui uma tela inicial onde mostra os contatos, podendo adicionar, editar e remover um usuário de sua lista.",
-            "Phonebook made in java, has a home screen where it shows contacts, being able to add, edit and remove a user from your list."
+        id: 99,
+        title: "WorkTimer",
+        category: "Produto autoral · aplicativo macOS",
+        status: "Versão 1.4",
+        descriptionPT: "Timer de barra de menu para registrar tempo por atividade, sem conta e sem depender da nuvem.",
+        descriptionEN: "A menu bar timer for tracking time by activity, with no account or cloud dependency.",
+        details: [
+            "O WorkTimer registra tempo por atividade a partir da barra de menus do macOS. Timers nomeados tornam simples alternar entre tarefas e revisar depois como o tempo foi distribuído, sem transformar o acompanhamento em uma ferramenta de apontamento pesada.\n\nO app funciona offline, guarda os dados no próprio Mac e oferece visão diária, histórico, agenda e gráficos. A proposta é manter a ação de iniciar e parar um timer rápida e deixar a análise para quando fizer sentido.",
+            "WorkTimer tracks time by activity from the macOS menu bar. Named timers make it simple to switch between tasks and later review how time was spent, without turning tracking into a heavy timesheet workflow.\n\nThe app works offline, stores data on the Mac, and includes daily, history, schedule, and chart views. The goal is to keep starting and stopping a timer quick, leaving analysis for when it is useful."
         ],
-        "tecnologies": [
-            "Java",
-            "Java Swing",
-            "OO"
-        ],
-        "finish": true,
-        "link": "https://github.com/vxfontes/JavaPOO-university/tree/main/aulaPOO/src/main/java/aula6/agenda",
-        "imgPrincipal": "https://raw.githubusercontent.com/vxfontes/JavaPOO-university/main/aulaPOO/src/main/java/aula6/agenda/img/principal.png",
-        "imgMobile": [],
-        "imgDesktop": [
-            "https://raw.githubusercontent.com/vxfontes/JavaPOO-university/main/aulaPOO/src/main/java/aula6/agenda/img/principal.png",
-            "https://raw.githubusercontent.com/vxfontes/JavaPOO-university/main/aulaPOO/src/main/java/aula6/agenda/img/editar.png",
-            "https://raw.githubusercontent.com/vxfontes/JavaPOO-university/main/aulaPOO/src/main/java/aula6/agenda/img/adicionar.png"
-        ],
-        "videos": [
-            "https://user-images.githubusercontent.com/63061509/202831176-81de5ba7-ecd0-4850-84cd-3db63855c42e.mp4"
-        ],
-        "another": [],
-        "anotherDescription": []
+        tecnologies: ["Swift", "SwiftUI", "AppKit", "Charts", "JSON local"],
+        finish: true,
+        link: "",
+        repoAvailability: "Disponível em breve",
+        icon: "/projects/worktimer.png",
+        imgPrincipal: "/projects/worktimer.png",
+        imageContain: true,
+        imgMobile: [], imgDesktop: [], videos: [], another: [], anotherDescription: []
     }
-]
+];

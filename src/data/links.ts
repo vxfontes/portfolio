@@ -2,34 +2,45 @@ import { ptBR as locale } from '../data/infos'
 
 export const links = [
     {
-        name: "Intro",
-        hash: "#intro",
-    },
-    {
         name: locale.about.title,
+        mobileName: "Sobre",
         hash: "#about",
     },
     {
-        name: locale.study.title,
-        hash: "#study",
+        name: "Impacto",
+        mobileName: "Impacto",
+        hash: "#impact",
+    },
+    {
+        name: "Construído",
+        mobileName: "Produto",
+        hash: "#built",
     },
     {
         name: locale.experience.title,
+        mobileName: "Carreira",
         hash: "#experience",
     },
     {
         name: locale.skill.title,
+        mobileName: "Stack",
         hash: "#skills",
     },
     {
         name: locale.projects.title,
+        mobileName: "Cases",
         hash: "#projects",
+    },
+    {
+        name: locale.study.title,
+        mobileName: "Formação",
+        hash: "#study",
     }
 ] as const;
 
 export const social = {
+    email: 'vanessaramosfontes@gmail.com',
     instagram: 'https://www.instagram.com/vxfontes',
     github: 'https://github.com/vxfontes',
-    linkedin: 'https://www.linkedin.com/in/vxfontes',
-    curriculo: 'https://firebasestorage.googleapis.com/v0/b/vxfontes.appspot.com/o/curriculo%2FRusselcurriculoPT.pdf?alt=media&token=d73fb973-fc61-4c17-a32d-5d060d09146d'
+    linkedin: 'https://www.linkedin.com/in/vxfontes'
 }

@@ -1,85 +1,57 @@
-import { motion, useScroll, useTransform } from "framer-motion";
-import Title from "./Title";
-import { ptBR as locale } from '../data/infos'
 import { projects } from "@/data/projects";
+import { ptBR as locale } from "@/data/infos";
+import Image from "next/image";
 import Link from "next/link";
+import { HiArrowRight } from "react-icons/hi";
 
-const Projects = () => {
-
-    const { scrollYProgress } = useScroll({
-        offset: ["0 1", "1.33 1"],
-    });
-    const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
-    const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-
-
-    return (
-        <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1.5 }}
-            className="relative flex overflow-hidden flex-col text-left max-w-full justify-evenly mx-auto items-center z-0"
-        >
-            <Title>{locale.projects.title}</Title>
-            <h3 className="absolute top-36 uppercase tracking-[3px] mb-12 text-gray-500 text-sm">{locale.projects.sub}</h3>
-
-            <div className="columns-1 md:columns-2 gap-2 px-16 pt-40 w-full overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
-                {projects.map((project, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{
-                            y: -300,
-                            opacity: 0
-                        }}
-                        transition={{ duration: 1.2 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        style={{
-                            scale: scaleProgess,
-                            opacity: opacityProgess,
-                        }}
-                        className="group mb-3 sm:mb-8 last:mb-0"
-                    >
-                        <Link href={`/projects/${project.id}`}>
-                            <section className="cursor-pointer max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] transition sm:group-even:pl-8 text-white bg-white/10 hover:bg-white/20">
-                                <div className="pt-4 pb-7 px-5 sm:pl-6 sm:pr-2 sm:pt-6 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-                                    <h3 className="text-2xl font-semibold">{project.title}</h3>
-                                    <p className="mt-2 leading-relaxed text-white/70 hidden sm:block">
-                                        {project.descriptionPT}
-                                    </p>
-                                    <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-                                        <li className={`${project.finish ? 'bg-green-900' : 'bg-red-900'} px-3 py-1 text-[0.7rem] uppercase tracking-wider rounded-full text-white/70`} key={index}>
-                                            {!project.finish ?  <>Em progresso...</>  :  <>Finalizado</>}
-                                        </li>
-                                    </ul>
-                                </div>
-
-                                <img
-                                    src={project.imgPrincipal}
-                                    alt="Project I worked on"
-                                    className="sm:absolute block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-                                    transition 
-                                    group-hover:scale-[1.04]
-                                    group-hover:-translate-x-3
-                                    group-hover:translate-y-3
-                                    group-hover:-rotate-2
-
-                                    group-even:group-hover:translate-x-3
-                                    group-even:group-hover:translate-y-3
-                                    group-even:group-hover:rotate-2
-
-                                    group-even:right-[initial] group-even:-left-40"
-                                />
-                            </section>
-                        </Link>
-                    </motion.div>
-                ))}
+const Projects = () => (
+    <section id="projects" className="section-shell scroll-mt-24 border-t border-stone-900/[0.06]">
+        <div className="mb-10 flex flex-col gap-3 sm:mb-14 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+                <p className="eyebrow">06 · Projetos</p>
+                <h2 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">{locale.projects.title}</h2>
             </div>
+            <p className="max-w-md text-sm leading-6 text-stone-900/45 sm:text-right">Produtos autorais com foco em resolver problemas reais — do desenho à implementação.</p>
+        </div>
 
-            <div className="w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" />
-
-        </motion.div>
-    );
-}
+        <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            {projects.map((project) => (
+                <Link
+                    key={project.id}
+                    href={`/projects/${project.id}`}
+                    className="project-card group overflow-hidden rounded-2xl border border-stone-900/[0.14] bg-[#fffdf7] hover:border-orange-700/45 hover:bg-white"
+                >
+                    <div className="p-5 sm:p-6">
+                        <span className="inline-flex rounded-full border border-stone-900/10 bg-[#f6f3eb] px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-stone-900/70">
+                            {project.status}
+                        </span>
+                        <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.16em] text-orange-700/80">{project.category}</p>
+                        <div className="mt-2 flex items-center justify-between gap-3">
+                            <span className="flex min-w-0 items-center gap-2.5">
+                                {project.icon && (
+                                    <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-stone-900/10 bg-[#eee8dc] p-0.5">
+                                        <Image src={project.icon} alt="" aria-hidden="true" width={44} height={44} className="h-full w-full rounded-[10px] object-contain" />
+                                    </span>
+                                )}
+                                <h3 className="truncate text-xl font-semibold tracking-tight">{project.title}</h3>
+                            </span>
+                            <HiArrowRight aria-hidden="true" className="-rotate-45 shrink-0 text-stone-900/40 transition-transform duration-200 ease-out group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-orange-700" />
+                        </div>
+                        <p className="mt-3 min-h-[4.5rem] text-sm leading-6 text-stone-900/55">{project.descriptionPT}</p>
+                        <ul className="mt-5 flex flex-wrap gap-1.5" aria-label="Tecnologias">
+                            {project.tecnologies.slice(0, 4).map((technology) => (
+                                <li key={technology} className="rounded-md border border-stone-900/[0.08] px-2 py-1 text-[10px] text-stone-900/45">{technology}</li>
+                            ))}
+                        </ul>
+                        <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-medium text-orange-700">
+                            Ver case <span className="sr-only">{project.title}</span>
+                        </span>
+                        {project.repoAvailability && <p className="mt-2 text-[10px] text-stone-900/40">Repositório privado · {project.repoAvailability}</p>}
+                    </div>
+                </Link>
+            ))}
+        </div>
+    </section>
+);
 
 export default Projects;

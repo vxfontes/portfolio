@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="ZimaDash">
+  <rect width="256" height="256" rx="56" fill="#111827"/>
+  <path d="M34 141h33l16-45 31 96 26-67h30l14-30h38" fill="none" stroke="#4f8cff" stroke-linecap="round" stroke-linejoin="round" stroke-width="15"/>
+  <circle cx="203" cy="95" r="12" fill="#22c55e"/>
+</svg>

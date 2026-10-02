@@ -1,40 +1,38 @@
 export const enUS = {
     intro: {
-        frases: ['Hi, my name is Vanessa', 'Developer-and-student.tsx', '<LovesCode />'],
-        baixar: 'Download CV'
+        frases: ['Hi, I’m Vanessa', 'Software Engineer', 'Full-Stack · AI · Backend'],
+        baixar: 'Download CV',
+        baixarEN: 'English CV'
     },
     about: {
         title: 'About',
         frase: 'me.',
         span: 'About',
-        sobremim: `Doing bachelor's degree in exact sciences and technology with terminality in computer engineering by UFRB and technologist in data sciences by UNOPAR.
-        I have a high performance returned to achieve or exceed goals and ease of learning. Offering knowledge in
-        technology, exacts and design, with experience in team strategy development.`
+        sobremim: `Software engineer focused on full-stack development, backend systems, and applied AI. I build reliable products across mobile, web, and cloud, with experience in fintech, multi-tenant SaaS, and RAG systems. I hold a degree in Exact Sciences and Technology from UFRB and am pursuing a specialization in Computer Engineering.`
     },
     experience: {
         title: "Experiences",
     },
     skill: {
         title: `Skills`,
-        sub: 'HOVER OVER A SKILL FOR CURRENCY PROFIENCYS'
+        sub: 'TECHNOLOGIES & AREAS OF FOCUS'
     }
 }
 
 export const ptBR = {
     intro: {
-        frases: ['Olá, meu nome é Vanessa', 'Desenvolvedora-e-estudante.tsx', '<ViciadaEmCodigo />'],
-        baixar: 'Currículo'
+        frases: ['Oi, eu sou Vanessa', 'Engenheira de Software', 'Full-stack · IA · Backend'],
+        baixar: 'Currículo',
+        baixarEN: 'CV em inglês'
     },
     about: {
         title: 'Sobre',
         frase: 'sou eu?',
         span: 'Quem',
-        sobremim: `Cursando bacharelado em ciências exatas e tecnológicas com terminalidade em engenharia da computação pela UFRB e tecnólogo em ciências de dados pela UNOPAR.
-        Tenho facilidade em aprendizado e alto desempenho voltado a atingir ou superar metas. Oferecendo conhecimentos
-        em tecnologia, exatas e design, com experiência em elaboração de estratégias em equipe.`
+        sobremim: `Engenheira de software com foco em desenvolvimento full-stack, sistemas backend e inteligência artificial aplicada. Construo produtos confiáveis para mobile, web e cloud, com experiência em fintech, SaaS multi-tenant e sistemas RAG. Sou bacharela em Ciências Exatas e Tecnológicas pela UFRB e atualmente curso especialização em Engenharia da Computação.`
     },
     study: {
-        title: "Estudos",
+        title: "Formação",
     },
     experience: {
         title: "Experiências",
@@ -53,6 +51,6 @@ export const ptBR = {
     },
     skill: {
         title: `Habilidades`,
-        sub: 'PASSE O MOUSE SOBRE UMA HABILIDADE PARA ver proficiência'
+        sub: 'TECNOLOGIAS E ÁREAS DE ATUAÇÃO'
     }
 }

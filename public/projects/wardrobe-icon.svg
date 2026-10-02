@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Wardrobe</title>
+  <desc id="desc">Cabide estilizado em um quadrado terracota.</desc>
+  <rect width="512" height="512" rx="112" fill="#20231f"/>
+  <circle cx="256" cy="112" r="42" fill="#bc563d"/>
+  <path d="M256 94v38M256 132 103 260c-19 16-30 32-30 52 0 39 32 71 71 71h224c39 0 71-32 71-71 0-20-11-36-30-52L256 132Z" fill="none" stroke="#f3f0e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="24"/>
+  <path d="M131 338h250" stroke="#bc563d" stroke-linecap="round" stroke-width="16"/>
+</svg>

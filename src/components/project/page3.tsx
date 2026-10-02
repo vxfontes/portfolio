@@ -1,25 +1,24 @@
-import { SubTitle } from "../Title";
-import React from "react";
+import Image from "next/image";
 
 interface Props {
     title: string,
     imgs: string[],
 }
 
-const Page3 = ({ title, imgs }: Props) => {
-    return (
-        <div className="flex h-screen items-center z-10 relative overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto">
-            <SubTitle>{title}</SubTitle>
-
-            <div className="relative flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+const Page3 = ({ title, imgs }: Props) => (
+    <section className="border-t border-stone-900/[0.06] py-16 sm:py-20">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+            <p className="eyebrow">Detalhes</p>
+            <h2 className="mb-8 mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">{title}</h2>
+            <div className="grid gap-4 sm:grid-cols-2">
                 {imgs.map((img, index) => (
-                    <div key={index} className="w-[70%] md:w-[70%] flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
-                        <img src={img} />
-                    </div>
+                    <figure key={img} className="relative overflow-hidden rounded-2xl border border-stone-900/10 bg-[#eee8dc] p-3">
+                        <Image src={img} alt={`${title} — imagem ${index + 1}`} loading="lazy" width={1200} height={900} sizes="(max-width: 640px) 100vw, 50vw" className="h-auto w-full rounded-xl object-contain" />
+                    </figure>
                 ))}
             </div>
         </div>
-    )
-}
+    </section>
+);
 
-export default Page3
+export default Page3;
