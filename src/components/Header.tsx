@@ -1,4 +1,7 @@
+"use client";
+
 import { links } from "@/data/links";
+import { track } from "@/lib/analytics";
 import Link from "next/link";
 
 const Header = () => (
@@ -10,6 +13,7 @@ const Header = () => (
             <Link
                 href="#intro"
                 aria-label="Ir para o início"
+                onClick={() => track("navigation_clicked", { destination: "intro", placement: "header" })}
                 className="mr-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-orange-700 text-xs font-bold text-[#fffdf7] transition-transform active:scale-95"
             >
                 VF
@@ -19,6 +23,7 @@ const Header = () => (
                     <li key={link.hash}>
                         <Link
                             href={link.hash}
+                            onClick={() => track("navigation_clicked", { destination: link.hash.slice(1), placement: "header" })}
                             className="block whitespace-nowrap rounded-full px-2 py-2 text-[10px] text-stone-900/65 transition-[transform,color,background-color] duration-150 hover:bg-stone-900/10 hover:text-stone-900 focus-visible:text-stone-900 active:scale-[0.97] sm:px-3.5 sm:text-sm"
                         >
                             <span className="hidden sm:inline">{link.name}</span>

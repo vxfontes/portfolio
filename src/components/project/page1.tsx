@@ -1,7 +1,10 @@
+"use client";
+
 import { ProjectProps } from "@/interface/ProjectProps";
 import { ptBR as locale } from "@/data/infos";
 import { HiArrowRight } from "react-icons/hi";
 import Image from "next/image";
+import { track } from "@/lib/analytics";
 
 interface Props {
     project: ProjectProps
@@ -53,8 +56,8 @@ const Page1 = ({ project }: Props) => (
 
             {(project.appLink || project.link) && (
                 <div className="mt-8 flex flex-wrap gap-3">
-                    {project.appLink && <a href={project.appLink} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-orange-700 px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 active:scale-[0.98]">Baixar na App Store <HiArrowRight aria-hidden="true" className="-rotate-45" /></a>}
-                    {project.link && <a href={project.link} target="_blank" rel="noreferrer" className="introButton min-h-11">Código-fonte <HiArrowRight aria-hidden="true" className="-rotate-45" /></a>}
+                    {project.appLink && <a href={project.appLink} onClick={() => track("project_link_clicked", { project_id: project.id, project_name: project.title, destination: "app_store" })} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-2 rounded-full bg-orange-700 px-5 py-3 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 active:scale-[0.98]">Baixar na App Store <HiArrowRight aria-hidden="true" className="-rotate-45" /></a>}
+                    {project.link && <a href={project.link} onClick={() => track("project_link_clicked", { project_id: project.id, project_name: project.title, destination: "source" })} target="_blank" rel="noreferrer" className="introButton min-h-11">Código-fonte <HiArrowRight aria-hidden="true" className="-rotate-45" /></a>}
                 </div>
             )}
             {!project.link && project.repoAvailability && (

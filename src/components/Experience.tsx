@@ -1,5 +1,8 @@
+"use client";
+
 import { experiencesData } from "@/data/experiences";
 import { ptBR as locale } from "@/data/infos";
+import { track } from "@/lib/analytics";
 import { HiArrowDown, HiArrowUp } from "react-icons/hi";
 
 const Experience = () => (
@@ -19,7 +22,13 @@ const Experience = () => (
                 const current = item.date.toLowerCase().includes("atual");
 
                 return (
-                    <details key={item.location} className="group rounded-2xl border border-stone-900/[0.09] bg-stone-900/[0.025] transition-colors open:border-orange-700/25 open:bg-stone-900/[0.04]">
+                    <details
+                        key={item.location}
+                        className="group rounded-2xl border border-stone-900/[0.09] bg-stone-900/[0.025] transition-colors open:border-orange-700/25 open:bg-stone-900/[0.04]"
+                        onToggle={(event) => {
+                            if (event.currentTarget.open) track("experience_expanded", { company: item.location, role: item.title });
+                        }}
+                    >
                         <summary className="flex cursor-pointer list-none items-start gap-4 rounded-2xl p-5 focus-visible:outline-offset-[-3px] sm:p-6 [&::-webkit-details-marker]:hidden">
                             <span aria-hidden="true" className="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-stone-900/10 font-mono text-xs text-orange-700">
                                 0{index + 1}

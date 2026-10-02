@@ -1,5 +1,8 @@
+"use client";
+
 import { projects } from "@/data/projects";
 import { ptBR as locale } from "@/data/infos";
+import { track } from "@/lib/analytics";
 import Image from "next/image";
 import Link from "next/link";
 import { HiArrowRight } from "react-icons/hi";
@@ -19,6 +22,7 @@ const Projects = () => (
                 <Link
                     key={project.id}
                     href={`/projects/${project.id}`}
+                    onClick={() => track("project_opened", { project_id: project.id, project_name: project.title, placement: "projects_grid" })}
                     className="project-card group overflow-hidden rounded-2xl border border-stone-900/[0.14] bg-[#fffdf7] hover:border-orange-700/45 hover:bg-white"
                 >
                     <div className="p-5 sm:p-6">
