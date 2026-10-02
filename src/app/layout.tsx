@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
     title: 'Vanessa Fontes — Engenheira de Software',
     description: 'Engenheira de software com foco em full-stack, mobile, backend e inteligência artificial aplicada.',
+    icons: {
+        icon: '/icon.svg',
+    },
 }
 
 export default function RootLayout({
